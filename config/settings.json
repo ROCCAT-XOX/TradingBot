@@ -1,0 +1,40 @@
+{
+    "ALPACA_API_KEY": "PKLZKA6O0B9MTB5OEMG4",
+    "ALPACA_API_SECRET": "UmRlUu8lNd09nOq9ycjtt9bNUDenGJcNVY1d5bJ2",
+    "ALPACA_API_BASE_URL": "https://paper-api.alpaca.markets",
+    "ALPACA_DATA_URL": "https://data.alpaca.markets",
+
+    "DB_HOST": "localhost",
+    "DB_PORT": "5432",
+    "DB_NAME": "trading_bot",
+    "DB_USER": "postgres",
+    "DB_PASSWORD": "your_db_password_here",
+
+    "TRADING_SYMBOLS": ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA"],
+    "DEFAULT_TIMEFRAME": "1Day",
+    "TRAINING_PERIOD_DAYS": 365,
+    "PAPER_TRADING": true,
+
+    "AI_MODEL_SETTINGS": {
+        "model_type": "PPO",
+        "learning_rate": 0.0003,
+        "n_steps": 2048,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "clip_range": 0.2,
+        "ent_coef": 0.0,
+        "max_grad_norm": 0.5,
+        "vf_coef": 0.5
+    },
+
+    "REWARD_SETTINGS": {
+        "profit_reward_factor": 1.0,
+        "loss_penalty_factor": 1.0,
+        "trade_frequency_penalty": 0.01,
+        "position_holding_reward": 0.001,
+        "drawdown_penalty_factor": 0.5,
+        "risk_adjusted_return_factor": 0.5
+    }
+}
