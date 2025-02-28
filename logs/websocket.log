@@ -80,3 +80,475 @@
 2025-02-28 23:03:04,195 - __main__ - INFO - Received signal 2. Shutting down...
 2025-02-28 23:03:04,197 - __main__ - INFO - Stopping WebSocket listener...
 2025-02-28 23:03:04,199 - __main__ - ERROR - Error processing data: A coroutine object is required
+2025-02-28 23:08:14,541 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:08:14,542 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:08:14,542 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:08:14,542 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpif_wzasa.json
+2025-02-28 23:08:14,542 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:08:14,933 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:08:14,934 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:08:14,957 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:08:14,957 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:08:14,957 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:08:14,958 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:08:14,958 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:08:14,958 - backend.websocket_listener - INFO - WebSocket connection attempt 1
+2025-02-28 23:08:14,958 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:08:14,958 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:08:14,958 - backend.websocket_listener - ERROR - WebSocket error: name 'random' is not defined
+2025-02-28 23:09:12,798 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:09:12,800 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:09:12,800 - backend.websocket_listener - WARNING - WebSocket listener is not running
+2025-02-28 23:09:12,800 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:09:14,578 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:09:14,578 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:09:14,578 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:09:14,579 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpkgyjwyka.json
+2025-02-28 23:09:14,579 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:09:14,990 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:09:14,991 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:09:15,013 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:09:15,013 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:09:15,013 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:09:15,014 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:09:15,014 - backend.websocket_listener - INFO - WebSocket connection attempt 1
+2025-02-28 23:09:15,014 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:09:15,014 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:09:15,014 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:09:15,014 - backend.websocket_listener - INFO - Waiting 9.11 seconds before retry...
+2025-02-28 23:09:24,133 - backend.websocket_listener - INFO - WebSocket connection attempt 2
+2025-02-28 23:09:24,134 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:09:24,134 - backend.websocket_listener - INFO - Waiting 16.01 seconds before retry...
+2025-02-28 23:09:40,146 - backend.websocket_listener - INFO - WebSocket connection attempt 3
+2025-02-28 23:09:40,146 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:09:40,146 - backend.websocket_listener - INFO - Waiting 20.36 seconds before retry...
+2025-02-28 23:09:49,568 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:09:49,571 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:09:49,571 - __main__ - ERROR - Error processing data: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:10:54,160 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:10:54,161 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:10:54,161 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:10:54,161 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmp20etmm22.json
+2025-02-28 23:10:54,162 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:10:54,543 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:10:54,544 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:10:54,563 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:10:54,563 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:10:54,563 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:10:54,563 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:10:54,563 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:10:54,563 - backend.websocket_listener - INFO - WebSocket connection attempt 1
+2025-02-28 23:10:54,563 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:10:54,563 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:10:54,564 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:10:54,564 - backend.websocket_listener - INFO - Waiting 7.47 seconds before retry...
+2025-02-28 23:11:02,042 - backend.websocket_listener - INFO - WebSocket connection attempt 2
+2025-02-28 23:11:02,043 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:11:02,043 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:11:02,043 - backend.websocket_listener - INFO - Waiting 15.86 seconds before retry...
+2025-02-28 23:11:05,357 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:11:05,358 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:11:05,358 - backend.websocket_listener - ERROR - Error stopping WebSocket: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:11:05,358 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:11:05,358 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:13:04,920 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:13:04,921 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:13:04,921 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:13:04,921 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpw3juxzqy.json
+2025-02-28 23:13:04,921 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:13:05,303 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:13:05,304 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:13:05,327 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:13:05,327 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:13:05,327 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:13:05,328 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:13:05,328 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:13:05,328 - backend.websocket_listener - INFO - WebSocket connection attempt 1
+2025-02-28 23:13:05,328 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:13:05,328 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:13:05,328 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:13:05,328 - backend.websocket_listener - INFO - Waiting 8.58 seconds before retry...
+2025-02-28 23:13:13,916 - backend.websocket_listener - INFO - WebSocket connection attempt 2
+2025-02-28 23:13:13,917 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:13:13,917 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:13:13,917 - backend.websocket_listener - INFO - Waiting 13.53 seconds before retry...
+2025-02-28 23:13:17,557 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:13:17,558 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:13:17,558 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:13:17,808 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:13:17,809 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:13:17,809 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:13:22,814 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:13:22,814 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:13:22,815 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:14:59,913 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:14:59,913 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:14:59,913 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:14:59,914 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmp7jjnvwdc.json
+2025-02-28 23:14:59,914 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:15:00,296 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:15:00,296 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:15:00,316 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:15:00,316 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:15:00,316 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:15:00,316 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:15:00,316 - backend.websocket_listener - INFO - WebSocket connection attempt 1
+2025-02-28 23:15:00,316 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:15:00,316 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:15:00,316 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:15:00,316 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:15:00,317 - backend.websocket_listener - INFO - Waiting 7.71 seconds before retry...
+2025-02-28 23:15:08,032 - backend.websocket_listener - INFO - WebSocket connection attempt 2
+2025-02-28 23:15:08,033 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:15:08,033 - backend.websocket_listener - WARNING - Connection attempt failed: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:15:08,033 - backend.websocket_listener - INFO - Waiting 17.10 seconds before retry...
+2025-02-28 23:15:12,939 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:15:12,939 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:15:12,939 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:15:13,191 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:15:13,191 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:15:13,191 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:15:18,192 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:15:18,192 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:15:18,193 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:17:03,668 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:17:03,668 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:17:03,668 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:17:03,669 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmph69n4xnb.json
+2025-02-28 23:17:03,669 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:17:04,087 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:17:04,087 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:17:04,110 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:17:04,110 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:17:04,110 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:17:04,110 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:17:04,110 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:17:04,110 - backend.websocket_listener - INFO - WebSocket connection attempt 1
+2025-02-28 23:17:04,111 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:17:04,111 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:17:04,111 - backend.websocket_listener - WARNING - Stream run error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:17:04,112 - backend.websocket_listener - INFO - Waiting 9.56 seconds before retry...
+2025-02-28 23:17:13,679 - backend.websocket_listener - INFO - WebSocket connection attempt 2
+2025-02-28 23:17:13,681 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:17:13,681 - backend.websocket_listener - WARNING - Stream run error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:17:13,681 - backend.websocket_listener - INFO - Waiting 15.36 seconds before retry...
+2025-02-28 23:17:13,779 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:17:13,779 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:17:13,780 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:17:14,030 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:17:14,030 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:17:14,030 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:17:19,036 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:17:19,036 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:17:19,036 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:18:23,714 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:18:23,715 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:18:23,715 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:18:23,715 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmp695t1vbk.json
+2025-02-28 23:18:23,716 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:18:24,110 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:18:24,111 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:18:24,136 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:18:24,136 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:18:24,136 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:18:24,136 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:18:24,136 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:18:24,136 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:18:24,136 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:18:24,137 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:18:24,137 - backend.websocket_listener - WARNING - Stream run error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:18:24,138 - backend.websocket_listener - INFO - Waiting 31.22 seconds before retry...
+2025-02-28 23:18:55,365 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:18:55,367 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:18:55,367 - backend.websocket_listener - WARNING - Stream run error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:18:55,368 - backend.websocket_listener - INFO - Waiting 28.07 seconds before retry...
+2025-02-28 23:19:14,283 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:19:14,284 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:19:14,286 - backend.websocket_listener - ERROR - Error in safe stream stop: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:19:14,537 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:19:14,537 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:19:14,537 - backend.websocket_listener - ERROR - Error in safe stream stop: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:19:19,542 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:19:19,543 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:19:19,543 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:19:56,822 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:19:56,822 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:19:56,822 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:19:56,823 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpg177oldg.json
+2025-02-28 23:19:56,823 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:19:57,208 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:19:57,209 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:19:57,233 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:19:57,233 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:19:57,233 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:19:57,233 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:19:57,234 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:19:57,234 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:19:57,234 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:19:57,234 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:19:57,234 - backend.websocket_listener - WARNING - Stream connection error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:19:57,235 - backend.websocket_listener - INFO - Waiting 20.43 seconds before retry...
+2025-02-28 23:20:09,986 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:20:09,987 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:20:09,988 - backend.websocket_listener - ERROR - Error in safe stream stop: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:20:10,237 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:20:10,237 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:20:10,237 - backend.websocket_listener - ERROR - Error in safe stream stop: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:20:15,242 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:20:15,243 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:20:15,243 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:47:59,476 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:47:59,477 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:47:59,477 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:47:59,477 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpc_mcvivw.json
+2025-02-28 23:47:59,477 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:47:59,915 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:47:59,916 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:47:59,940 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:47:59,941 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:47:59,941 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:47:59,941 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:47:59,941 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:47:59,941 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:47:59,941 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:47:59,942 - backend.websocket_listener - INFO - Starting WebSocket stream for 5 symbols
+2025-02-28 23:47:59,942 - alpaca_trade_api.stream - INFO - started stock data stream
+2025-02-28 23:47:59,942 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:48:00,754 - alpaca_trade_api.stream - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2025-02-28 23:48:00,932 - alpaca_trade_api.stream - INFO - subscribed to trades: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA'], quotes: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA'], bars: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA'], corrections: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA']
+2025-02-28 23:51:21,515 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:51:21,518 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:51:21,770 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:51:21,770 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:51:26,776 - backend.websocket_listener - ERROR - Error stopping stream: 
+2025-02-28 23:51:27,646 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:51:27,648 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:51:29,768 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:51:29,768 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:51:29,768 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:51:29,769 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmph73z7m8d.json
+2025-02-28 23:51:29,769 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:51:30,151 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:51:30,153 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:51:30,173 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:51:30,173 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:51:30,173 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:51:30,173 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:51:30,173 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:51:30,173 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:51:30,173 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:51:30,174 - backend.websocket_listener - INFO - Starting WebSocket stream for 3 symbols
+2025-02-28 23:51:30,174 - backend.websocket_listener - WARNING - Stream connection error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:51:30,175 - backend.websocket_listener - INFO - Waiting 24.44 seconds before retry...
+2025-02-28 23:51:32,653 - backend.websocket_listener - ERROR - Error stopping stream: 
+2025-02-28 23:51:37,659 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:51:37,659 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:51:37,659 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:51:37,659 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:51:54,620 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:51:54,623 - backend.websocket_listener - INFO - Starting WebSocket stream for 3 symbols
+2025-02-28 23:51:54,624 - backend.websocket_listener - WARNING - Stream connection error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:51:54,625 - backend.websocket_listener - INFO - Waiting 32.90 seconds before retry...
+2025-02-28 23:52:27,523 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:52:27,525 - backend.websocket_listener - INFO - Starting WebSocket stream for 3 symbols
+2025-02-28 23:52:27,525 - backend.websocket_listener - WARNING - Stream connection error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:52:27,525 - backend.websocket_listener - INFO - Waiting 20.69 seconds before retry...
+2025-02-28 23:52:48,213 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:52:48,213 - backend.websocket_listener - INFO - Starting WebSocket stream for 3 symbols
+2025-02-28 23:52:48,213 - backend.websocket_listener - WARNING - Stream connection error: asyncio.run() cannot be called from a running event loop
+2025-02-28 23:52:48,213 - backend.websocket_listener - INFO - Waiting 28.12 seconds before retry...
+2025-02-28 23:52:50,495 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:52:50,495 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:52:50,502 - backend.websocket_listener - ERROR - Error in safe stream stop: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:52:50,752 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:52:50,752 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:52:50,752 - backend.websocket_listener - ERROR - Error in safe stream stop: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:52:52,606 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:52:52,607 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:52:52,607 - backend.websocket_listener - ERROR - Error in safe stream stop: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:52:55,982 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:52:55,982 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:52:55,982 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:52:55,983 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpmrr8c0_w.json
+2025-02-28 23:52:55,983 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:52:56,371 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:52:56,372 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:52:56,391 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:52:56,391 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:52:56,391 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:52:56,391 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:52:56,391 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:52:56,392 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:52:56,392 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:52:56,392 - backend.websocket_listener - WARNING - Connection attempt failed: object Stream can't be used in 'await' expression
+2025-02-28 23:52:56,392 - backend.websocket_listener - INFO - Waiting 28.37 seconds before retry...
+2025-02-28 23:52:57,613 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:52:57,613 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:52:57,613 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:52:57,613 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:53:24,769 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:53:24,772 - backend.websocket_listener - WARNING - Connection attempt failed: object Stream can't be used in 'await' expression
+2025-02-28 23:53:24,772 - backend.websocket_listener - INFO - Waiting 21.36 seconds before retry...
+2025-02-28 23:53:46,137 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:53:46,138 - backend.websocket_listener - WARNING - Connection attempt failed: object Stream can't be used in 'await' expression
+2025-02-28 23:53:46,138 - backend.websocket_listener - INFO - Waiting 27.54 seconds before retry...
+2025-02-28 23:54:13,683 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:54:13,685 - backend.websocket_listener - WARNING - Connection attempt failed: object Stream can't be used in 'await' expression
+2025-02-28 23:54:13,685 - backend.websocket_listener - INFO - Waiting 20.62 seconds before retry...
+2025-02-28 23:54:34,302 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:54:34,305 - backend.websocket_listener - WARNING - Connection attempt failed: object Stream can't be used in 'await' expression
+2025-02-28 23:54:34,305 - backend.websocket_listener - INFO - Waiting 36.78 seconds before retry...
+2025-02-28 23:54:39,591 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:54:39,592 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:54:39,827 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:54:39,827 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:54:41,015 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:54:41,015 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:54:44,244 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:54:44,244 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:54:44,244 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:54:44,244 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmp_6qb5s29.json
+2025-02-28 23:54:44,245 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:54:44,766 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:54:44,767 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:54:44,784 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:54:44,784 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:54:44,784 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:54:44,784 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:54:44,784 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:54:44,785 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:54:44,785 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:54:44,785 - backend.websocket_listener - WARNING - Connection attempt failed: handler must be a coroutine function
+2025-02-28 23:54:44,785 - backend.websocket_listener - INFO - Waiting 37.15 seconds before retry...
+2025-02-28 23:54:46,016 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:54:46,016 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:54:46,017 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:54:46,017 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:54:52,758 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:54:52,758 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:54:52,759 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:54:53,013 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:54:53,013 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:54:53,013 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:54:54,047 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:54:54,049 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:54:54,049 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:54:59,052 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:54:59,053 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:54:59,053 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:54:59,053 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:56:16,685 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:56:16,686 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:56:16,686 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:56:16,687 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpfsegkcev.json
+2025-02-28 23:56:16,687 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:56:17,072 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:56:17,073 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:56:17,099 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:56:17,100 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:56:17,100 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:56:17,100 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:56:17,100 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:56:17,100 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:56:17,100 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:56:17,100 - backend.websocket_listener - INFO - Creating WebSocket stream for 3 symbols
+2025-02-28 23:56:17,100 - backend.websocket_listener - WARNING - Connection attempt failed: handler must be a coroutine function
+2025-02-28 23:56:17,100 - backend.websocket_listener - INFO - Waiting 38.01 seconds before retry...
+2025-02-28 23:56:29,496 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:56:29,497 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:56:29,497 - backend.websocket_listener - ERROR - Error stopping stream: 'NoneType' object has no attribute 'is_running'
+2025-02-28 23:56:29,749 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:56:29,749 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:56:33,771 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:56:33,772 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:56:38,777 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:56:38,779 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:56:38,779 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:56:38,779 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:59:05,105 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:59:05,105 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:59:05,105 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:59:05,106 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpo_f2j0ng.json
+2025-02-28 23:59:05,106 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:59:05,492 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:59:05,493 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:59:05,518 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:59:05,518 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:59:05,518 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:59:05,518 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:59:05,518 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:59:05,518 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-02-28 23:59:05,518 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:59:05,518 - backend.websocket_listener - INFO - Creating WebSocket stream for 3 symbols
+2025-02-28 23:59:05,519 - backend.websocket_listener - INFO - Starting WebSocket stream for 3 symbols
+2025-02-28 23:59:05,520 - alpaca_trade_api.stream - INFO - started stock data stream
+2025-02-28 23:59:05,520 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:59:06,074 - alpaca_trade_api.stream - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2025-02-28 23:59:06,196 - alpaca_trade_api.stream - INFO - subscribed to trades: ['AAPL', 'GOOGL', 'MSFT'], quotes: ['AAPL', 'GOOGL', 'MSFT'], bars: ['AAPL', 'GOOGL', 'MSFT'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: ['AAPL', 'GOOGL', 'MSFT'], corrections: ['AAPL', 'GOOGL', 'MSFT']
+2025-02-28 23:59:12,398 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:59:12,399 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:59:12,652 - __main__ - INFO - Received signal 15. Shutting down...
+2025-02-28 23:59:12,652 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:59:16,335 - alpaca_trade_api.stream - INFO - stock data stream stopped
+2025-02-28 23:59:16,349 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-02-28 23:59:16,349 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:59:16,349 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-03-01 00:00:44,296 - __main__ - INFO - Starting WebSocket integration...
+2025-03-01 00:00:44,296 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 00:00:44,296 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-03-01 00:00:44,297 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmpwe_8ke_a.json
+2025-03-01 00:00:44,297 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 00:00:44,685 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 00:00:44,686 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 00:00:44,706 - backend.database - INFO - SQLite database connection established
+2025-03-01 00:00:44,707 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-03-01 00:00:44,707 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-03-01 00:00:44,707 - backend.websocket_listener - INFO - WebSocket listener started
+2025-03-01 00:00:44,707 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-03-01 00:00:44,707 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-03-01 00:00:44,707 - __main__ - INFO - Starting data processing loop...
+2025-03-01 00:00:44,707 - backend.websocket_listener - INFO - Creating WebSocket stream for 3 symbols
+2025-03-01 00:00:44,707 - backend.websocket_listener - INFO - Starting WebSocket stream for 3 symbols
+2025-03-01 00:00:44,708 - alpaca_trade_api.stream - INFO - started stock data stream
+2025-03-01 00:00:44,708 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-03-01 00:00:45,240 - alpaca_trade_api.stream - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2025-03-01 00:00:45,362 - alpaca_trade_api.stream - INFO - subscribed to trades: ['AAPL', 'GOOGL', 'MSFT'], quotes: ['AAPL', 'GOOGL', 'MSFT'], bars: ['AAPL', 'GOOGL', 'MSFT'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: ['AAPL', 'GOOGL', 'MSFT'], corrections: ['AAPL', 'GOOGL', 'MSFT']
+2025-03-01 00:00:52,659 - __main__ - INFO - Received signal 2. Shutting down...
+2025-03-01 00:00:52,659 - __main__ - INFO - Stopping WebSocket listener...
+2025-03-01 00:00:52,914 - __main__ - INFO - Received signal 15. Shutting down...
+2025-03-01 00:00:52,914 - __main__ - INFO - Stopping WebSocket listener...
+2025-03-01 00:00:55,496 - alpaca_trade_api.stream - INFO - stock data stream stopped
+2025-03-01 00:00:55,509 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-03-01 00:00:55,510 - __main__ - INFO - WebSocket integration stopped.
+2025-03-01 00:00:55,510 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-03-01 00:01:43,651 - __main__ - INFO - Starting WebSocket integration...
+2025-03-01 00:01:43,652 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 00:01:43,652 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-03-01 00:01:43,652 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmp1hk_9rr_.json
+2025-03-01 00:01:43,652 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 00:01:44,071 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 00:01:44,073 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 00:01:44,095 - backend.database - INFO - SQLite database connection established
+2025-03-01 00:01:44,095 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-03-01 00:01:44,096 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-03-01 00:01:44,096 - backend.websocket_listener - INFO - WebSocket listener started
+2025-03-01 00:01:44,096 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-03-01 00:01:44,096 - backend.websocket_listener - INFO - Establishing WebSocket connection
+2025-03-01 00:01:44,096 - __main__ - INFO - Starting data processing loop...
+2025-03-01 00:01:44,096 - backend.websocket_listener - INFO - Creating WebSocket stream for 3 symbols
+2025-03-01 00:01:44,096 - backend.websocket_listener - INFO - Starting WebSocket stream for 3 symbols
+2025-03-01 00:01:44,097 - alpaca_trade_api.stream - INFO - started stock data stream
+2025-03-01 00:01:44,097 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-03-01 00:01:44,627 - alpaca_trade_api.stream - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2025-03-01 00:01:44,748 - alpaca_trade_api.stream - INFO - subscribed to trades: ['AAPL', 'GOOGL', 'MSFT'], quotes: ['AAPL', 'GOOGL', 'MSFT'], bars: ['AAPL', 'GOOGL', 'MSFT'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: ['AAPL', 'GOOGL', 'MSFT'], corrections: ['AAPL', 'GOOGL', 'MSFT']
+2025-03-01 00:01:51,557 - __main__ - INFO - Received signal 2. Shutting down...
+2025-03-01 00:01:51,558 - __main__ - INFO - Stopping WebSocket listener...
+2025-03-01 00:01:51,810 - __main__ - INFO - Received signal 15. Shutting down...
+2025-03-01 00:01:51,810 - __main__ - INFO - Stopping WebSocket listener...
+2025-03-01 00:01:52,823 - __main__ - INFO - Received signal 2. Shutting down...
+2025-03-01 00:01:52,823 - __main__ - INFO - Stopping WebSocket listener...
+2025-03-01 00:01:54,881 - alpaca_trade_api.stream - INFO - stock data stream stopped
+2025-03-01 00:01:54,893 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-03-01 00:01:54,894 - __main__ - INFO - WebSocket integration stopped.
+2025-03-01 00:01:54,894 - backend.websocket_listener - INFO - WebSocket listener stopped
+2025-03-01 00:01:54,894 - backend.websocket_listener - INFO - WebSocket listener stopped
