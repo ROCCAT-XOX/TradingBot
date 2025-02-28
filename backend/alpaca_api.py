@@ -20,41 +20,67 @@ class AlpacaAPI:
             config_path (str, optional): Path to the settings.json file.
                 If None, will use environment variables.
         """
+        self.api_key = None
+        self.api_secret = None
+        self.base_url = None
+        self.data_url = None
+
         if config_path:
+            logger.info(f"Loading Alpaca API configuration from: {config_path}")
             with open(config_path, 'r') as f:
                 config = json.load(f)
-                api_key = config.get('ALPACA_API_KEY')
-                api_secret = config.get('ALPACA_API_SECRET')
-                base_url = config.get('ALPACA_API_BASE_URL', 'https://paper-api.alpaca.markets')
-                data_url = config.get('ALPACA_DATA_URL', 'https://data.alpaca.markets')
+                self.api_key = config.get('ALPACA_API_KEY')
+                self.api_secret = config.get('ALPACA_API_SECRET')
+                self.base_url = config.get('ALPACA_API_BASE_URL', 'https://paper-api.alpaca.markets')
+                self.data_url = config.get('ALPACA_DATA_URL', 'https://data.alpaca.markets')
+
+                # Log partial API key for verification
+                if self.api_key:
+                    logger.info(f"API key from config: {self.api_key[:4]}...{self.api_key[-4:]}")
+                else:
+                    logger.warning("No API key found in config file")
         else:
             # Use environment variables if no config file provided
-            api_key = os.environ.get('ALPACA_API_KEY')
-            api_secret = os.environ.get('ALPACA_API_SECRET')
-            base_url = os.environ.get('ALPACA_API_BASE_URL', 'https://paper-api.alpaca.markets')
-            data_url = os.environ.get('ALPACA_DATA_URL', 'https://data.alpaca.markets')
+            logger.info("Using environment variables for Alpaca API credentials")
+            self.api_key = os.environ.get('ALPACA_API_KEY')
+            self.api_secret = os.environ.get('ALPACA_API_SECRET')
+            self.base_url = os.environ.get('ALPACA_API_BASE_URL', 'https://paper-api.alpaca.markets')
+            self.data_url = os.environ.get('ALPACA_DATA_URL', 'https://data.alpaca.markets')
 
-        if not api_key or not api_secret:
-            raise ValueError(
-                "Alpaca API credentials not found. Please provide them in config file or as environment variables.")
+            # Log partial API key for verification
+            if self.api_key:
+                logger.info(f"API key from env vars: {self.api_key[:4]}...{self.api_key[-4:]}")
+            else:
+                logger.warning("No API key found in environment variables")
+
+        if not self.api_key or not self.api_secret:
+            error_msg = "Alpaca API credentials not found. Please provide them in config file or as environment variables."
+            logger.error(error_msg)
+            raise ValueError(error_msg)
 
         # Initialize REST API client
-        self.api = tradeapi.REST(
-            api_key,
-            api_secret,
-            base_url,
-            api_version='v2'
-        )
+        try:
+            self.api = tradeapi.REST(
+                self.api_key,
+                self.api_secret,
+                self.base_url,
+                api_version='v2'
+            )
+
+            # Test connection with a simple call
+            self.api.get_account()
+            logger.info("Alpaca API client initialized and verified successfully")
+        except Exception as e:
+            logger.error(f"Failed to initialize Alpaca API client: {e}")
+            raise
 
         # Store stream configuration for later use
         self.stream_config = {
-            'key_id': api_key,
-            'secret_key': api_secret,
-            'base_url': base_url,
+            'key_id': self.api_key,
+            'secret_key': self.api_secret,
+            'base_url': self.base_url,
             'data_feed': 'iex'  # Using 'iex' for free tier, 'sip' requires paid subscription
         }
-
-        logger.info("Alpaca API client initialized")
 
     def get_account_info(self):
         """Get account information."""
@@ -117,8 +143,6 @@ class AlpacaAPI:
                         logger.warning(f"No data returned for {symbol}")
                 except Exception as e:
                     logger.warning(f"Error fetching data for {symbol}: {e}")
-
-            return result
 
             return result
         except Exception as e:

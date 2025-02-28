@@ -90,18 +90,42 @@ def load_config():
 
 
 # Initialize API clients
+# This is a partial update for the dashboard.py file
+# Replace the initialize_alpaca_api function with this improved version
+
 @st.cache_resource
 def initialize_alpaca_api(_config):
     try:
-        api = AlpacaAPI()  # Use environment variables
-        api.get_account_info()  # Test the connection
+        # Try to load from config file first
+        config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config',
+                                   'settings.json')
+
+        # Check if config file exists
+        if os.path.exists(config_path):
+            logger.info(f"Loading Alpaca API configuration from: {config_path}")
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+
+            # Set environment variables for Alpaca API
+            os.environ['ALPACA_API_KEY'] = config.get('ALPACA_API_KEY', '')
+            os.environ['ALPACA_API_SECRET'] = config.get('ALPACA_API_SECRET', '')
+            os.environ['ALPACA_API_BASE_URL'] = config.get('ALPACA_API_BASE_URL', 'https://paper-api.alpaca.markets')
+
+            api = AlpacaAPI(config_path=config_path)
+        else:
+            # Fall back to environment variables
+            logger.info("Using environment variables for Alpaca API credentials")
+            api = AlpacaAPI()
+
+        # Test the connection
+        api.get_account_info()
+
         st.session_state.api_connected = True
         return api
     except Exception as e:
         logger.error(f"Error initializing Alpaca API: {e}")
         st.session_state.api_connected = False
         return None
-
 
 @st.cache_resource
 def initialize_database(_config):
@@ -130,13 +154,28 @@ def start_websocket_listener(alpaca_api, symbols):
 
 
 # Function to fetch historical data
+# Update this function in your dashboard.py
+
+# Change the function signature to add underscore to alpaca_api parameter
 @st.cache_data(ttl=3600)  # Cache for 1 hour
-def fetch_historical_data(alpaca_api, symbols, timeframe='1Day', days=30):
+def fetch_historical_data(_alpaca_api, symbols, timeframe='1Day', days=30):
+    """
+    Fetch historical price data.
+
+    Args:
+        _alpaca_api (AlpacaAPI): The Alpaca API instance (not hashed)
+        symbols (list): List of stock symbols
+        timeframe (str): Timeframe for the data
+        days (int): Number of days of historical data to fetch
+
+    Returns:
+        dict: Dictionary of DataFrames with historical price data
+    """
     start_date = (datetime.now() - timedelta(days=days)).strftime('%Y-%m-%d')
     end_date = datetime.now().strftime('%Y-%m-%d')
 
     try:
-        return alpaca_api.get_historical_bars(symbols, timeframe=timeframe, start=start_date, end=end_date)
+        return _alpaca_api.get_historical_bars(symbols, timeframe=timeframe, start=start_date, end=end_date)
     except Exception as e:
         logger.error(f"Error fetching historical data: {e}")
         return {}

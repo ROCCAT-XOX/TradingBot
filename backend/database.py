@@ -110,24 +110,20 @@ class Database:
             config_path (str, optional): Path to the settings.json file.
                 If None, will use environment variables.
         """
-        if config_path:
-            with open(config_path, 'r') as f:
-                config = json.load(f)
-                db_host = config.get('DB_HOST', 'localhost')
-                db_port = config.get('DB_PORT', '5432')
-                db_name = config.get('DB_NAME', 'trading_bot')
-                db_user = config.get('DB_USER', 'postgres')
-                db_password = config.get('DB_PASSWORD', '')
-        else:
-            # Use environment variables if no config file provided
-            db_host = os.environ.get('DB_HOST', 'localhost')
-            db_port = os.environ.get('DB_PORT', '5432')
-            db_name = os.environ.get('DB_NAME', 'trading_bot')
-            db_user = os.environ.get('DB_USER', 'postgres')
-            db_password = os.environ.get('DB_PASSWORD', '')
+        # Get the project root directory
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-        # Create the database URL
-        self.database_url = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+        # Create the data directory if it doesn't exist
+        data_dir = os.path.join(project_root, 'backend', 'data')
+        if not os.path.exists(data_dir):
+            os.makedirs(data_dir)
+
+        # Define the SQLite database path
+        db_path = os.path.join(data_dir, 'trading_bot.db')
+        logger.info(f"Using SQLite database at: {db_path}")
+
+        # Create the SQLite database URL
+        self.database_url = f"sqlite:///{db_path}"
 
         try:
             # Create the engine
@@ -139,9 +135,9 @@ class Database:
             # Create a session factory
             self.Session = sessionmaker(bind=self.engine)
 
-            logger.info("Database connection established")
+            logger.info("SQLite database connection established")
         except Exception as e:
-            logger.error(f"Error connecting to database: {e}")
+            logger.error(f"Error connecting to SQLite database: {e}")
             raise
 
     def get_session(self):
@@ -201,6 +197,76 @@ class Database:
 
         Returns:
             int: Number of records added.
+        """
+        session = self.get_session()
+        try:
+            # Get the stock
+            stock = session.query(Stock).filter_by(symbol=stock_symbol).first()
+            if not stock:
+                logger.warning(f"Stock {stock_symbol} not found, adding it")
+                stock = self.add_stock(stock_symbol)
+
+            # Prepare the data
+            count = 0
+            for _, row in dataframe.iterrows():
+                # Check if this timestamp already exists
+                existing = session.query(PriceData).filter_by(
+                    stock_id=stock.id,
+                    timestamp=row.name if isinstance(row.name, datetime) else pd.to_datetime(row.name),
+                    timeframe=timeframe
+                ).first()
+
+                if existing:
+                    # Update existing record
+                    existing.open = row['open']
+                    existing.high = row['high']
+                    existing.low = row['low']
+                    existing.close = row['close']
+                    existing.volume = row['volume']
+                else:
+                    # Create a new record
+                    price_data = PriceData(
+                        stock_id=stock.id,
+                        timestamp=row.name if isinstance(row.name, datetime) else pd.to_datetime(row.name),
+                        open=row['open'],
+                        high=row['high'],
+                        low=row['low'],
+                        close=row['close'],
+                        volume=row['volume'],
+                        timeframe=timeframe
+                    )
+                    session.add(price_data)
+                    count += 1
+
+            session.commit()
+            logger.info(f"Added {count} price records for {stock_symbol}")
+            return count
+        except Exception as e:
+            session.rollback()
+            logger.error(f"Error adding price data for {stock_symbol}: {e}")
+            raise
+        finally:
+            session.close()
+
+    def add_trade(self, stock_symbol, trade_type, quantity, price, timestamp=None, order_id=None,
+                  strategy=None, model_id=None, confidence=None, profit_loss=None, notes=None):
+        """Add a trade to the database.
+
+        Args:
+            stock_symbol (str): Stock symbol.
+            trade_type (str): 'buy' or 'sell'.
+            quantity (int): Number of shares.
+            price (float): Trade price.
+            timestamp (datetime, optional): Trade timestamp.
+            order_id (str, optional): Alpaca order ID.
+            strategy (str, optional): Trading strategy.
+            model_id (int, optional): AI model ID.
+            confidence (float, optional): AI prediction confidence.
+            profit_loss (float, optional): Realized profit/loss.
+            notes (str, optional): Additional notes.
+
+        Returns:
+            Trade: The created Trade object.
         """
         session = self.get_session()
         try:
@@ -398,21 +464,12 @@ if __name__ == "__main__":
     import os
     import sys
 
-    # Add parent directory to path to import config
-    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
     # Set up logging for the test
     logging.basicConfig(level=logging.INFO)
 
     try:
-        # Try to load from config file first
-        config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config',
-                                   'settings.json')
-        if os.path.exists(config_path):
-            db = Database(config_path=config_path)
-        else:
-            # Fall back to environment variables
-            db = Database()
+        # Initialize the database
+        db = Database()
 
         # Test adding a stock
         stock = db.add_stock('AAPL', 'Apple Inc.', 'Technology', 'Consumer Electronics')
@@ -459,75 +516,3 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Error testing database: {e}")
         sys.exit(1)
-        stock
-        stock = session.query(Stock).filter_by(symbol=stock_symbol).first()
-        if not stock:
-            logger.warning(f"Stock {stock_symbol} not found, adding it")
-            stock = self.add_stock(stock_symbol)
-
-        # Prepare the data
-        count = 0
-        for _, row in dataframe.iterrows():
-            # Check if this timestamp already exists
-            existing = session.query(PriceData).filter_by(
-                stock_id=stock.id,
-                timestamp=row.name if isinstance(row.name, datetime) else pd.to_datetime(row.name),
-                timeframe=timeframe
-            ).first()
-
-            if existing:
-                # Update existing record
-                existing.open = row['open']
-                existing.high = row['high']
-                existing.low = row['low']
-                existing.close = row['close']
-                existing.volume = row['volume']
-            else:
-                # Create a new record
-                price_data = PriceData(
-                    stock_id=stock.id,
-                    timestamp=row.name if isinstance(row.name, datetime) else pd.to_datetime(row.name),
-                    open=row['open'],
-                    high=row['high'],
-                    low=row['low'],
-                    close=row['close'],
-                    volume=row['volume'],
-                    timeframe=timeframe
-                )
-                session.add(price_data)
-                count += 1
-
-        session.commit()
-        logger.info(f"Added {count} price records for {stock_symbol}")
-        return count
-    except Exception as e:
-        session.rollback()
-        logger.error(f"Error adding price data for {stock_symbol}: {e}")
-        raise
-    finally:
-        session.close()
-
-
-def add_trade(self, stock_symbol, trade_type, quantity, price, timestamp=None, order_id=None,
-              strategy=None, model_id=None, confidence=None, profit_loss=None, notes=None):
-    """Add a trade to the database.
-
-    Args:
-        stock_symbol (str): Stock symbol.
-        trade_type (str): 'buy' or 'sell'.
-        quantity (int): Number of shares.
-        price (float): Trade price.
-        timestamp (datetime, optional): Trade timestamp.
-        order_id (str, optional): Alpaca order ID.
-        strategy (str, optional): Trading strategy.
-        model_id (int, optional): AI model ID.
-        confidence (float, optional): AI prediction confidence.
-        profit_loss (float, optional): Realized profit/loss.
-        notes (str, optional): Additional notes.
-
-    Returns:
-        Trade: The created Trade object.
-    """
-    session = self.get_session()
-    try:
-# Get the

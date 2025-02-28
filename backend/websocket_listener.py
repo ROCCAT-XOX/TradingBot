@@ -1,6 +1,7 @@
 import logging
 import threading
 import queue
+import asyncio
 from datetime import datetime
 
 logger = logging.getLogger(__name__)
@@ -21,6 +22,7 @@ class WebSocketListener:
         self.stream = None
         self.running = False
         self.thread = None
+        self.loop = None
 
         # Queues for different data types
         self.trade_queue = queue.Queue()
@@ -34,49 +36,58 @@ class WebSocketListener:
 
         logger.info(f"WebSocket listener initialized for symbols: {', '.join(self.symbols)}")
 
-    def _trade_callback(self, trade):
+    async def _trade_callback(self, trade):
         """Callback for trade updates."""
-        trade_data = {
-            'symbol': trade.symbol,
-            'price': trade.price,
-            'size': trade.size,
-            'timestamp': trade.timestamp,
-            'received_at': datetime.now().isoformat()
-        }
-        self.latest_trades[trade.symbol] = trade_data
-        self.trade_queue.put(trade_data)
-        logger.debug(f"Trade received: {trade.symbol} @ {trade.price}")
+        try:
+            trade_data = {
+                'symbol': trade.symbol,
+                'price': trade.price,
+                'size': trade.size,
+                'timestamp': trade.timestamp,
+                'received_at': datetime.now().isoformat()
+            }
+            self.latest_trades[trade.symbol] = trade_data
+            self.trade_queue.put(trade_data)
+            logger.debug(f"Trade received: {trade.symbol} @ {trade.price}")
+        except Exception as e:
+            logger.error(f"Error in trade callback: {e}")
 
-    def _quote_callback(self, quote):
+    async def _quote_callback(self, quote):
         """Callback for quote updates."""
-        quote_data = {
-            'symbol': quote.symbol,
-            'bid_price': quote.bid_price,
-            'bid_size': quote.bid_size,
-            'ask_price': quote.ask_price,
-            'ask_size': quote.ask_size,
-            'timestamp': quote.timestamp,
-            'received_at': datetime.now().isoformat()
-        }
-        self.latest_quotes[quote.symbol] = quote_data
-        self.quote_queue.put(quote_data)
-        logger.debug(f"Quote received: {quote.symbol} bid: {quote.bid_price}, ask: {quote.ask_price}")
+        try:
+            quote_data = {
+                'symbol': quote.symbol,
+                'bid_price': quote.bid_price,
+                'bid_size': quote.bid_size,
+                'ask_price': quote.ask_price,
+                'ask_size': quote.ask_size,
+                'timestamp': quote.timestamp,
+                'received_at': datetime.now().isoformat()
+            }
+            self.latest_quotes[quote.symbol] = quote_data
+            self.quote_queue.put(quote_data)
+            logger.debug(f"Quote received: {quote.symbol} bid: {quote.bid_price}, ask: {quote.ask_price}")
+        except Exception as e:
+            logger.error(f"Error in quote callback: {e}")
 
-    def _bar_callback(self, bar):
+    async def _bar_callback(self, bar):
         """Callback for bar updates."""
-        bar_data = {
-            'symbol': bar.symbol,
-            'open': bar.open,
-            'high': bar.high,
-            'low': bar.low,
-            'close': bar.close,
-            'volume': bar.volume,
-            'timestamp': bar.timestamp,
-            'received_at': datetime.now().isoformat()
-        }
-        self.latest_bars[bar.symbol] = bar_data
-        self.bar_queue.put(bar_data)
-        logger.debug(f"Bar received: {bar.symbol} OHLC: {bar.open}/{bar.high}/{bar.low}/{bar.close}")
+        try:
+            bar_data = {
+                'symbol': bar.symbol,
+                'open': bar.open,
+                'high': bar.high,
+                'low': bar.low,
+                'close': bar.close,
+                'volume': bar.volume,
+                'timestamp': bar.timestamp,
+                'received_at': datetime.now().isoformat()
+            }
+            self.latest_bars[bar.symbol] = bar_data
+            self.bar_queue.put(bar_data)
+            logger.debug(f"Bar received: {bar.symbol} OHLC: {bar.open}/{bar.high}/{bar.low}/{bar.close}")
+        except Exception as e:
+            logger.error(f"Error in bar callback: {e}")
 
     def start(self):
         """Start the WebSocket connection in a separate thread."""
@@ -91,6 +102,11 @@ class WebSocketListener:
         def run_ws():
             """Run the WebSocket connection."""
             try:
+                # Create a new event loop for this thread
+                self.loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(self.loop)
+
+                # Create the WebSocket stream
                 self.stream = self.alpaca_api.create_websocket_connection()
 
                 # Override the default callbacks
@@ -99,7 +115,7 @@ class WebSocketListener:
                 self.stream.subscribe_bars(self._bar_callback, *self.symbols)
 
                 logger.info(f"Starting WebSocket connection for {len(self.symbols)} symbols")
-                self.stream.run()
+                self.loop.run_until_complete(self.stream.run())
             except Exception as e:
                 logger.error(f"WebSocket error: {e}")
                 self.running = False
@@ -116,8 +132,10 @@ class WebSocketListener:
             return
 
         self.running = False
-        if self.stream:
-            self.stream.stop()
+
+        if self.stream and self.loop:
+            # Schedule the stream.stop() in the event loop
+            asyncio.run_coroutine_threadsafe(self.stream.stop(), self.loop)
 
         if self.thread and self.thread.is_alive():
             self.thread.join(timeout=5)
@@ -137,10 +155,15 @@ class WebSocketListener:
         self.symbols.extend(new_symbols)
 
         # If already running, update the stream subscriptions
-        if self.running and self.stream:
-            self.stream.subscribe_trades(self._trade_callback, *new_symbols)
-            self.stream.subscribe_quotes(self._quote_callback, *new_symbols)
-            self.stream.subscribe_bars(self._bar_callback, *new_symbols)
+        if self.running and self.stream and self.loop:
+            # Schedule the subscription updates in the event loop
+            for symbol in new_symbols:
+                asyncio.run_coroutine_threadsafe(
+                    self.stream.subscribe_trades(self._trade_callback, symbol), self.loop)
+                asyncio.run_coroutine_threadsafe(
+                    self.stream.subscribe_quotes(self._quote_callback, symbol), self.loop)
+                asyncio.run_coroutine_threadsafe(
+                    self.stream.subscribe_bars(self._bar_callback, symbol), self.loop)
 
         logger.info(f"Added symbols to WebSocket listener: {', '.join(new_symbols)}")
 

@@ -1,0 +1,82 @@
+2025-02-28 22:43:28,225 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 22:43:28,226 - backend.alpaca_api - INFO - Alpaca API client initialized
+2025-02-28 22:43:28,367 - backend.database - ERROR - Error connecting to database: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  role "postgres" does not exist
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-28 22:43:28,367 - __main__ - ERROR - Error initializing WebSocket integration: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  role "postgres" does not exist
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-28 22:43:28,367 - __main__ - ERROR - Error running WebSocket integration: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  role "postgres" does not exist
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-28 22:48:14,267 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 22:48:14,267 - backend.alpaca_api - INFO - Alpaca API client initialized
+2025-02-28 22:48:14,268 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 22:48:14,354 - backend.database - INFO - SQLite database connection established
+2025-02-28 22:48:14,354 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 22:48:14,354 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 22:48:14,354 - backend.websocket_listener - ERROR - WebSocket error: handler must be a coroutine function
+2025-02-28 22:48:14,354 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 22:48:14,354 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 22:48:14,354 - __main__ - INFO - Starting data processing loop...
+2025-02-28 22:52:31,318 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 22:52:31,319 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 22:52:31,320 - backend.websocket_listener - WARNING - WebSocket listener is not running
+2025-02-28 22:52:31,320 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 22:52:40,633 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 22:52:40,633 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 22:52:40,633 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 22:52:40,634 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmp3snri59p.json
+2025-02-28 22:52:40,634 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 22:52:41,042 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 22:52:41,042 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 22:52:41,062 - backend.database - INFO - SQLite database connection established
+2025-02-28 22:52:41,062 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 22:52:41,062 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 22:52:41,063 - backend.websocket_listener - ERROR - WebSocket error: handler must be a coroutine function
+2025-02-28 22:52:41,063 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 22:52:41,063 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 22:52:41,063 - __main__ - INFO - Starting data processing loop...
+2025-02-28 22:54:29,088 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 22:54:29,090 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 22:54:29,090 - backend.websocket_listener - WARNING - WebSocket listener is not running
+2025-02-28 22:54:29,090 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 22:54:31,355 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 22:54:31,355 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 22:54:31,355 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 22:54:31,356 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmphkvijbwj.json
+2025-02-28 22:54:31,356 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 22:54:31,725 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 22:54:31,726 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 22:54:31,749 - backend.database - INFO - SQLite database connection established
+2025-02-28 22:54:31,749 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 22:54:31,750 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 22:54:31,750 - backend.websocket_listener - ERROR - WebSocket error: handler must be a coroutine function
+2025-02-28 22:54:31,750 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 22:54:31,750 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 22:54:31,750 - __main__ - INFO - Starting data processing loop...
+2025-02-28 22:56:27,001 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 22:56:27,003 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 22:56:27,003 - backend.websocket_listener - WARNING - WebSocket listener is not running
+2025-02-28 22:56:27,003 - __main__ - INFO - WebSocket integration stopped.
+2025-02-28 23:02:44,200 - __main__ - INFO - Starting WebSocket integration...
+2025-02-28 23:02:44,200 - __main__ - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:02:44,200 - __main__ - INFO - Found API key in config: PKLZ...EMG4
+2025-02-28 23:02:44,200 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /var/folders/vl/gkvs4gr50375c1x471wm8qzm0000gn/T/tmp0w9cj5g7.json
+2025-02-28 23:02:44,201 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:02:44,618 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:02:44,620 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:02:44,644 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:02:44,645 - __main__ - INFO - WebSocket integration initialized successfully.
+2025-02-28 23:02:44,645 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:02:44,645 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:02:44,645 - __main__ - INFO - WebSocket listener started for symbols: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-02-28 23:02:44,645 - __main__ - INFO - Starting data processing loop...
+2025-02-28 23:02:44,645 - backend.websocket_listener - INFO - Starting WebSocket connection for 5 symbols
+2025-02-28 23:02:44,646 - alpaca_trade_api.stream - INFO - started stock data stream
+2025-02-28 23:02:44,646 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:45,176 - alpaca_trade_api.stream - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2025-02-28 23:02:45,300 - alpaca_trade_api.stream - INFO - subscribed to trades: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA'], quotes: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA'], bars: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA'], corrections: ['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA']
+2025-02-28 23:03:04,195 - __main__ - INFO - Received signal 2. Shutting down...
+2025-02-28 23:03:04,197 - __main__ - INFO - Stopping WebSocket listener...
+2025-02-28 23:03:04,199 - __main__ - ERROR - Error processing data: A coroutine object is required

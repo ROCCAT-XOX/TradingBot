@@ -1,0 +1,343 @@
+2025-02-28 22:43:30,998 - __main__ - ERROR - Error initializing Alpaca API: Alpaca API credentials not found. Please provide them in config file or as environment variables.
+2025-02-28 22:43:31,054 - backend.database - ERROR - Error connecting to database: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  role "postgres" does not exist
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-28 22:43:31,054 - __main__ - ERROR - Error initializing database: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  role "postgres" does not exist
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-28 22:48:16,941 - __main__ - ERROR - Error initializing Alpaca API: Alpaca API credentials not found. Please provide them in config file or as environment variables.
+2025-02-28 22:48:16,941 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 22:48:16,970 - backend.database - INFO - SQLite database connection established
+2025-02-28 22:52:43,404 - __main__ - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 22:52:43,404 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 22:52:43,404 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 22:52:43,772 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 22:52:43,905 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 22:52:43,970 - backend.database - INFO - SQLite database connection established
+2025-02-28 22:52:43,971 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL
+2025-02-28 22:52:43,972 - backend.websocket_listener - ERROR - WebSocket error: handler must be a coroutine function
+2025-02-28 22:52:43,972 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 22:54:34,177 - __main__ - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 22:54:34,178 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 22:54:34,178 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 22:54:34,543 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 22:54:34,670 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 22:54:34,748 - backend.database - INFO - SQLite database connection established
+2025-02-28 22:54:34,753 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL
+2025-02-28 22:54:34,753 - backend.websocket_listener - ERROR - WebSocket error: handler must be a coroutine function
+2025-02-28 22:54:34,753 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 22:55:38,935 - backend.websocket_listener - WARNING - WebSocket listener is not running
+2025-02-28 22:55:38,936 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: MSFT, GOOGL
+2025-02-28 22:55:38,937 - backend.websocket_listener - ERROR - WebSocket error: handler must be a coroutine function
+2025-02-28 22:55:38,937 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 22:55:40,860 - backend.websocket_listener - WARNING - WebSocket listener is not running
+2025-02-28 22:55:40,860 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: GOOGL
+2025-02-28 22:55:40,861 - backend.websocket_listener - ERROR - WebSocket error: handler must be a coroutine function
+2025-02-28 22:55:40,861 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 22:55:47,286 - backend.websocket_listener - WARNING - WebSocket listener is not running
+2025-02-28 22:55:47,287 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: NVDA
+2025-02-28 22:55:47,287 - backend.websocket_listener - ERROR - WebSocket error: handler must be a coroutine function
+2025-02-28 22:55:47,287 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:02:46,865 - __main__ - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:02:46,865 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-02-28 23:02:46,866 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-02-28 23:02:47,253 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-02-28 23:02:47,382 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-02-28 23:02:47,446 - backend.database - INFO - SQLite database connection established
+2025-02-28 23:02:47,448 - backend.websocket_listener - INFO - WebSocket listener initialized for symbols: AAPL, MSFT, GOOGL
+2025-02-28 23:02:47,448 - backend.websocket_listener - INFO - WebSocket listener started
+2025-02-28 23:02:47,448 - backend.websocket_listener - INFO - Starting WebSocket connection for 3 symbols
+2025-02-28 23:02:47,449 - alpaca_trade_api.stream - INFO - started stock data stream
+2025-02-28 23:02:47,449 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:48,022 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:48,037 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:48,556 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:48,567 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:49,062 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:49,076 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:49,596 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:49,608 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:50,144 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:50,157 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:50,681 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:50,693 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:51,256 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:51,267 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:51,786 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:51,798 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:52,326 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:52,338 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:52,863 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:52,876 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:53,411 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:53,423 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:53,954 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:53,966 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:54,483 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:54,496 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:55,023 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:55,034 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:55,555 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:55,567 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:56,095 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:56,107 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:56,625 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:56,637 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:57,175 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:57,187 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:57,823 - alpaca_trade_api.stream - WARNING - data websocket error, restarting connection: server rejected WebSocket connection: HTTP 429
+2025-02-28 23:02:57,835 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:58,354 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:58,366 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:58,896 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:58,909 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:59,440 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:59,453 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:02:59,977 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:02:59,990 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:03:00,510 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:03:00,522 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:03:01,047 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:03:01,060 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:03:01,688 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:03:01,700 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:03:02,267 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:03:02,278 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:03:02,804 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:03:02,816 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:03:03,340 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:03:03,351 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
+2025-02-28 23:03:03,871 - alpaca_trade_api.stream - ERROR - error during websocket communication: connection limit exceeded
+Traceback (most recent call last):
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 105, in _start_ws
+    await self._auth()
+  File "/Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/alpaca_trade_api/stream.py", line 99, in _auth
+    raise ValueError(msg[0].get('msg', 'auth failed'))
+ValueError: connection limit exceeded
+2025-02-28 23:03:03,884 - alpaca_trade_api.stream - INFO - starting stock data websocket connection
