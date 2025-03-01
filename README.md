@@ -146,6 +146,21 @@ python start.py
    ```
    python backend/websocket_integration.py
    ```
+   
+3. Training Bot
+   Starte auch den Trading-Bot im Test-Modus
+   ````
+   python start_training_mode.py --bot
+   ````
+   Starte auch das einfache Dashboard
+   ````
+   python start_training_mode.py --bot --simple
+   
+   ````
+   Starte alle zusammen
+   ````
+   python start_training_mode.py --bot --simple
+ 
 
 ### Dashboard Features
 

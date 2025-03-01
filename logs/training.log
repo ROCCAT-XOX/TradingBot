@@ -1,0 +1,758 @@
+2025-03-01 10:33:01,898 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:33:01,898 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:33:02,208 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:33:02,312 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:33:02,320 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:33:02,392 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:33:02,393 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:33:02,700 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:33:02,805 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:33:02,812 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:33:02,813 - backend.trade_bot - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:33:02,813 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:33:02,813 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:33:03,123 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:33:03,123 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:33:03,124 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:33:03,124 - backend.trade_bot - ERROR - No model found for AAPL
+2025-03-01 10:33:03,124 - backend.trade_bot - INFO - Using technical strategy for AAPL
+2025-03-01 10:33:03,124 - backend.trade_bot - ERROR - No model found for MSFT
+2025-03-01 10:33:03,124 - backend.trade_bot - INFO - Using technical strategy for MSFT
+2025-03-01 10:33:03,124 - backend.trade_bot - ERROR - No model found for GOOGL
+2025-03-01 10:33:03,124 - backend.trade_bot - INFO - Using technical strategy for GOOGL
+2025-03-01 10:33:03,124 - backend.trade_bot - ERROR - No model found for AMZN
+2025-03-01 10:33:03,124 - backend.trade_bot - INFO - Using technical strategy for AMZN
+2025-03-01 10:33:03,124 - backend.trade_bot - ERROR - No model found for TSLA
+2025-03-01 10:33:03,124 - backend.trade_bot - INFO - Using technical strategy for TSLA
+2025-03-01 10:33:03,124 - backend.trade_bot - INFO - All components initialized successfully
+2025-03-01 10:33:03,126 - __main__ - INFO - Fetching historical data for ['AAPL', 'MSFT', 'GOOGL']
+2025-03-01 10:33:03,653 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 10:33:03,659 - __main__ - WARNING - No active model found in database
+2025-03-01 10:33:03,720 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 10:33:03,720 - __main__ - WARNING - No active model found in database
+2025-03-01 10:51:59,723 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:51:59,723 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:52:00,060 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:52:00,164 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:52:00,179 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:52:05,332 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:52:05,332 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:52:05,653 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:52:05,767 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:52:05,788 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:52:05,790 - backend.trade_bot - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:52:05,790 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:52:05,791 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:52:06,149 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:52:06,150 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:52:06,155 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:52:06,156 - backend.trade_bot - ERROR - No model found for AAPL
+2025-03-01 10:52:06,156 - backend.trade_bot - INFO - Using technical strategy for AAPL
+2025-03-01 10:52:06,157 - backend.trade_bot - ERROR - No model found for MSFT
+2025-03-01 10:52:06,157 - backend.trade_bot - INFO - Using technical strategy for MSFT
+2025-03-01 10:52:06,157 - backend.trade_bot - ERROR - No model found for GOOGL
+2025-03-01 10:52:06,158 - backend.trade_bot - INFO - Using technical strategy for GOOGL
+2025-03-01 10:52:06,159 - backend.trade_bot - ERROR - No model found for AMZN
+2025-03-01 10:52:06,159 - backend.trade_bot - INFO - Using technical strategy for AMZN
+2025-03-01 10:52:06,159 - backend.trade_bot - ERROR - No model found for TSLA
+2025-03-01 10:52:06,159 - backend.trade_bot - INFO - Using technical strategy for TSLA
+2025-03-01 10:52:06,160 - backend.trade_bot - INFO - All components initialized successfully
+2025-03-01 10:52:06,167 - __main__ - INFO - Fetching historical data for ['AAPL', 'MSFT', 'GOOGL']
+2025-03-01 10:52:11,721 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 10:52:11,744 - __main__ - WARNING - No active model found in database
+2025-03-01 10:52:11,824 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 10:52:11,825 - __main__ - WARNING - No active model found in database
+2025-03-01 10:52:11,836 - __main__ - WARNING - Strategy for GOOGL is not an ML strategy
+2025-03-01 10:52:11,837 - __main__ - WARNING - No active model found in database
+2025-03-01 10:52:18,861 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:52:18,868 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:52:18,868 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:52:18,868 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:52:19,184 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:52:19,185 - __main__ - INFO - Using device: cpu
+2025-03-01 10:52:19,185 - __main__ - INFO - Fetching historical data for 5 symbols from 2024-03-01 to 2025-03-01
+2025-03-01 10:52:20,064 - __main__ - INFO - Training model for AAPL
+2025-03-01 10:52:20,736 - __main__ - INFO - Epoch 1/50 - Train Loss: 50130.515625, Valid Loss: 58791.199219
+2025-03-01 10:52:20,757 - __main__ - INFO - Epoch 2/50 - Train Loss: 50056.439453, Valid Loss: 58735.800781
+2025-03-01 10:52:20,778 - __main__ - INFO - Epoch 3/50 - Train Loss: 50006.720703, Valid Loss: 58679.882812
+2025-03-01 10:52:20,798 - __main__ - INFO - Epoch 4/50 - Train Loss: 50006.982422, Valid Loss: 58622.425781
+2025-03-01 10:52:20,819 - __main__ - INFO - Epoch 5/50 - Train Loss: 49964.148438, Valid Loss: 58562.054688
+2025-03-01 10:52:20,840 - __main__ - INFO - Epoch 6/50 - Train Loss: 49889.527344, Valid Loss: 58497.457031
+2025-03-01 10:52:20,859 - __main__ - INFO - Epoch 7/50 - Train Loss: 49835.783203, Valid Loss: 58427.199219
+2025-03-01 10:52:20,879 - __main__ - INFO - Epoch 8/50 - Train Loss: 49731.761719, Valid Loss: 58349.882812
+2025-03-01 10:52:20,899 - __main__ - INFO - Epoch 9/50 - Train Loss: 49693.937500, Valid Loss: 58264.324219
+2025-03-01 10:52:20,918 - __main__ - INFO - Epoch 10/50 - Train Loss: 49555.189453, Valid Loss: 58169.738281
+2025-03-01 10:52:20,939 - __main__ - INFO - Epoch 11/50 - Train Loss: 49518.613281, Valid Loss: 58066.175781
+2025-03-01 10:52:20,960 - __main__ - INFO - Epoch 12/50 - Train Loss: 49410.703125, Valid Loss: 57954.761719
+2025-03-01 10:52:20,978 - __main__ - INFO - Epoch 13/50 - Train Loss: 49293.701172, Valid Loss: 57838.042969
+2025-03-01 10:52:20,998 - __main__ - INFO - Epoch 14/50 - Train Loss: 49188.455078, Valid Loss: 57719.019531
+2025-03-01 10:52:21,019 - __main__ - INFO - Epoch 15/50 - Train Loss: 49078.677734, Valid Loss: 57600.105469
+2025-03-01 10:52:21,040 - __main__ - INFO - Epoch 16/50 - Train Loss: 49004.000000, Valid Loss: 57482.562500
+2025-03-01 10:52:21,063 - __main__ - INFO - Epoch 17/50 - Train Loss: 48844.667969, Valid Loss: 57366.445312
+2025-03-01 10:52:21,084 - __main__ - INFO - Epoch 18/50 - Train Loss: 48743.058594, Valid Loss: 57251.554688
+2025-03-01 10:52:21,104 - __main__ - INFO - Epoch 19/50 - Train Loss: 48673.572266, Valid Loss: 57137.648438
+2025-03-01 10:52:21,125 - __main__ - INFO - Epoch 20/50 - Train Loss: 48540.751953, Valid Loss: 57024.718750
+2025-03-01 10:52:21,146 - __main__ - INFO - Epoch 21/50 - Train Loss: 48431.865234, Valid Loss: 56912.726562
+2025-03-01 10:52:21,166 - __main__ - INFO - Epoch 22/50 - Train Loss: 48324.748047, Valid Loss: 56801.632812
+2025-03-01 10:52:21,186 - __main__ - INFO - Epoch 23/50 - Train Loss: 48238.917969, Valid Loss: 56691.312500
+2025-03-01 10:52:21,205 - __main__ - INFO - Epoch 24/50 - Train Loss: 48151.867188, Valid Loss: 56581.636719
+2025-03-01 10:52:21,225 - __main__ - INFO - Epoch 25/50 - Train Loss: 48024.021484, Valid Loss: 56472.242188
+2025-03-01 10:52:21,243 - __main__ - INFO - Epoch 26/50 - Train Loss: 47927.730469, Valid Loss: 56363.156250
+2025-03-01 10:52:21,264 - __main__ - INFO - Epoch 27/50 - Train Loss: 47797.187500, Valid Loss: 56254.519531
+2025-03-01 10:52:21,283 - __main__ - INFO - Epoch 28/50 - Train Loss: 47717.736328, Valid Loss: 56147.125000
+2025-03-01 10:52:21,302 - __main__ - INFO - Epoch 29/50 - Train Loss: 47605.962891, Valid Loss: 56042.000000
+2025-03-01 10:52:21,322 - __main__ - INFO - Epoch 30/50 - Train Loss: 47551.333984, Valid Loss: 55940.238281
+2025-03-01 10:52:21,342 - __main__ - INFO - Epoch 31/50 - Train Loss: 47462.414062, Valid Loss: 55842.742188
+2025-03-01 10:52:21,363 - __main__ - INFO - Epoch 32/50 - Train Loss: 47347.447266, Valid Loss: 55750.175781
+2025-03-01 10:52:21,382 - __main__ - INFO - Epoch 33/50 - Train Loss: 47273.029297, Valid Loss: 55662.750000
+2025-03-01 10:52:21,403 - __main__ - INFO - Epoch 34/50 - Train Loss: 47167.892578, Valid Loss: 55580.054688
+2025-03-01 10:52:21,424 - __main__ - INFO - Epoch 35/50 - Train Loss: 47101.892578, Valid Loss: 55501.437500
+2025-03-01 10:52:21,442 - __main__ - INFO - Epoch 36/50 - Train Loss: 47009.005859, Valid Loss: 55426.386719
+2025-03-01 10:52:21,463 - __main__ - INFO - Epoch 37/50 - Train Loss: 46964.865234, Valid Loss: 55354.511719
+2025-03-01 10:52:21,482 - __main__ - INFO - Epoch 38/50 - Train Loss: 46913.070312, Valid Loss: 55285.445312
+2025-03-01 10:52:21,502 - __main__ - INFO - Epoch 39/50 - Train Loss: 46850.267578, Valid Loss: 55218.625000
+2025-03-01 10:52:21,523 - __main__ - INFO - Epoch 40/50 - Train Loss: 46776.500000, Valid Loss: 55153.386719
+2025-03-01 10:52:21,543 - __main__ - INFO - Epoch 41/50 - Train Loss: 46693.107422, Valid Loss: 55089.917969
+2025-03-01 10:52:21,564 - __main__ - INFO - Epoch 42/50 - Train Loss: 46697.228516, Valid Loss: 55028.960938
+2025-03-01 10:52:21,582 - __main__ - INFO - Epoch 43/50 - Train Loss: 46577.632812, Valid Loss: 54970.292969
+2025-03-01 10:52:21,603 - __main__ - INFO - Epoch 44/50 - Train Loss: 46580.056641, Valid Loss: 54913.355469
+2025-03-01 10:52:21,624 - __main__ - INFO - Epoch 45/50 - Train Loss: 46499.404297, Valid Loss: 54857.625000
+2025-03-01 10:52:21,642 - __main__ - INFO - Epoch 46/50 - Train Loss: 46500.355469, Valid Loss: 54802.773438
+2025-03-01 10:52:21,663 - __main__ - INFO - Epoch 47/50 - Train Loss: 46399.654297, Valid Loss: 54748.417969
+2025-03-01 10:52:21,681 - __main__ - INFO - Epoch 48/50 - Train Loss: 46350.109375, Valid Loss: 54694.386719
+2025-03-01 10:52:21,701 - __main__ - INFO - Epoch 49/50 - Train Loss: 46279.189453, Valid Loss: 54640.738281
+2025-03-01 10:52:21,722 - __main__ - INFO - Epoch 50/50 - Train Loss: 46226.734375, Valid Loss: 54587.574219
+2025-03-01 10:52:21,724 - __main__ - INFO - Model evaluation for AAPL:
+2025-03-01 10:52:21,724 - __main__ - INFO -   MSE: 55145.515625
+2025-03-01 10:52:21,724 - __main__ - INFO -   RMSE: 234.830826
+2025-03-01 10:52:21,724 - __main__ - INFO -   MAE: 234.812363
+2025-03-01 10:52:21,820 - __main__ - ERROR - Error training model for AAPL: Object of type float32 is not JSON serializable
+2025-03-01 10:52:21,820 - __main__ - INFO - Training model for MSFT
+2025-03-01 10:52:21,857 - __main__ - INFO - Epoch 1/50 - Train Loss: 182239.015625, Valid Loss: 177723.593750
+2025-03-01 10:52:21,882 - __main__ - INFO - Epoch 2/50 - Train Loss: 182297.046875, Valid Loss: 177621.296875
+2025-03-01 10:52:21,903 - __main__ - INFO - Epoch 3/50 - Train Loss: 181967.804688, Valid Loss: 177516.609375
+2025-03-01 10:52:21,924 - __main__ - INFO - Epoch 4/50 - Train Loss: 181828.890625, Valid Loss: 177404.781250
+2025-03-01 10:52:21,944 - __main__ - INFO - Epoch 5/50 - Train Loss: 181818.132812, Valid Loss: 177290.796875
+2025-03-01 10:52:21,964 - __main__ - INFO - Epoch 6/50 - Train Loss: 181776.250000, Valid Loss: 177172.531250
+2025-03-01 10:52:21,986 - __main__ - INFO - Epoch 7/50 - Train Loss: 181617.492188, Valid Loss: 177044.062500
+2025-03-01 10:52:22,005 - __main__ - INFO - Epoch 8/50 - Train Loss: 181702.648438, Valid Loss: 176900.671875
+2025-03-01 10:52:22,025 - __main__ - INFO - Epoch 9/50 - Train Loss: 181410.382812, Valid Loss: 176740.718750
+2025-03-01 10:52:22,046 - __main__ - INFO - Epoch 10/50 - Train Loss: 181330.531250, Valid Loss: 176562.953125
+2025-03-01 10:52:22,065 - __main__ - INFO - Epoch 11/50 - Train Loss: 180891.023438, Valid Loss: 176367.375000
+2025-03-01 10:52:22,086 - __main__ - INFO - Epoch 12/50 - Train Loss: 180757.070312, Valid Loss: 176156.500000
+2025-03-01 10:52:22,110 - __main__ - INFO - Epoch 13/50 - Train Loss: 180824.070312, Valid Loss: 175934.734375
+2025-03-01 10:52:22,135 - __main__ - INFO - Epoch 14/50 - Train Loss: 180481.960938, Valid Loss: 175707.484375
+2025-03-01 10:52:22,163 - __main__ - INFO - Epoch 15/50 - Train Loss: 180160.984375, Valid Loss: 175479.687500
+2025-03-01 10:52:22,185 - __main__ - INFO - Epoch 16/50 - Train Loss: 179827.828125, Valid Loss: 175254.000000
+2025-03-01 10:52:22,204 - __main__ - INFO - Epoch 17/50 - Train Loss: 179567.281250, Valid Loss: 175030.875000
+2025-03-01 10:52:22,225 - __main__ - INFO - Epoch 18/50 - Train Loss: 179417.375000, Valid Loss: 174809.953125
+2025-03-01 10:52:22,246 - __main__ - INFO - Epoch 19/50 - Train Loss: 179220.062500, Valid Loss: 174591.156250
+2025-03-01 10:52:22,266 - __main__ - INFO - Epoch 20/50 - Train Loss: 178962.820312, Valid Loss: 174374.328125
+2025-03-01 10:52:22,288 - __main__ - INFO - Epoch 21/50 - Train Loss: 178831.609375, Valid Loss: 174159.265625
+2025-03-01 10:52:22,308 - __main__ - INFO - Epoch 22/50 - Train Loss: 178555.351562, Valid Loss: 173945.906250
+2025-03-01 10:52:22,328 - __main__ - INFO - Epoch 23/50 - Train Loss: 178461.437500, Valid Loss: 173734.687500
+2025-03-01 10:52:22,348 - __main__ - INFO - Epoch 24/50 - Train Loss: 178260.023438, Valid Loss: 173526.515625
+2025-03-01 10:52:22,368 - __main__ - INFO - Epoch 25/50 - Train Loss: 177913.703125, Valid Loss: 173322.093750
+2025-03-01 10:52:22,389 - __main__ - INFO - Epoch 26/50 - Train Loss: 177619.125000, Valid Loss: 173122.218750
+2025-03-01 10:52:22,410 - __main__ - INFO - Epoch 27/50 - Train Loss: 177509.625000, Valid Loss: 172927.921875
+2025-03-01 10:52:22,431 - __main__ - INFO - Epoch 28/50 - Train Loss: 177343.406250, Valid Loss: 172740.890625
+2025-03-01 10:52:22,453 - __main__ - INFO - Epoch 29/50 - Train Loss: 177109.687500, Valid Loss: 172562.328125
+2025-03-01 10:52:22,474 - __main__ - INFO - Epoch 30/50 - Train Loss: 177041.898438, Valid Loss: 172392.234375
+2025-03-01 10:52:22,494 - __main__ - INFO - Epoch 31/50 - Train Loss: 176747.820312, Valid Loss: 172229.625000
+2025-03-01 10:52:22,516 - __main__ - INFO - Epoch 32/50 - Train Loss: 176690.109375, Valid Loss: 172073.546875
+2025-03-01 10:52:22,535 - __main__ - INFO - Epoch 33/50 - Train Loss: 176346.250000, Valid Loss: 171923.031250
+2025-03-01 10:52:22,557 - __main__ - INFO - Epoch 34/50 - Train Loss: 176459.687500, Valid Loss: 171777.546875
+2025-03-01 10:52:22,579 - __main__ - INFO - Epoch 35/50 - Train Loss: 176185.429688, Valid Loss: 171636.578125
+2025-03-01 10:52:22,600 - __main__ - INFO - Epoch 36/50 - Train Loss: 175969.570312, Valid Loss: 171499.421875
+2025-03-01 10:52:22,620 - __main__ - INFO - Epoch 37/50 - Train Loss: 175985.585938, Valid Loss: 171365.578125
+2025-03-01 10:52:22,641 - __main__ - INFO - Epoch 38/50 - Train Loss: 175790.609375, Valid Loss: 171235.406250
+2025-03-01 10:52:22,659 - __main__ - INFO - Epoch 39/50 - Train Loss: 175754.414062, Valid Loss: 171110.031250
+2025-03-01 10:52:22,680 - __main__ - INFO - Epoch 40/50 - Train Loss: 175479.546875, Valid Loss: 170988.828125
+2025-03-01 10:52:22,700 - __main__ - INFO - Epoch 41/50 - Train Loss: 175368.585938, Valid Loss: 170870.984375
+2025-03-01 10:52:22,721 - __main__ - INFO - Epoch 42/50 - Train Loss: 175371.195312, Valid Loss: 170755.890625
+2025-03-01 10:52:22,743 - __main__ - INFO - Epoch 43/50 - Train Loss: 175071.828125, Valid Loss: 170643.250000
+2025-03-01 10:52:22,765 - __main__ - INFO - Epoch 44/50 - Train Loss: 174971.210938, Valid Loss: 170532.875000
+2025-03-01 10:52:22,785 - __main__ - INFO - Epoch 45/50 - Train Loss: 174989.539062, Valid Loss: 170424.421875
+2025-03-01 10:52:22,807 - __main__ - INFO - Epoch 46/50 - Train Loss: 174824.562500, Valid Loss: 170317.781250
+2025-03-01 10:52:22,826 - __main__ - INFO - Epoch 47/50 - Train Loss: 174649.804688, Valid Loss: 170212.781250
+2025-03-01 10:52:22,846 - __main__ - INFO - Epoch 48/50 - Train Loss: 174565.164062, Valid Loss: 170109.390625
+2025-03-01 10:52:22,867 - __main__ - INFO - Epoch 49/50 - Train Loss: 174465.640625, Valid Loss: 170007.843750
+2025-03-01 10:52:22,888 - __main__ - INFO - Epoch 50/50 - Train Loss: 174308.421875, Valid Loss: 169908.625000
+2025-03-01 10:52:22,890 - __main__ - INFO - Model evaluation for MSFT:
+2025-03-01 10:52:22,890 - __main__ - INFO -   MSE: 156852.390625
+2025-03-01 10:52:22,890 - __main__ - INFO -   RMSE: 396.045959
+2025-03-01 10:52:22,890 - __main__ - INFO -   MAE: 395.978821
+2025-03-01 10:52:23,019 - __main__ - ERROR - Error training model for MSFT: Object of type float32 is not JSON serializable
+2025-03-01 10:52:23,019 - __main__ - INFO - Training model for GOOGL
+2025-03-01 10:52:23,055 - __main__ - INFO - Epoch 1/50 - Train Loss: 28835.767578, Valid Loss: 36859.664062
+2025-03-01 10:52:23,078 - __main__ - INFO - Epoch 2/50 - Train Loss: 28804.208008, Valid Loss: 36818.699219
+2025-03-01 10:52:23,099 - __main__ - INFO - Epoch 3/50 - Train Loss: 28737.083008, Valid Loss: 36776.925781
+2025-03-01 10:52:23,120 - __main__ - INFO - Epoch 4/50 - Train Loss: 28702.287109, Valid Loss: 36732.992188
+2025-03-01 10:52:23,144 - __main__ - INFO - Epoch 5/50 - Train Loss: 28700.583984, Valid Loss: 36685.652344
+2025-03-01 10:52:23,166 - __main__ - INFO - Epoch 6/50 - Train Loss: 28619.617188, Valid Loss: 36633.398438
+2025-03-01 10:52:23,186 - __main__ - INFO - Epoch 7/50 - Train Loss: 28583.694336, Valid Loss: 36574.820312
+2025-03-01 10:52:23,208 - __main__ - INFO - Epoch 8/50 - Train Loss: 28549.257812, Valid Loss: 36508.261719
+2025-03-01 10:52:23,228 - __main__ - INFO - Epoch 9/50 - Train Loss: 28475.648438, Valid Loss: 36432.304688
+2025-03-01 10:52:23,247 - __main__ - INFO - Epoch 10/50 - Train Loss: 28415.290039, Valid Loss: 36349.253906
+2025-03-01 10:52:23,269 - __main__ - INFO - Epoch 11/50 - Train Loss: 28340.098633, Valid Loss: 36267.890625
+2025-03-01 10:52:23,291 - __main__ - INFO - Epoch 12/50 - Train Loss: 28252.056641, Valid Loss: 36159.710938
+2025-03-01 10:52:23,311 - __main__ - INFO - Epoch 13/50 - Train Loss: 28176.584961, Valid Loss: 36037.101562
+2025-03-01 10:52:23,332 - __main__ - INFO - Epoch 14/50 - Train Loss: 28031.282227, Valid Loss: 35918.164062
+2025-03-01 10:52:23,353 - __main__ - INFO - Epoch 15/50 - Train Loss: 27948.147461, Valid Loss: 35805.300781
+2025-03-01 10:52:23,374 - __main__ - INFO - Epoch 16/50 - Train Loss: 27841.782227, Valid Loss: 35696.382812
+2025-03-01 10:52:23,393 - __main__ - INFO - Epoch 17/50 - Train Loss: 27786.637695, Valid Loss: 35591.460938
+2025-03-01 10:52:23,414 - __main__ - INFO - Epoch 18/50 - Train Loss: 27655.009766, Valid Loss: 35490.722656
+2025-03-01 10:52:23,435 - __main__ - INFO - Epoch 19/50 - Train Loss: 27584.569336, Valid Loss: 35394.054688
+2025-03-01 10:52:23,477 - __main__ - INFO - Epoch 20/50 - Train Loss: 27478.509766, Valid Loss: 35300.839844
+2025-03-01 10:52:23,512 - __main__ - INFO - Epoch 21/50 - Train Loss: 27383.250977, Valid Loss: 35210.507812
+2025-03-01 10:52:23,534 - __main__ - INFO - Epoch 22/50 - Train Loss: 27322.208984, Valid Loss: 35122.710938
+2025-03-01 10:52:23,558 - __main__ - INFO - Epoch 23/50 - Train Loss: 27248.199219, Valid Loss: 35037.210938
+2025-03-01 10:52:23,579 - __main__ - INFO - Epoch 24/50 - Train Loss: 27152.490234, Valid Loss: 34953.757812
+2025-03-01 10:52:23,602 - __main__ - INFO - Epoch 25/50 - Train Loss: 27101.107422, Valid Loss: 34872.191406
+2025-03-01 10:52:23,622 - __main__ - INFO - Epoch 26/50 - Train Loss: 27042.429688, Valid Loss: 34792.445312
+2025-03-01 10:52:23,642 - __main__ - INFO - Epoch 27/50 - Train Loss: 26956.967773, Valid Loss: 34714.539062
+2025-03-01 10:52:23,662 - __main__ - INFO - Epoch 28/50 - Train Loss: 26916.116211, Valid Loss: 34638.507812
+2025-03-01 10:52:23,682 - __main__ - INFO - Epoch 29/50 - Train Loss: 26799.783203, Valid Loss: 34564.214844
+2025-03-01 10:52:23,703 - __main__ - INFO - Epoch 30/50 - Train Loss: 26782.673828, Valid Loss: 34491.914062
+2025-03-01 10:52:23,724 - __main__ - INFO - Epoch 31/50 - Train Loss: 26692.928711, Valid Loss: 34422.003906
+2025-03-01 10:52:23,745 - __main__ - INFO - Epoch 32/50 - Train Loss: 26647.679688, Valid Loss: 34355.277344
+2025-03-01 10:52:23,766 - __main__ - INFO - Epoch 33/50 - Train Loss: 26602.878906, Valid Loss: 34292.054688
+2025-03-01 10:52:23,785 - __main__ - INFO - Epoch 34/50 - Train Loss: 26515.628906, Valid Loss: 34232.011719
+2025-03-01 10:52:23,806 - __main__ - INFO - Epoch 35/50 - Train Loss: 26455.965820, Valid Loss: 34174.585938
+2025-03-01 10:52:23,827 - __main__ - INFO - Epoch 36/50 - Train Loss: 26390.785156, Valid Loss: 34119.164062
+2025-03-01 10:52:23,847 - __main__ - INFO - Epoch 37/50 - Train Loss: 26409.994141, Valid Loss: 34065.460938
+2025-03-01 10:52:23,867 - __main__ - INFO - Epoch 38/50 - Train Loss: 26321.293945, Valid Loss: 34013.203125
+2025-03-01 10:52:23,887 - __main__ - INFO - Epoch 39/50 - Train Loss: 26271.693359, Valid Loss: 33962.324219
+2025-03-01 10:52:23,908 - __main__ - INFO - Epoch 40/50 - Train Loss: 26226.794922, Valid Loss: 33912.746094
+2025-03-01 10:52:23,928 - __main__ - INFO - Epoch 41/50 - Train Loss: 26233.370117, Valid Loss: 33864.367188
+2025-03-01 10:52:23,948 - __main__ - INFO - Epoch 42/50 - Train Loss: 26136.353516, Valid Loss: 33816.871094
+2025-03-01 10:52:23,971 - __main__ - INFO - Epoch 43/50 - Train Loss: 26100.483398, Valid Loss: 33770.148438
+2025-03-01 10:52:23,993 - __main__ - INFO - Epoch 44/50 - Train Loss: 26057.999023, Valid Loss: 33724.125000
+2025-03-01 10:52:24,013 - __main__ - INFO - Epoch 45/50 - Train Loss: 26017.428711, Valid Loss: 33678.773438
+2025-03-01 10:52:24,034 - __main__ - INFO - Epoch 46/50 - Train Loss: 25965.779297, Valid Loss: 33633.992188
+2025-03-01 10:52:24,052 - __main__ - INFO - Epoch 47/50 - Train Loss: 25980.845703, Valid Loss: 33589.855469
+2025-03-01 10:52:24,074 - __main__ - INFO - Epoch 48/50 - Train Loss: 25867.095703, Valid Loss: 33546.328125
+2025-03-01 10:52:24,095 - __main__ - INFO - Epoch 49/50 - Train Loss: 25851.938477, Valid Loss: 33503.503906
+2025-03-01 10:52:24,116 - __main__ - INFO - Epoch 50/50 - Train Loss: 25823.938477, Valid Loss: 33461.394531
+2025-03-01 10:52:24,118 - __main__ - INFO - Model evaluation for GOOGL:
+2025-03-01 10:52:24,118 - __main__ - INFO -   MSE: 28932.341797
+2025-03-01 10:52:24,118 - __main__ - INFO -   RMSE: 170.095093
+2025-03-01 10:52:24,118 - __main__ - INFO -   MAE: 169.982651
+2025-03-01 10:52:24,184 - __main__ - ERROR - Error training model for GOOGL: Object of type float32 is not JSON serializable
+2025-03-01 10:52:24,185 - __main__ - INFO - Training model for AMZN
+2025-03-01 10:52:24,221 - __main__ - INFO - Epoch 1/50 - Train Loss: 35212.464844, Valid Loss: 48822.148438
+2025-03-01 10:52:24,240 - __main__ - INFO - Epoch 2/50 - Train Loss: 35127.816406, Valid Loss: 48761.082031
+2025-03-01 10:52:24,260 - __main__ - INFO - Epoch 3/50 - Train Loss: 35096.931641, Valid Loss: 48697.976562
+2025-03-01 10:52:24,280 - __main__ - INFO - Epoch 4/50 - Train Loss: 35078.562500, Valid Loss: 48631.304688
+2025-03-01 10:52:24,301 - __main__ - INFO - Epoch 5/50 - Train Loss: 34976.845703, Valid Loss: 48559.246094
+2025-03-01 10:52:24,321 - __main__ - INFO - Epoch 6/50 - Train Loss: 34898.601562, Valid Loss: 48479.992188
+2025-03-01 10:52:24,341 - __main__ - INFO - Epoch 7/50 - Train Loss: 34877.335938, Valid Loss: 48391.820312
+2025-03-01 10:52:24,365 - __main__ - INFO - Epoch 8/50 - Train Loss: 34737.689453, Valid Loss: 48293.429688
+2025-03-01 10:52:24,385 - __main__ - INFO - Epoch 9/50 - Train Loss: 34690.314453, Valid Loss: 48184.230469
+2025-03-01 10:52:24,406 - __main__ - INFO - Epoch 10/50 - Train Loss: 34550.939453, Valid Loss: 48064.593750
+2025-03-01 10:52:24,426 - __main__ - INFO - Epoch 11/50 - Train Loss: 34473.380859, Valid Loss: 47936.292969
+2025-03-01 10:52:24,444 - __main__ - INFO - Epoch 12/50 - Train Loss: 34362.921875, Valid Loss: 47802.164062
+2025-03-01 10:52:24,465 - __main__ - INFO - Epoch 13/50 - Train Loss: 34226.148438, Valid Loss: 47666.343750
+2025-03-01 10:52:24,485 - __main__ - INFO - Epoch 14/50 - Train Loss: 34096.400391, Valid Loss: 47532.820312
+2025-03-01 10:52:24,505 - __main__ - INFO - Epoch 15/50 - Train Loss: 34011.714844, Valid Loss: 47404.039062
+2025-03-01 10:52:24,527 - __main__ - INFO - Epoch 16/50 - Train Loss: 33882.353516, Valid Loss: 47280.582031
+2025-03-01 10:52:24,545 - __main__ - INFO - Epoch 17/50 - Train Loss: 33799.621094, Valid Loss: 47162.175781
+2025-03-01 10:52:24,566 - __main__ - INFO - Epoch 18/50 - Train Loss: 33695.029297, Valid Loss: 47048.437500
+2025-03-01 10:52:24,585 - __main__ - INFO - Epoch 19/50 - Train Loss: 33620.570312, Valid Loss: 46939.234375
+2025-03-01 10:52:24,606 - __main__ - INFO - Epoch 20/50 - Train Loss: 33470.060547, Valid Loss: 46834.523438
+2025-03-01 10:52:24,627 - __main__ - INFO - Epoch 21/50 - Train Loss: 33413.839844, Valid Loss: 46734.207031
+2025-03-01 10:52:24,646 - __main__ - INFO - Epoch 22/50 - Train Loss: 33320.193359, Valid Loss: 46637.972656
+2025-03-01 10:52:24,664 - __main__ - INFO - Epoch 23/50 - Train Loss: 33244.800781, Valid Loss: 46545.531250
+2025-03-01 10:52:24,683 - __main__ - INFO - Epoch 24/50 - Train Loss: 33201.169922, Valid Loss: 46456.648438
+2025-03-01 10:52:24,702 - __main__ - INFO - Epoch 25/50 - Train Loss: 33087.753906, Valid Loss: 46371.011719
+2025-03-01 10:52:24,721 - __main__ - INFO - Epoch 26/50 - Train Loss: 33043.800781, Valid Loss: 46288.664062
+2025-03-01 10:52:24,740 - __main__ - INFO - Epoch 27/50 - Train Loss: 32945.887695, Valid Loss: 46209.417969
+2025-03-01 10:52:24,761 - __main__ - INFO - Epoch 28/50 - Train Loss: 32873.431641, Valid Loss: 46133.003906
+2025-03-01 10:52:24,779 - __main__ - INFO - Epoch 29/50 - Train Loss: 32814.995117, Valid Loss: 46059.156250
+2025-03-01 10:52:24,800 - __main__ - INFO - Epoch 30/50 - Train Loss: 32792.389648, Valid Loss: 45987.679688
+2025-03-01 10:52:24,822 - __main__ - INFO - Epoch 31/50 - Train Loss: 32736.137695, Valid Loss: 45918.449219
+2025-03-01 10:52:24,840 - __main__ - INFO - Epoch 32/50 - Train Loss: 32655.070312, Valid Loss: 45851.355469
+2025-03-01 10:52:24,861 - __main__ - INFO - Epoch 33/50 - Train Loss: 32605.503906, Valid Loss: 45786.347656
+2025-03-01 10:52:24,880 - __main__ - INFO - Epoch 34/50 - Train Loss: 32564.247070, Valid Loss: 45723.230469
+2025-03-01 10:52:24,900 - __main__ - INFO - Epoch 35/50 - Train Loss: 32493.312500, Valid Loss: 45661.839844
+2025-03-01 10:52:24,921 - __main__ - INFO - Epoch 36/50 - Train Loss: 32453.631836, Valid Loss: 45601.984375
+2025-03-01 10:52:24,942 - __main__ - INFO - Epoch 37/50 - Train Loss: 32367.050781, Valid Loss: 45543.613281
+2025-03-01 10:52:24,963 - __main__ - INFO - Epoch 38/50 - Train Loss: 32345.433594, Valid Loss: 45486.761719
+2025-03-01 10:52:24,983 - __main__ - INFO - Epoch 39/50 - Train Loss: 32291.901367, Valid Loss: 45431.414062
+2025-03-01 10:52:25,002 - __main__ - INFO - Epoch 40/50 - Train Loss: 32237.206055, Valid Loss: 45377.402344
+2025-03-01 10:52:25,024 - __main__ - INFO - Epoch 41/50 - Train Loss: 32182.951172, Valid Loss: 45324.625000
+2025-03-01 10:52:25,043 - __main__ - INFO - Epoch 42/50 - Train Loss: 32100.453125, Valid Loss: 45272.855469
+2025-03-01 10:52:25,063 - __main__ - INFO - Epoch 43/50 - Train Loss: 32111.158203, Valid Loss: 45221.960938
+2025-03-01 10:52:25,083 - __main__ - INFO - Epoch 44/50 - Train Loss: 32059.190430, Valid Loss: 45171.765625
+2025-03-01 10:52:25,103 - __main__ - INFO - Epoch 45/50 - Train Loss: 32002.555664, Valid Loss: 45122.070312
+2025-03-01 10:52:25,124 - __main__ - INFO - Epoch 46/50 - Train Loss: 31978.738281, Valid Loss: 45072.761719
+2025-03-01 10:52:25,146 - __main__ - INFO - Epoch 47/50 - Train Loss: 31929.621094, Valid Loss: 45023.687500
+2025-03-01 10:52:25,166 - __main__ - INFO - Epoch 48/50 - Train Loss: 31913.132812, Valid Loss: 44974.644531
+2025-03-01 10:52:25,189 - __main__ - INFO - Epoch 49/50 - Train Loss: 31846.143555, Valid Loss: 44925.410156
+2025-03-01 10:52:25,210 - __main__ - INFO - Epoch 50/50 - Train Loss: 31830.462891, Valid Loss: 44876.023438
+2025-03-01 10:52:25,212 - __main__ - INFO - Model evaluation for AMZN:
+2025-03-01 10:52:25,212 - __main__ - INFO -   MSE: 44139.230469
+2025-03-01 10:52:25,212 - __main__ - INFO -   RMSE: 210.093384
+2025-03-01 10:52:25,212 - __main__ - INFO -   MAE: 209.961334
+2025-03-01 10:52:25,276 - __main__ - ERROR - Error training model for AMZN: Object of type float32 is not JSON serializable
+2025-03-01 10:52:25,276 - __main__ - INFO - Training model for TSLA
+2025-03-01 10:52:25,314 - __main__ - INFO - Epoch 1/50 - Train Loss: 58980.583984, Valid Loss: 160503.671875
+2025-03-01 10:52:25,333 - __main__ - INFO - Epoch 2/50 - Train Loss: 59101.609375, Valid Loss: 160399.109375
+2025-03-01 10:52:25,354 - __main__ - INFO - Epoch 3/50 - Train Loss: 59065.777344, Valid Loss: 160290.031250
+2025-03-01 10:52:25,374 - __main__ - INFO - Epoch 4/50 - Train Loss: 58568.425781, Valid Loss: 160174.109375
+2025-03-01 10:52:25,394 - __main__ - INFO - Epoch 5/50 - Train Loss: 58883.041016, Valid Loss: 160049.593750
+2025-03-01 10:52:25,416 - __main__ - INFO - Epoch 6/50 - Train Loss: 58760.375000, Valid Loss: 159913.328125
+2025-03-01 10:52:25,437 - __main__ - INFO - Epoch 7/50 - Train Loss: 58453.626953, Valid Loss: 159762.031250
+2025-03-01 10:52:25,459 - __main__ - INFO - Epoch 8/50 - Train Loss: 58494.179688, Valid Loss: 159592.078125
+2025-03-01 10:52:25,480 - __main__ - INFO - Epoch 9/50 - Train Loss: 58551.949219, Valid Loss: 159399.562500
+2025-03-01 10:52:25,500 - __main__ - INFO - Epoch 10/50 - Train Loss: 58068.312500, Valid Loss: 159181.718750
+2025-03-01 10:52:25,521 - __main__ - INFO - Epoch 11/50 - Train Loss: 58125.976562, Valid Loss: 158940.015625
+2025-03-01 10:52:25,540 - __main__ - INFO - Epoch 12/50 - Train Loss: 57928.259766, Valid Loss: 158680.578125
+2025-03-01 10:52:25,560 - __main__ - INFO - Epoch 13/50 - Train Loss: 57890.535156, Valid Loss: 158413.781250
+2025-03-01 10:52:25,588 - __main__ - INFO - Epoch 14/50 - Train Loss: 57499.750000, Valid Loss: 158149.625000
+2025-03-01 10:52:25,610 - __main__ - INFO - Epoch 15/50 - Train Loss: 57680.541016, Valid Loss: 157893.593750
+2025-03-01 10:52:25,630 - __main__ - INFO - Epoch 16/50 - Train Loss: 57219.958984, Valid Loss: 157645.171875
+2025-03-01 10:52:25,650 - __main__ - INFO - Epoch 17/50 - Train Loss: 57158.759766, Valid Loss: 157402.906250
+2025-03-01 10:52:25,670 - __main__ - INFO - Epoch 18/50 - Train Loss: 57172.134766, Valid Loss: 157165.500000
+2025-03-01 10:52:25,690 - __main__ - INFO - Epoch 19/50 - Train Loss: 57039.671875, Valid Loss: 156932.828125
+2025-03-01 10:52:25,711 - __main__ - INFO - Epoch 20/50 - Train Loss: 56954.201172, Valid Loss: 156705.687500
+2025-03-01 10:52:25,731 - __main__ - INFO - Epoch 21/50 - Train Loss: 56782.894531, Valid Loss: 156484.500000
+2025-03-01 10:52:25,751 - __main__ - INFO - Epoch 22/50 - Train Loss: 56553.400391, Valid Loss: 156269.625000
+2025-03-01 10:52:25,771 - __main__ - INFO - Epoch 23/50 - Train Loss: 56152.234375, Valid Loss: 156061.687500
+2025-03-01 10:52:25,792 - __main__ - INFO - Epoch 24/50 - Train Loss: 56094.521484, Valid Loss: 155861.625000
+2025-03-01 10:52:25,811 - __main__ - INFO - Epoch 25/50 - Train Loss: 56386.056641, Valid Loss: 155670.125000
+2025-03-01 10:52:25,832 - __main__ - INFO - Epoch 26/50 - Train Loss: 56170.175781, Valid Loss: 155487.718750
+2025-03-01 10:52:25,853 - __main__ - INFO - Epoch 27/50 - Train Loss: 55917.935547, Valid Loss: 155315.562500
+2025-03-01 10:52:25,876 - __main__ - INFO - Epoch 28/50 - Train Loss: 55963.347656, Valid Loss: 155154.093750
+2025-03-01 10:52:25,894 - __main__ - INFO - Epoch 29/50 - Train Loss: 55765.394531, Valid Loss: 155002.156250
+2025-03-01 10:52:25,916 - __main__ - INFO - Epoch 30/50 - Train Loss: 55515.437500, Valid Loss: 154858.203125
+2025-03-01 10:52:25,937 - __main__ - INFO - Epoch 31/50 - Train Loss: 55563.755859, Valid Loss: 154721.125000
+2025-03-01 10:52:25,969 - __main__ - INFO - Epoch 32/50 - Train Loss: 55502.597656, Valid Loss: 154589.671875
+2025-03-01 10:52:26,003 - __main__ - INFO - Epoch 33/50 - Train Loss: 55573.490234, Valid Loss: 154463.406250
+2025-03-01 10:52:26,039 - __main__ - INFO - Epoch 34/50 - Train Loss: 55220.435547, Valid Loss: 154342.046875
+2025-03-01 10:52:26,060 - __main__ - INFO - Epoch 35/50 - Train Loss: 55107.833984, Valid Loss: 154225.546875
+2025-03-01 10:52:26,082 - __main__ - INFO - Epoch 36/50 - Train Loss: 55448.703125, Valid Loss: 154113.703125
+2025-03-01 10:52:26,102 - __main__ - INFO - Epoch 37/50 - Train Loss: 55209.996094, Valid Loss: 154005.593750
+2025-03-01 10:52:26,123 - __main__ - INFO - Epoch 38/50 - Train Loss: 55104.810547, Valid Loss: 153900.843750
+2025-03-01 10:52:26,150 - __main__ - INFO - Epoch 39/50 - Train Loss: 54820.224609, Valid Loss: 153798.859375
+2025-03-01 10:52:26,177 - __main__ - INFO - Epoch 40/50 - Train Loss: 54583.982422, Valid Loss: 153699.171875
+2025-03-01 10:52:26,201 - __main__ - INFO - Epoch 41/50 - Train Loss: 54826.875000, Valid Loss: 153601.500000
+2025-03-01 10:52:26,227 - __main__ - INFO - Epoch 42/50 - Train Loss: 54599.234375, Valid Loss: 153505.062500
+2025-03-01 10:52:26,253 - __main__ - INFO - Epoch 43/50 - Train Loss: 54619.306641, Valid Loss: 153409.765625
+2025-03-01 10:52:26,280 - __main__ - INFO - Epoch 44/50 - Train Loss: 54858.736328, Valid Loss: 153315.578125
+2025-03-01 10:52:26,306 - __main__ - INFO - Epoch 45/50 - Train Loss: 54476.166016, Valid Loss: 153222.265625
+2025-03-01 10:52:26,328 - __main__ - INFO - Epoch 46/50 - Train Loss: 54515.552734, Valid Loss: 153130.031250
+2025-03-01 10:52:26,349 - __main__ - INFO - Epoch 47/50 - Train Loss: 54457.701172, Valid Loss: 153038.718750
+2025-03-01 10:52:26,370 - __main__ - INFO - Epoch 48/50 - Train Loss: 54387.996094, Valid Loss: 152948.281250
+2025-03-01 10:52:26,390 - __main__ - INFO - Epoch 49/50 - Train Loss: 54407.804688, Valid Loss: 152858.671875
+2025-03-01 10:52:26,412 - __main__ - INFO - Epoch 50/50 - Train Loss: 54541.800781, Valid Loss: 152770.203125
+2025-03-01 10:52:26,414 - __main__ - INFO - Model evaluation for TSLA:
+2025-03-01 10:52:26,414 - __main__ - INFO -   MSE: 102626.226562
+2025-03-01 10:52:26,414 - __main__ - INFO -   RMSE: 320.353271
+2025-03-01 10:52:26,414 - __main__ - INFO -   MAE: 319.008698
+2025-03-01 10:52:26,487 - __main__ - ERROR - Error training model for TSLA: Object of type float32 is not JSON serializable
+2025-03-01 10:57:12,859 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:57:12,859 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:57:13,179 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:57:13,285 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:57:13,295 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:57:18,498 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:57:18,498 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:57:18,811 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:57:18,927 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:57:18,950 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:57:18,952 - backend.trade_bot - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:57:18,953 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:57:18,953 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:57:19,269 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:57:19,269 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:57:19,272 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:57:19,275 - backend.trade_bot - ERROR - Error loading model for AAPL: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 10:57:19,275 - backend.trade_bot - INFO - Using technical strategy for AAPL
+2025-03-01 10:57:19,277 - backend.trade_bot - ERROR - Error loading model for MSFT: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 10:57:19,277 - backend.trade_bot - INFO - Using technical strategy for MSFT
+2025-03-01 10:57:19,279 - backend.trade_bot - ERROR - Error loading model for GOOGL: Expecting value: line 70 column 16 (char 1529)
+2025-03-01 10:57:19,279 - backend.trade_bot - INFO - Using technical strategy for GOOGL
+2025-03-01 10:57:19,280 - backend.trade_bot - ERROR - Error loading model for AMZN: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 10:57:19,280 - backend.trade_bot - INFO - Using technical strategy for AMZN
+2025-03-01 10:57:19,281 - backend.trade_bot - ERROR - Error loading model for TSLA: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 10:57:19,281 - backend.trade_bot - INFO - Using technical strategy for TSLA
+2025-03-01 10:57:19,281 - backend.trade_bot - INFO - All components initialized successfully
+2025-03-01 10:57:19,289 - __main__ - INFO - Fetching historical data for ['AAPL', 'MSFT', 'GOOGL']
+2025-03-01 10:57:19,836 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 10:57:19,857 - __main__ - WARNING - No active model found in database
+2025-03-01 10:57:19,929 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 10:57:19,932 - __main__ - WARNING - No active model found in database
+2025-03-01 10:57:19,944 - __main__ - WARNING - Strategy for GOOGL is not an ML strategy
+2025-03-01 10:57:19,945 - __main__ - WARNING - No active model found in database
+2025-03-01 10:57:31,612 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 10:57:31,618 - backend.database - INFO - SQLite database connection established
+2025-03-01 10:57:31,618 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 10:57:31,619 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 10:57:31,934 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 10:57:31,935 - __main__ - INFO - Using device: cpu
+2025-03-01 10:57:31,935 - __main__ - INFO - Fetching historical data for 5 symbols from 2024-03-01 to 2025-03-01
+2025-03-01 10:57:32,818 - __main__ - INFO - Training model for AAPL
+2025-03-01 10:57:33,481 - __main__ - INFO - Epoch 1/50 - Train Loss: 50007.441406, Valid Loss: 58671.937500
+2025-03-01 10:57:33,503 - __main__ - INFO - Epoch 2/50 - Train Loss: 49973.876953, Valid Loss: 58581.261719
+2025-03-01 10:57:33,523 - __main__ - INFO - Epoch 3/50 - Train Loss: 49881.501953, Valid Loss: 58504.914062
+2025-03-01 10:57:33,544 - __main__ - INFO - Epoch 4/50 - Train Loss: 49776.623047, Valid Loss: 58426.093750
+2025-03-01 10:57:33,566 - __main__ - INFO - Epoch 5/50 - Train Loss: 49757.148438, Valid Loss: 58339.136719
+2025-03-01 10:57:33,586 - __main__ - INFO - Epoch 6/50 - Train Loss: 49656.626953, Valid Loss: 58241.804688
+2025-03-01 10:57:33,607 - __main__ - INFO - Epoch 7/50 - Train Loss: 49553.037109, Valid Loss: 58132.199219
+2025-03-01 10:57:33,627 - __main__ - INFO - Epoch 8/50 - Train Loss: 49465.437500, Valid Loss: 58009.332031
+2025-03-01 10:57:33,648 - __main__ - INFO - Epoch 9/50 - Train Loss: 49352.531250, Valid Loss: 57873.601562
+2025-03-01 10:57:33,668 - __main__ - INFO - Epoch 10/50 - Train Loss: 49233.582031, Valid Loss: 57726.945312
+2025-03-01 10:57:33,687 - __main__ - INFO - Epoch 11/50 - Train Loss: 49076.664062, Valid Loss: 57572.460938
+2025-03-01 10:57:33,707 - __main__ - INFO - Epoch 12/50 - Train Loss: 48973.212891, Valid Loss: 57414.144531
+2025-03-01 10:57:33,726 - __main__ - INFO - Epoch 13/50 - Train Loss: 48778.078125, Valid Loss: 57256.667969
+2025-03-01 10:57:33,746 - __main__ - INFO - Epoch 14/50 - Train Loss: 48635.070312, Valid Loss: 57103.824219
+2025-03-01 10:57:33,764 - __main__ - INFO - Epoch 15/50 - Train Loss: 48477.732422, Valid Loss: 56957.179688
+2025-03-01 10:57:33,784 - __main__ - INFO - Epoch 16/50 - Train Loss: 48383.441406, Valid Loss: 56816.019531
+2025-03-01 10:57:33,804 - __main__ - INFO - Epoch 17/50 - Train Loss: 48248.228516, Valid Loss: 56678.925781
+2025-03-01 10:57:33,822 - __main__ - INFO - Epoch 18/50 - Train Loss: 48126.298828, Valid Loss: 56544.648438
+2025-03-01 10:57:33,841 - __main__ - INFO - Epoch 19/50 - Train Loss: 47976.341797, Valid Loss: 56412.511719
+2025-03-01 10:57:33,860 - __main__ - INFO - Epoch 20/50 - Train Loss: 47867.126953, Valid Loss: 56282.343750
+2025-03-01 10:57:33,877 - __main__ - INFO - Epoch 21/50 - Train Loss: 47763.681641, Valid Loss: 56154.351562
+2025-03-01 10:57:33,896 - __main__ - INFO - Epoch 22/50 - Train Loss: 47639.871094, Valid Loss: 56029.074219
+2025-03-01 10:57:33,915 - __main__ - INFO - Epoch 23/50 - Train Loss: 47537.962891, Valid Loss: 55907.167969
+2025-03-01 10:57:33,937 - __main__ - INFO - Epoch 24/50 - Train Loss: 47418.216797, Valid Loss: 55789.261719
+2025-03-01 10:57:33,957 - __main__ - INFO - Epoch 25/50 - Train Loss: 47310.878906, Valid Loss: 55675.789062
+2025-03-01 10:57:33,977 - __main__ - INFO - Epoch 26/50 - Train Loss: 47172.759766, Valid Loss: 55566.914062
+2025-03-01 10:57:33,995 - __main__ - INFO - Epoch 27/50 - Train Loss: 47117.033203, Valid Loss: 55462.687500
+2025-03-01 10:57:34,015 - __main__ - INFO - Epoch 28/50 - Train Loss: 47030.724609, Valid Loss: 55363.156250
+2025-03-01 10:57:34,035 - __main__ - INFO - Epoch 29/50 - Train Loss: 46941.972656, Valid Loss: 55268.511719
+2025-03-01 10:57:34,055 - __main__ - INFO - Epoch 30/50 - Train Loss: 46830.509766, Valid Loss: 55178.914062
+2025-03-01 10:57:34,075 - __main__ - INFO - Epoch 31/50 - Train Loss: 46754.904297, Valid Loss: 55094.187500
+2025-03-01 10:57:34,096 - __main__ - INFO - Epoch 32/50 - Train Loss: 46667.701172, Valid Loss: 55013.824219
+2025-03-01 10:57:34,115 - __main__ - INFO - Epoch 33/50 - Train Loss: 46585.113281, Valid Loss: 54937.226562
+2025-03-01 10:57:34,138 - __main__ - INFO - Epoch 34/50 - Train Loss: 46516.386719, Valid Loss: 54864.144531
+2025-03-01 10:57:34,160 - __main__ - INFO - Epoch 35/50 - Train Loss: 46476.500000, Valid Loss: 54794.367188
+2025-03-01 10:57:34,180 - __main__ - INFO - Epoch 36/50 - Train Loss: 46395.695312, Valid Loss: 54727.324219
+2025-03-01 10:57:34,201 - __main__ - INFO - Epoch 37/50 - Train Loss: 46296.128906, Valid Loss: 54662.468750
+2025-03-01 10:57:34,222 - __main__ - INFO - Epoch 38/50 - Train Loss: 46265.392578, Valid Loss: 54599.480469
+2025-03-01 10:57:34,242 - __main__ - INFO - Epoch 39/50 - Train Loss: 46205.453125, Valid Loss: 54538.074219
+2025-03-01 10:57:34,262 - __main__ - INFO - Epoch 40/50 - Train Loss: 46127.101562, Valid Loss: 54478.007812
+2025-03-01 10:57:34,281 - __main__ - INFO - Epoch 41/50 - Train Loss: 46085.464844, Valid Loss: 54419.324219
+2025-03-01 10:57:34,302 - __main__ - INFO - Epoch 42/50 - Train Loss: 46033.574219, Valid Loss: 54362.125000
+2025-03-01 10:57:34,320 - __main__ - INFO - Epoch 43/50 - Train Loss: 46001.886719, Valid Loss: 54306.480469
+2025-03-01 10:57:34,341 - __main__ - INFO - Epoch 44/50 - Train Loss: 45995.271484, Valid Loss: 54252.312500
+2025-03-01 10:57:34,362 - __main__ - INFO - Epoch 45/50 - Train Loss: 45876.123047, Valid Loss: 54199.367188
+2025-03-01 10:57:34,380 - __main__ - INFO - Epoch 46/50 - Train Loss: 45868.464844, Valid Loss: 54147.554688
+2025-03-01 10:57:34,401 - __main__ - INFO - Epoch 47/50 - Train Loss: 45786.585938, Valid Loss: 54096.695312
+2025-03-01 10:57:34,421 - __main__ - INFO - Epoch 48/50 - Train Loss: 45752.144531, Valid Loss: 54046.476562
+2025-03-01 10:57:34,441 - __main__ - INFO - Epoch 49/50 - Train Loss: 45690.246094, Valid Loss: 53996.632812
+2025-03-01 10:57:34,462 - __main__ - INFO - Epoch 50/50 - Train Loss: 45671.167969, Valid Loss: 53946.843750
+2025-03-01 10:57:34,464 - __main__ - INFO - Model evaluation for AAPL:
+2025-03-01 10:57:34,464 - __main__ - INFO -   MSE: 54502.183594
+2025-03-01 10:57:34,464 - __main__ - INFO -   RMSE: 233.457031
+2025-03-01 10:57:34,464 - __main__ - INFO -   MAE: 233.438477
+2025-03-01 10:57:34,642 - __main__ - ERROR - Error training model for AAPL: Object of type float32 is not JSON serializable
+2025-03-01 10:57:34,642 - __main__ - INFO - Training model for MSFT
+2025-03-01 10:57:34,677 - __main__ - INFO - Epoch 1/50 - Train Loss: 182134.804688, Valid Loss: 177689.187500
+2025-03-01 10:57:34,700 - __main__ - INFO - Epoch 2/50 - Train Loss: 182195.773438, Valid Loss: 177617.531250
+2025-03-01 10:57:34,722 - __main__ - INFO - Epoch 3/50 - Train Loss: 182199.578125, Valid Loss: 177542.515625
+2025-03-01 10:57:34,741 - __main__ - INFO - Epoch 4/50 - Train Loss: 182108.898438, Valid Loss: 177461.921875
+2025-03-01 10:57:34,762 - __main__ - INFO - Epoch 5/50 - Train Loss: 182059.125000, Valid Loss: 177373.781250
+2025-03-01 10:57:34,781 - __main__ - INFO - Epoch 6/50 - Train Loss: 181880.335938, Valid Loss: 177275.843750
+2025-03-01 10:57:34,802 - __main__ - INFO - Epoch 7/50 - Train Loss: 181631.585938, Valid Loss: 177165.421875
+2025-03-01 10:57:34,823 - __main__ - INFO - Epoch 8/50 - Train Loss: 181621.359375, Valid Loss: 177039.156250
+2025-03-01 10:57:34,842 - __main__ - INFO - Epoch 9/50 - Train Loss: 181632.695312, Valid Loss: 176892.953125
+2025-03-01 10:57:34,863 - __main__ - INFO - Epoch 10/50 - Train Loss: 181293.257812, Valid Loss: 176722.218750
+2025-03-01 10:57:34,882 - __main__ - INFO - Epoch 11/50 - Train Loss: 181117.070312, Valid Loss: 176522.718750
+2025-03-01 10:57:34,902 - __main__ - INFO - Epoch 12/50 - Train Loss: 180979.445312, Valid Loss: 176291.734375
+2025-03-01 10:57:34,923 - __main__ - INFO - Epoch 13/50 - Train Loss: 180766.648438, Valid Loss: 176031.328125
+2025-03-01 10:57:34,942 - __main__ - INFO - Epoch 14/50 - Train Loss: 180490.796875, Valid Loss: 175750.031250
+2025-03-01 10:57:34,963 - __main__ - INFO - Epoch 15/50 - Train Loss: 180091.671875, Valid Loss: 175461.546875
+2025-03-01 10:57:34,981 - __main__ - INFO - Epoch 16/50 - Train Loss: 179747.390625, Valid Loss: 175180.312500
+2025-03-01 10:57:35,002 - __main__ - INFO - Epoch 17/50 - Train Loss: 179468.101562, Valid Loss: 174915.687500
+2025-03-01 10:57:35,025 - __main__ - INFO - Epoch 18/50 - Train Loss: 179428.398438, Valid Loss: 174669.375000
+2025-03-01 10:57:35,044 - __main__ - INFO - Epoch 19/50 - Train Loss: 179131.382812, Valid Loss: 174438.218750
+2025-03-01 10:57:35,064 - __main__ - INFO - Epoch 20/50 - Train Loss: 178787.093750, Valid Loss: 174218.453125
+2025-03-01 10:57:35,083 - __main__ - INFO - Epoch 21/50 - Train Loss: 178625.601562, Valid Loss: 174007.968750
+2025-03-01 10:57:35,103 - __main__ - INFO - Epoch 22/50 - Train Loss: 178394.265625, Valid Loss: 173806.093750
+2025-03-01 10:57:35,124 - __main__ - INFO - Epoch 23/50 - Train Loss: 178148.054688, Valid Loss: 173612.250000
+2025-03-01 10:57:35,147 - __main__ - INFO - Epoch 24/50 - Train Loss: 178027.312500, Valid Loss: 173425.296875
+2025-03-01 10:57:35,178 - __main__ - INFO - Epoch 25/50 - Train Loss: 177698.914062, Valid Loss: 173243.781250
+2025-03-01 10:57:35,204 - __main__ - INFO - Epoch 26/50 - Train Loss: 177802.187500, Valid Loss: 173066.984375
+2025-03-01 10:57:35,225 - __main__ - INFO - Epoch 27/50 - Train Loss: 177486.101562, Valid Loss: 172894.531250
+2025-03-01 10:57:35,245 - __main__ - INFO - Epoch 28/50 - Train Loss: 177369.804688, Valid Loss: 172726.156250
+2025-03-01 10:57:35,266 - __main__ - INFO - Epoch 29/50 - Train Loss: 177211.710938, Valid Loss: 172561.718750
+2025-03-01 10:57:35,287 - __main__ - INFO - Epoch 30/50 - Train Loss: 177028.148438, Valid Loss: 172401.531250
+2025-03-01 10:57:35,307 - __main__ - INFO - Epoch 31/50 - Train Loss: 176930.789062, Valid Loss: 172245.781250
+2025-03-01 10:57:35,327 - __main__ - INFO - Epoch 32/50 - Train Loss: 176543.210938, Valid Loss: 172094.687500
+2025-03-01 10:57:35,346 - __main__ - INFO - Epoch 33/50 - Train Loss: 176586.875000, Valid Loss: 171948.468750
+2025-03-01 10:57:35,367 - __main__ - INFO - Epoch 34/50 - Train Loss: 176435.656250, Valid Loss: 171807.515625
+2025-03-01 10:57:35,387 - __main__ - INFO - Epoch 35/50 - Train Loss: 176000.898438, Valid Loss: 171671.656250
+2025-03-01 10:57:35,406 - __main__ - INFO - Epoch 36/50 - Train Loss: 176173.101562, Valid Loss: 171540.656250
+2025-03-01 10:57:35,425 - __main__ - INFO - Epoch 37/50 - Train Loss: 175891.367188, Valid Loss: 171414.031250
+2025-03-01 10:57:35,445 - __main__ - INFO - Epoch 38/50 - Train Loss: 175842.617188, Valid Loss: 171291.171875
+2025-03-01 10:57:35,465 - __main__ - INFO - Epoch 39/50 - Train Loss: 175715.750000, Valid Loss: 171171.656250
+2025-03-01 10:57:35,485 - __main__ - INFO - Epoch 40/50 - Train Loss: 175492.015625, Valid Loss: 171055.281250
+2025-03-01 10:57:35,504 - __main__ - INFO - Epoch 41/50 - Train Loss: 175456.695312, Valid Loss: 170942.203125
+2025-03-01 10:57:35,524 - __main__ - INFO - Epoch 42/50 - Train Loss: 175315.281250, Valid Loss: 170831.781250
+2025-03-01 10:57:35,544 - __main__ - INFO - Epoch 43/50 - Train Loss: 175224.625000, Valid Loss: 170723.531250
+2025-03-01 10:57:35,563 - __main__ - INFO - Epoch 44/50 - Train Loss: 175068.750000, Valid Loss: 170617.187500
+2025-03-01 10:57:35,583 - __main__ - INFO - Epoch 45/50 - Train Loss: 175185.929688, Valid Loss: 170512.718750
+2025-03-01 10:57:35,603 - __main__ - INFO - Epoch 46/50 - Train Loss: 174951.546875, Valid Loss: 170410.500000
+2025-03-01 10:57:35,624 - __main__ - INFO - Epoch 47/50 - Train Loss: 174884.195312, Valid Loss: 170310.921875
+2025-03-01 10:57:35,644 - __main__ - INFO - Epoch 48/50 - Train Loss: 174656.484375, Valid Loss: 170213.531250
+2025-03-01 10:57:35,664 - __main__ - INFO - Epoch 49/50 - Train Loss: 174676.960938, Valid Loss: 170118.453125
+2025-03-01 10:57:35,685 - __main__ - INFO - Epoch 50/50 - Train Loss: 174473.132812, Valid Loss: 170025.593750
+2025-03-01 10:57:35,686 - __main__ - INFO - Model evaluation for MSFT:
+2025-03-01 10:57:35,686 - __main__ - INFO -   MSE: 156962.421875
+2025-03-01 10:57:35,686 - __main__ - INFO -   RMSE: 396.184845
+2025-03-01 10:57:35,686 - __main__ - INFO -   MAE: 396.117706
+2025-03-01 10:57:35,812 - __main__ - ERROR - Error training model for MSFT: Object of type float32 is not JSON serializable
+2025-03-01 10:57:35,812 - __main__ - INFO - Training model for GOOGL
+2025-03-01 10:57:35,847 - __main__ - INFO - Epoch 1/50 - Train Loss: 28824.510742, Valid Loss: 36875.742188
+2025-03-01 10:57:35,868 - __main__ - INFO - Epoch 2/50 - Train Loss: 28823.640625, Valid Loss: 36838.738281
+2025-03-01 10:57:35,889 - __main__ - INFO - Epoch 3/50 - Train Loss: 28789.812500, Valid Loss: 36801.281250
+2025-03-01 10:57:35,907 - __main__ - INFO - Epoch 4/50 - Train Loss: 28746.666992, Valid Loss: 36762.542969
+2025-03-01 10:57:35,928 - __main__ - INFO - Epoch 5/50 - Train Loss: 28678.428711, Valid Loss: 36721.675781
+2025-03-01 10:57:35,949 - __main__ - INFO - Epoch 6/50 - Train Loss: 28639.728516, Valid Loss: 36677.898438
+2025-03-01 10:57:35,969 - __main__ - INFO - Epoch 7/50 - Train Loss: 28609.376953, Valid Loss: 36630.085938
+2025-03-01 10:57:35,991 - __main__ - INFO - Epoch 8/50 - Train Loss: 28553.205078, Valid Loss: 36576.562500
+2025-03-01 10:57:36,011 - __main__ - INFO - Epoch 9/50 - Train Loss: 28538.865234, Valid Loss: 36514.761719
+2025-03-01 10:57:36,031 - __main__ - INFO - Epoch 10/50 - Train Loss: 28468.932617, Valid Loss: 36440.890625
+2025-03-01 10:57:36,051 - __main__ - INFO - Epoch 11/50 - Train Loss: 28415.189453, Valid Loss: 36352.613281
+2025-03-01 10:57:36,071 - __main__ - INFO - Epoch 12/50 - Train Loss: 28351.183594, Valid Loss: 36250.324219
+2025-03-01 10:57:36,091 - __main__ - INFO - Epoch 13/50 - Train Loss: 28219.315430, Valid Loss: 36136.437500
+2025-03-01 10:57:36,112 - __main__ - INFO - Epoch 14/50 - Train Loss: 28155.960938, Valid Loss: 36015.957031
+2025-03-01 10:57:36,133 - __main__ - INFO - Epoch 15/50 - Train Loss: 28006.791992, Valid Loss: 35894.585938
+2025-03-01 10:57:36,153 - __main__ - INFO - Epoch 16/50 - Train Loss: 27891.446289, Valid Loss: 35775.777344
+2025-03-01 10:57:36,172 - __main__ - INFO - Epoch 17/50 - Train Loss: 27817.172852, Valid Loss: 35660.367188
+2025-03-01 10:57:36,193 - __main__ - INFO - Epoch 18/50 - Train Loss: 27717.924805, Valid Loss: 35548.039062
+2025-03-01 10:57:36,214 - __main__ - INFO - Epoch 19/50 - Train Loss: 27655.575195, Valid Loss: 35438.207031
+2025-03-01 10:57:36,232 - __main__ - INFO - Epoch 20/50 - Train Loss: 27521.008789, Valid Loss: 35330.351562
+2025-03-01 10:57:36,254 - __main__ - INFO - Epoch 21/50 - Train Loss: 27425.294922, Valid Loss: 35224.449219
+2025-03-01 10:57:36,272 - __main__ - INFO - Epoch 22/50 - Train Loss: 27310.598633, Valid Loss: 35120.585938
+2025-03-01 10:57:36,292 - __main__ - INFO - Epoch 23/50 - Train Loss: 27237.558594, Valid Loss: 35019.324219
+2025-03-01 10:57:36,313 - __main__ - INFO - Epoch 24/50 - Train Loss: 27153.909180, Valid Loss: 34921.132812
+2025-03-01 10:57:36,333 - __main__ - INFO - Epoch 25/50 - Train Loss: 27053.284180, Valid Loss: 34826.394531
+2025-03-01 10:57:36,354 - __main__ - INFO - Epoch 26/50 - Train Loss: 26966.937500, Valid Loss: 34735.351562
+2025-03-01 10:57:36,376 - __main__ - INFO - Epoch 27/50 - Train Loss: 26918.519531, Valid Loss: 34648.097656
+2025-03-01 10:57:36,395 - __main__ - INFO - Epoch 28/50 - Train Loss: 26832.443359, Valid Loss: 34564.230469
+2025-03-01 10:57:36,414 - __main__ - INFO - Epoch 29/50 - Train Loss: 26722.268555, Valid Loss: 34483.460938
+2025-03-01 10:57:36,432 - __main__ - INFO - Epoch 30/50 - Train Loss: 26645.094727, Valid Loss: 34405.625000
+2025-03-01 10:57:36,450 - __main__ - INFO - Epoch 31/50 - Train Loss: 26592.453125, Valid Loss: 34330.656250
+2025-03-01 10:57:36,468 - __main__ - INFO - Epoch 32/50 - Train Loss: 26549.055664, Valid Loss: 34258.425781
+2025-03-01 10:57:36,486 - __main__ - INFO - Epoch 33/50 - Train Loss: 26498.774414, Valid Loss: 34188.574219
+2025-03-01 10:57:36,504 - __main__ - INFO - Epoch 34/50 - Train Loss: 26420.796875, Valid Loss: 34120.839844
+2025-03-01 10:57:36,524 - __main__ - INFO - Epoch 35/50 - Train Loss: 26355.143555, Valid Loss: 34054.898438
+2025-03-01 10:57:36,545 - __main__ - INFO - Epoch 36/50 - Train Loss: 26330.752930, Valid Loss: 33990.511719
+2025-03-01 10:57:36,564 - __main__ - INFO - Epoch 37/50 - Train Loss: 26239.179688, Valid Loss: 33927.441406
+2025-03-01 10:57:36,584 - __main__ - INFO - Epoch 38/50 - Train Loss: 26176.429688, Valid Loss: 33865.726562
+2025-03-01 10:57:36,606 - __main__ - INFO - Epoch 39/50 - Train Loss: 26114.960938, Valid Loss: 33805.347656
+2025-03-01 10:57:36,625 - __main__ - INFO - Epoch 40/50 - Train Loss: 26067.097656, Valid Loss: 33746.375000
+2025-03-01 10:57:36,646 - __main__ - INFO - Epoch 41/50 - Train Loss: 26000.107422, Valid Loss: 33688.867188
+2025-03-01 10:57:36,663 - __main__ - INFO - Epoch 42/50 - Train Loss: 25982.928711, Valid Loss: 33632.996094
+2025-03-01 10:57:36,686 - __main__ - INFO - Epoch 43/50 - Train Loss: 25916.258789, Valid Loss: 33578.585938
+2025-03-01 10:57:36,706 - __main__ - INFO - Epoch 44/50 - Train Loss: 25869.330078, Valid Loss: 33525.226562
+2025-03-01 10:57:36,724 - __main__ - INFO - Epoch 45/50 - Train Loss: 25868.401367, Valid Loss: 33472.546875
+2025-03-01 10:57:36,745 - __main__ - INFO - Epoch 46/50 - Train Loss: 25753.188477, Valid Loss: 33420.265625
+2025-03-01 10:57:36,763 - __main__ - INFO - Epoch 47/50 - Train Loss: 25727.808594, Valid Loss: 33368.882812
+2025-03-01 10:57:36,784 - __main__ - INFO - Epoch 48/50 - Train Loss: 25735.024414, Valid Loss: 33319.199219
+2025-03-01 10:57:36,804 - __main__ - INFO - Epoch 49/50 - Train Loss: 25649.430664, Valid Loss: 33271.570312
+2025-03-01 10:57:36,823 - __main__ - INFO - Epoch 50/50 - Train Loss: 25636.875000, Valid Loss: 33225.894531
+2025-03-01 10:57:36,825 - __main__ - INFO - Model evaluation for GOOGL:
+2025-03-01 10:57:36,825 - __main__ - INFO -   MSE: 28713.304688
+2025-03-01 10:57:36,825 - __main__ - INFO -   RMSE: 169.450012
+2025-03-01 10:57:36,825 - __main__ - INFO -   MAE: 169.336975
+2025-03-01 10:57:36,888 - __main__ - ERROR - Error training model for GOOGL: Object of type float32 is not JSON serializable
+2025-03-01 10:57:36,888 - __main__ - INFO - Training model for AMZN
+2025-03-01 10:57:36,922 - __main__ - INFO - Epoch 1/50 - Train Loss: 35226.171875, Valid Loss: 48880.101562
+2025-03-01 10:57:36,943 - __main__ - INFO - Epoch 2/50 - Train Loss: 35168.285156, Valid Loss: 48843.898438
+2025-03-01 10:57:36,962 - __main__ - INFO - Epoch 3/50 - Train Loss: 35087.025391, Valid Loss: 48805.035156
+2025-03-01 10:57:36,981 - __main__ - INFO - Epoch 4/50 - Train Loss: 35079.460938, Valid Loss: 48757.652344
+2025-03-01 10:57:37,001 - __main__ - INFO - Epoch 5/50 - Train Loss: 35041.511719, Valid Loss: 48701.035156
+2025-03-01 10:57:37,020 - __main__ - INFO - Epoch 6/50 - Train Loss: 35039.888672, Valid Loss: 48636.199219
+2025-03-01 10:57:37,041 - __main__ - INFO - Epoch 7/50 - Train Loss: 34963.093750, Valid Loss: 48562.800781
+2025-03-01 10:57:37,060 - __main__ - INFO - Epoch 8/50 - Train Loss: 34896.330078, Valid Loss: 48480.230469
+2025-03-01 10:57:37,081 - __main__ - INFO - Epoch 9/50 - Train Loss: 34778.746094, Valid Loss: 48386.867188
+2025-03-01 10:57:37,102 - __main__ - INFO - Epoch 10/50 - Train Loss: 34743.742188, Valid Loss: 48280.753906
+2025-03-01 10:57:37,121 - __main__ - INFO - Epoch 11/50 - Train Loss: 34631.931641, Valid Loss: 48160.625000
+2025-03-01 10:57:37,142 - __main__ - INFO - Epoch 12/50 - Train Loss: 34553.802734, Valid Loss: 48027.660156
+2025-03-01 10:57:37,163 - __main__ - INFO - Epoch 13/50 - Train Loss: 34441.917969, Valid Loss: 47886.039062
+2025-03-01 10:57:37,183 - __main__ - INFO - Epoch 14/50 - Train Loss: 34295.015625, Valid Loss: 47741.753906
+2025-03-01 10:57:37,204 - __main__ - INFO - Epoch 15/50 - Train Loss: 34201.617188, Valid Loss: 47600.519531
+2025-03-01 10:57:37,224 - __main__ - INFO - Epoch 16/50 - Train Loss: 34071.919922, Valid Loss: 47464.742188
+2025-03-01 10:57:37,244 - __main__ - INFO - Epoch 17/50 - Train Loss: 33970.427734, Valid Loss: 47334.765625
+2025-03-01 10:57:37,263 - __main__ - INFO - Epoch 18/50 - Train Loss: 33837.460938, Valid Loss: 47209.898438
+2025-03-01 10:57:37,283 - __main__ - INFO - Epoch 19/50 - Train Loss: 33748.007812, Valid Loss: 47089.238281
+2025-03-01 10:57:37,304 - __main__ - INFO - Epoch 20/50 - Train Loss: 33647.226562, Valid Loss: 46971.855469
+2025-03-01 10:57:37,360 - __main__ - INFO - Epoch 21/50 - Train Loss: 33541.900391, Valid Loss: 46856.679688
+2025-03-01 10:57:37,381 - __main__ - INFO - Epoch 22/50 - Train Loss: 33476.478516, Valid Loss: 46742.828125
+2025-03-01 10:57:37,401 - __main__ - INFO - Epoch 23/50 - Train Loss: 33348.291016, Valid Loss: 46630.113281
+2025-03-01 10:57:37,420 - __main__ - INFO - Epoch 24/50 - Train Loss: 33307.098633, Valid Loss: 46519.179688
+2025-03-01 10:57:37,440 - __main__ - INFO - Epoch 25/50 - Train Loss: 33172.427734, Valid Loss: 46410.656250
+2025-03-01 10:57:37,459 - __main__ - INFO - Epoch 26/50 - Train Loss: 33091.023438, Valid Loss: 46305.367188
+2025-03-01 10:57:37,478 - __main__ - INFO - Epoch 27/50 - Train Loss: 32945.412109, Valid Loss: 46203.593750
+2025-03-01 10:57:37,499 - __main__ - INFO - Epoch 28/50 - Train Loss: 32884.776367, Valid Loss: 46105.792969
+2025-03-01 10:57:37,517 - __main__ - INFO - Epoch 29/50 - Train Loss: 32794.458984, Valid Loss: 46012.156250
+2025-03-01 10:57:37,538 - __main__ - INFO - Epoch 30/50 - Train Loss: 32693.624023, Valid Loss: 45922.855469
+2025-03-01 10:57:37,556 - __main__ - INFO - Epoch 31/50 - Train Loss: 32635.231445, Valid Loss: 45837.867188
+2025-03-01 10:57:37,576 - __main__ - INFO - Epoch 32/50 - Train Loss: 32576.038086, Valid Loss: 45756.957031
+2025-03-01 10:57:37,598 - __main__ - INFO - Epoch 33/50 - Train Loss: 32527.611328, Valid Loss: 45680.000000
+2025-03-01 10:57:37,616 - __main__ - INFO - Epoch 34/50 - Train Loss: 32440.639648, Valid Loss: 45606.679688
+2025-03-01 10:57:37,635 - __main__ - INFO - Epoch 35/50 - Train Loss: 32391.089844, Valid Loss: 45536.699219
+2025-03-01 10:57:37,654 - __main__ - INFO - Epoch 36/50 - Train Loss: 32350.465820, Valid Loss: 45469.578125
+2025-03-01 10:57:37,674 - __main__ - INFO - Epoch 37/50 - Train Loss: 32246.402344, Valid Loss: 45404.804688
+2025-03-01 10:57:37,695 - __main__ - INFO - Epoch 38/50 - Train Loss: 32271.325195, Valid Loss: 45342.144531
+2025-03-01 10:57:37,715 - __main__ - INFO - Epoch 39/50 - Train Loss: 32182.197266, Valid Loss: 45281.273438
+2025-03-01 10:57:37,736 - __main__ - INFO - Epoch 40/50 - Train Loss: 32108.882812, Valid Loss: 45222.082031
+2025-03-01 10:57:37,755 - __main__ - INFO - Epoch 41/50 - Train Loss: 32086.161133, Valid Loss: 45164.492188
+2025-03-01 10:57:37,774 - __main__ - INFO - Epoch 42/50 - Train Loss: 32004.901367, Valid Loss: 45108.425781
+2025-03-01 10:57:37,795 - __main__ - INFO - Epoch 43/50 - Train Loss: 31891.100586, Valid Loss: 45053.757812
+2025-03-01 10:57:37,814 - __main__ - INFO - Epoch 44/50 - Train Loss: 31919.399414, Valid Loss: 45000.414062
+2025-03-01 10:57:37,834 - __main__ - INFO - Epoch 45/50 - Train Loss: 31855.301758, Valid Loss: 44948.289062
+2025-03-01 10:57:37,854 - __main__ - INFO - Epoch 46/50 - Train Loss: 31852.083984, Valid Loss: 44897.277344
+2025-03-01 10:57:37,874 - __main__ - INFO - Epoch 47/50 - Train Loss: 31786.750000, Valid Loss: 44847.214844
+2025-03-01 10:57:37,895 - __main__ - INFO - Epoch 48/50 - Train Loss: 31782.290039, Valid Loss: 44798.023438
+2025-03-01 10:57:37,913 - __main__ - INFO - Epoch 49/50 - Train Loss: 31719.124023, Valid Loss: 44749.562500
+2025-03-01 10:57:37,935 - __main__ - INFO - Epoch 50/50 - Train Loss: 31668.905273, Valid Loss: 44701.730469
+2025-03-01 10:57:37,937 - __main__ - INFO - Model evaluation for AMZN:
+2025-03-01 10:57:37,937 - __main__ - INFO -   MSE: 43966.875000
+2025-03-01 10:57:37,937 - __main__ - INFO -   RMSE: 209.682800
+2025-03-01 10:57:37,937 - __main__ - INFO -   MAE: 209.550522
+2025-03-01 10:57:37,996 - __main__ - ERROR - Error training model for AMZN: Object of type float32 is not JSON serializable
+2025-03-01 10:57:37,996 - __main__ - INFO - Training model for TSLA
+2025-03-01 10:57:38,032 - __main__ - INFO - Epoch 1/50 - Train Loss: 58945.669922, Valid Loss: 160551.406250
+2025-03-01 10:57:38,052 - __main__ - INFO - Epoch 2/50 - Train Loss: 58851.677734, Valid Loss: 160456.906250
+2025-03-01 10:57:38,072 - __main__ - INFO - Epoch 3/50 - Train Loss: 59156.138672, Valid Loss: 160358.984375
+2025-03-01 10:57:38,092 - __main__ - INFO - Epoch 4/50 - Train Loss: 58703.445312, Valid Loss: 160253.968750
+2025-03-01 10:57:38,112 - __main__ - INFO - Epoch 5/50 - Train Loss: 58868.068359, Valid Loss: 160138.250000
+2025-03-01 10:57:38,134 - __main__ - INFO - Epoch 6/50 - Train Loss: 58681.515625, Valid Loss: 160008.578125
+2025-03-01 10:57:38,155 - __main__ - INFO - Epoch 7/50 - Train Loss: 58841.546875, Valid Loss: 159862.781250
+2025-03-01 10:57:38,174 - __main__ - INFO - Epoch 8/50 - Train Loss: 58565.851562, Valid Loss: 159697.875000
+2025-03-01 10:57:38,195 - __main__ - INFO - Epoch 9/50 - Train Loss: 58255.976562, Valid Loss: 159511.531250
+2025-03-01 10:57:38,213 - __main__ - INFO - Epoch 10/50 - Train Loss: 58405.556641, Valid Loss: 159302.593750
+2025-03-01 10:57:38,233 - __main__ - INFO - Epoch 11/50 - Train Loss: 58187.160156, Valid Loss: 159071.968750
+2025-03-01 10:57:38,254 - __main__ - INFO - Epoch 12/50 - Train Loss: 57875.917969, Valid Loss: 158824.562500
+2025-03-01 10:57:38,273 - __main__ - INFO - Epoch 13/50 - Train Loss: 57831.781250, Valid Loss: 158568.812500
+2025-03-01 10:57:38,293 - __main__ - INFO - Epoch 14/50 - Train Loss: 57750.505859, Valid Loss: 158313.781250
+2025-03-01 10:57:38,313 - __main__ - INFO - Epoch 15/50 - Train Loss: 57598.691406, Valid Loss: 158065.625000
+2025-03-01 10:57:38,333 - __main__ - INFO - Epoch 16/50 - Train Loss: 57336.376953, Valid Loss: 157826.218750
+2025-03-01 10:57:38,354 - __main__ - INFO - Epoch 17/50 - Train Loss: 57181.794922, Valid Loss: 157595.375000
+2025-03-01 10:57:38,374 - __main__ - INFO - Epoch 18/50 - Train Loss: 57313.560547, Valid Loss: 157371.921875
+2025-03-01 10:57:38,395 - __main__ - INFO - Epoch 19/50 - Train Loss: 56882.759766, Valid Loss: 157154.546875
+2025-03-01 10:57:38,414 - __main__ - INFO - Epoch 20/50 - Train Loss: 56863.689453, Valid Loss: 156943.203125
+2025-03-01 10:57:38,433 - __main__ - INFO - Epoch 21/50 - Train Loss: 56583.685547, Valid Loss: 156737.734375
+2025-03-01 10:57:38,452 - __main__ - INFO - Epoch 22/50 - Train Loss: 56707.873047, Valid Loss: 156538.656250
+2025-03-01 10:57:38,471 - __main__ - INFO - Epoch 23/50 - Train Loss: 56383.822266, Valid Loss: 156346.281250
+2025-03-01 10:57:38,492 - __main__ - INFO - Epoch 24/50 - Train Loss: 56369.791016, Valid Loss: 156160.906250
+2025-03-01 10:57:38,513 - __main__ - INFO - Epoch 25/50 - Train Loss: 56207.478516, Valid Loss: 155982.515625
+2025-03-01 10:57:38,533 - __main__ - INFO - Epoch 26/50 - Train Loss: 56248.980469, Valid Loss: 155811.046875
+2025-03-01 10:57:38,554 - __main__ - INFO - Epoch 27/50 - Train Loss: 55815.509766, Valid Loss: 155646.125000
+2025-03-01 10:57:38,572 - __main__ - INFO - Epoch 28/50 - Train Loss: 55914.699219, Valid Loss: 155487.359375
+2025-03-01 10:57:38,593 - __main__ - INFO - Epoch 29/50 - Train Loss: 55976.833984, Valid Loss: 155333.703125
+2025-03-01 10:57:38,612 - __main__ - INFO - Epoch 30/50 - Train Loss: 55783.865234, Valid Loss: 155184.062500
+2025-03-01 10:57:38,632 - __main__ - INFO - Epoch 31/50 - Train Loss: 55567.923828, Valid Loss: 155037.593750
+2025-03-01 10:57:38,652 - __main__ - INFO - Epoch 32/50 - Train Loss: 55662.003906, Valid Loss: 154894.093750
+2025-03-01 10:57:38,671 - __main__ - INFO - Epoch 33/50 - Train Loss: 55688.285156, Valid Loss: 154753.625000
+2025-03-01 10:57:38,692 - __main__ - INFO - Epoch 34/50 - Train Loss: 55391.525391, Valid Loss: 154617.000000
+2025-03-01 10:57:38,711 - __main__ - INFO - Epoch 35/50 - Train Loss: 55431.169922, Valid Loss: 154485.656250
+2025-03-01 10:57:38,731 - __main__ - INFO - Epoch 36/50 - Train Loss: 55163.107422, Valid Loss: 154360.093750
+2025-03-01 10:57:38,752 - __main__ - INFO - Epoch 37/50 - Train Loss: 55226.392578, Valid Loss: 154240.609375
+2025-03-01 10:57:38,772 - __main__ - INFO - Epoch 38/50 - Train Loss: 55053.488281, Valid Loss: 154126.453125
+2025-03-01 10:57:38,792 - __main__ - INFO - Epoch 39/50 - Train Loss: 55193.011719, Valid Loss: 154017.218750
+2025-03-01 10:57:38,814 - __main__ - INFO - Epoch 40/50 - Train Loss: 55107.898438, Valid Loss: 153912.078125
+2025-03-01 10:57:38,832 - __main__ - INFO - Epoch 41/50 - Train Loss: 54825.501953, Valid Loss: 153810.390625
+2025-03-01 10:57:38,853 - __main__ - INFO - Epoch 42/50 - Train Loss: 54785.990234, Valid Loss: 153711.796875
+2025-03-01 10:57:38,872 - __main__ - INFO - Epoch 43/50 - Train Loss: 55042.716797, Valid Loss: 153616.031250
+2025-03-01 10:57:38,892 - __main__ - INFO - Epoch 44/50 - Train Loss: 55120.335938, Valid Loss: 153522.437500
+2025-03-01 10:57:38,911 - __main__ - INFO - Epoch 45/50 - Train Loss: 54713.521484, Valid Loss: 153430.515625
+2025-03-01 10:57:38,931 - __main__ - INFO - Epoch 46/50 - Train Loss: 54668.732422, Valid Loss: 153340.343750
+2025-03-01 10:57:38,950 - __main__ - INFO - Epoch 47/50 - Train Loss: 54626.964844, Valid Loss: 153251.953125
+2025-03-01 10:57:38,969 - __main__ - INFO - Epoch 48/50 - Train Loss: 54584.345703, Valid Loss: 153165.156250
+2025-03-01 10:57:38,988 - __main__ - INFO - Epoch 49/50 - Train Loss: 54663.087891, Valid Loss: 153079.906250
+2025-03-01 10:57:39,007 - __main__ - INFO - Epoch 50/50 - Train Loss: 54654.837891, Valid Loss: 152995.937500
+2025-03-01 10:57:39,009 - __main__ - INFO - Model evaluation for TSLA:
+2025-03-01 10:57:39,009 - __main__ - INFO -   MSE: 102804.992188
+2025-03-01 10:57:39,009 - __main__ - INFO -   RMSE: 320.632172
+2025-03-01 10:57:39,009 - __main__ - INFO -   MAE: 319.288605
+2025-03-01 10:57:39,070 - __main__ - ERROR - Error training model for TSLA: Object of type float32 is not JSON serializable
+2025-03-01 10:58:00,937 - __main__ - INFO - Fetching historical data for ['AAPL', 'MSFT', 'GOOGL']
+2025-03-01 10:58:01,267 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 10:58:01,270 - __main__ - WARNING - No active model found in database
+2025-03-01 10:58:01,299 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 10:58:01,300 - __main__ - WARNING - No active model found in database
+2025-03-01 10:58:01,316 - __main__ - WARNING - Strategy for GOOGL is not an ML strategy
+2025-03-01 10:58:01,317 - __main__ - WARNING - No active model found in database
+2025-03-01 10:58:45,154 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 10:58:45,156 - __main__ - WARNING - No active model found in database
+2025-03-01 10:58:45,181 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 10:58:45,182 - __main__ - WARNING - No active model found in database
+2025-03-01 10:58:45,201 - __main__ - WARNING - Strategy for GOOGL is not an ML strategy
+2025-03-01 10:58:45,202 - __main__ - WARNING - No active model found in database
+2025-03-01 11:00:37,287 - __main__ - INFO - Fetching historical data for ['AAPL', 'MSFT', 'GOOGL']
+2025-03-01 11:00:37,865 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 11:00:37,876 - __main__ - WARNING - No active model found in database
+2025-03-01 11:00:37,920 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 11:00:37,927 - __main__ - WARNING - No active model found in database
+2025-03-01 11:00:37,947 - __main__ - WARNING - Strategy for GOOGL is not an ML strategy
+2025-03-01 11:00:37,949 - __main__ - WARNING - No active model found in database
+2025-03-01 11:00:39,817 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 11:00:39,819 - __main__ - WARNING - No active model found in database
+2025-03-01 11:00:39,845 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 11:00:39,846 - __main__ - WARNING - No active model found in database
+2025-03-01 11:00:39,860 - __main__ - WARNING - Strategy for GOOGL is not an ML strategy
+2025-03-01 11:00:39,861 - __main__ - WARNING - No active model found in database
+2025-03-01 11:37:11,810 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 11:37:11,811 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 11:37:12,129 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 11:37:12,248 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 11:37:12,270 - backend.database - INFO - SQLite database connection established
+2025-03-01 11:37:12,272 - backend.trade_bot - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 11:37:12,272 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 11:37:12,272 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 11:37:12,589 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 11:37:12,589 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 11:37:12,592 - backend.database - INFO - SQLite database connection established
+2025-03-01 11:37:12,593 - backend.trade_bot - ERROR - Error loading model for AAPL: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 11:37:12,593 - backend.trade_bot - INFO - Using technical strategy for AAPL
+2025-03-01 11:37:12,594 - backend.trade_bot - ERROR - Error loading model for MSFT: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 11:37:12,594 - backend.trade_bot - INFO - Using technical strategy for MSFT
+2025-03-01 11:37:12,595 - backend.trade_bot - ERROR - Error loading model for GOOGL: Expecting value: line 70 column 16 (char 1529)
+2025-03-01 11:37:12,595 - backend.trade_bot - INFO - Using technical strategy for GOOGL
+2025-03-01 11:37:12,595 - backend.trade_bot - ERROR - Error loading model for AMZN: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 11:37:12,595 - backend.trade_bot - INFO - Using technical strategy for AMZN
+2025-03-01 11:37:12,596 - backend.trade_bot - ERROR - Error loading model for TSLA: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 11:37:12,596 - backend.trade_bot - INFO - Using technical strategy for TSLA
+2025-03-01 11:37:12,596 - backend.trade_bot - INFO - All components initialized successfully
+2025-03-01 11:37:12,605 - __main__ - INFO - Fetching historical data for ['AAPL', 'MSFT', 'GOOGL']
+2025-03-01 11:37:13,156 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 11:37:13,177 - __main__ - WARNING - No active model found in database
+2025-03-01 11:37:13,241 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 11:37:13,242 - __main__ - WARNING - No active model found in database
+2025-03-01 11:37:13,253 - __main__ - WARNING - Strategy for GOOGL is not an ML strategy
+2025-03-01 11:37:13,254 - __main__ - WARNING - No active model found in database
+2025-03-01 11:53:58,952 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 11:53:58,952 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 11:53:59,333 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 11:53:59,445 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 11:53:59,468 - backend.database - INFO - SQLite database connection established
+2025-03-01 11:53:59,470 - backend.trade_bot - INFO - Loaded configuration from /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 11:53:59,470 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 11:53:59,470 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 11:53:59,786 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 11:53:59,787 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 11:53:59,793 - backend.database - INFO - SQLite database connection established
+2025-03-01 11:53:59,794 - backend.trade_bot - ERROR - Error loading model for AAPL: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 11:53:59,794 - backend.trade_bot - INFO - Using technical strategy for AAPL
+2025-03-01 11:53:59,794 - backend.trade_bot - ERROR - Error loading model for MSFT: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 11:53:59,795 - backend.trade_bot - INFO - Using technical strategy for MSFT
+2025-03-01 11:53:59,796 - backend.trade_bot - ERROR - Error loading model for GOOGL: Expecting value: line 70 column 16 (char 1529)
+2025-03-01 11:53:59,796 - backend.trade_bot - INFO - Using technical strategy for GOOGL
+2025-03-01 11:53:59,796 - backend.trade_bot - ERROR - Error loading model for AMZN: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 11:53:59,797 - backend.trade_bot - INFO - Using technical strategy for AMZN
+2025-03-01 11:53:59,797 - backend.trade_bot - ERROR - Error loading model for TSLA: Expecting value: line 70 column 16 (char 1528)
+2025-03-01 11:53:59,797 - backend.trade_bot - INFO - Using technical strategy for TSLA
+2025-03-01 11:53:59,797 - backend.trade_bot - INFO - All components initialized successfully
+2025-03-01 11:53:59,803 - __main__ - INFO - Fetching historical data for ['AAPL', 'MSFT', 'GOOGL']
+2025-03-01 11:54:00,362 - __main__ - WARNING - Strategy for AAPL is not an ML strategy
+2025-03-01 11:54:00,384 - __main__ - WARNING - No active model found in database
+2025-03-01 11:54:00,446 - __main__ - WARNING - Strategy for MSFT is not an ML strategy
+2025-03-01 11:54:00,446 - __main__ - WARNING - No active model found in database
+2025-03-01 11:54:00,458 - __main__ - WARNING - Strategy for GOOGL is not an ML strategy
+2025-03-01 11:54:00,459 - __main__ - WARNING - No active model found in database

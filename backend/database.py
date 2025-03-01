@@ -1,12 +1,13 @@
 import os
 import json
 import logging
+import math
 import pandas as pd
 from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime, Boolean, Text, MetaData, Table, \
     ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
-from datetime import datetime
+from datetime import datetime, timedelta
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,7 @@ class Stock(Base):
     # Relationships
     price_data = relationship("PriceData", back_populates="stock")
     trades = relationship("Trade", back_populates="stock")
+    predictions = relationship("ModelPrediction", back_populates="stock")
 
     def __repr__(self):
         return f"<Stock(symbol='{self.symbol}', name='{self.name}')>"
@@ -86,7 +88,7 @@ class AIModel(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(100), nullable=False)
     version = Column(String(20), nullable=False)
-    model_type = Column(String(50), nullable=False)  # e.g., 'PPO', 'DQN'
+    model_type = Column(String(50), nullable=False)  # e.g., 'PPO', 'DQN', 'LSTM'
     description = Column(Text, nullable=True)
     created_at = Column(DateTime, default=datetime.now, nullable=False)
     is_active = Column(Boolean, default=False)
@@ -95,9 +97,33 @@ class AIModel(Base):
 
     # Relationships
     trades = relationship("Trade", back_populates="model")
+    predictions = relationship("ModelPrediction", back_populates="model")
 
     def __repr__(self):
         return f"<AIModel(name='{self.name}', version='{self.version}', active='{self.is_active}')>"
+
+
+class ModelPrediction(Base):
+    """Model for storing AI model predictions."""
+    __tablename__ = 'model_predictions'
+
+    id = Column(Integer, primary_key=True)
+    stock_id = Column(Integer, ForeignKey('stocks.id'), nullable=False)
+    model_id = Column(Integer, ForeignKey('models.id'), nullable=True)
+    timestamp = Column(DateTime, default=datetime.now, nullable=False)
+    predicted_value = Column(Float, nullable=False)
+    actual_value = Column(Float, nullable=True)  # Updated after we know the actual value
+    confidence = Column(Float, nullable=True)
+    error_percent = Column(Float, nullable=True)  # Difference between predicted and actual
+    is_correct = Column(Boolean, nullable=True)  # Whether prediction was correct within threshold
+    notes = Column(Text, nullable=True)
+
+    # Relationships
+    stock = relationship("Stock", back_populates="predictions")
+    model = relationship("AIModel", back_populates="predictions")
+
+    def __repr__(self):
+        return f"<ModelPrediction(stock='{self.stock.symbol if self.stock else None}', predicted='{self.predicted_value}', actual='{self.actual_value}')>"
 
 
 class Database:
@@ -403,7 +429,7 @@ class Database:
         finally:
             session.close()
 
-    def get_stock_trades(self, symbol=None, start_date=None, end_date=None, trade_type=None):
+    def get_stock_trades(self, symbol=None, start_date=None, end_date=None, trade_type=None, limit=None):
         """Get trades for a stock or all stocks.
 
         Args:
@@ -411,6 +437,7 @@ class Database:
             start_date (datetime, optional): Start date for filtering.
             end_date (datetime, optional): End date for filtering.
             trade_type (str, optional): Filter by trade type ('buy' or 'sell').
+            limit (int, optional): Limit number of results.
 
         Returns:
             list: List of Trade objects.
@@ -434,8 +461,15 @@ class Database:
             if trade_type:
                 query = query.filter_by(trade_type=trade_type)
 
+            # Order by timestamp (newest first)
+            query = query.order_by(Trade.timestamp.desc())
+
+            # Limit results if specified
+            if limit:
+                query = query.limit(limit)
+
             # Get the trades
-            trades = query.order_by(Trade.timestamp).all()
+            trades = query.all()
             return trades
         except Exception as e:
             logger.error(f"Error getting trades: {e}")
@@ -455,6 +489,175 @@ class Database:
         except Exception as e:
             logger.error(f"Error getting active model: {e}")
             raise
+        finally:
+            session.close()
+
+    def get_model_by_symbol(self, symbol):
+        """Get the AI model for a specific stock symbol.
+
+        Args:
+            symbol (str): Stock symbol
+
+        Returns:
+            AIModel: AI model for the symbol
+        """
+        session = self.get_session()
+        try:
+            # Look for models matching the symbol
+            models = session.query(AIModel).filter(AIModel.name.like(f'%{symbol}%')).order_by(
+                AIModel.created_at.desc()).all()
+            return models[0] if models else None
+        except Exception as e:
+            logger.error(f"Error getting model for {symbol}: {e}")
+            return None
+        finally:
+            session.close()
+
+    def save_model_prediction(self, symbol, prediction, confidence, timestamp=None, model_id=None):
+        """Save a model prediction to the database.
+
+        Args:
+            symbol (str): Stock symbol
+            prediction (float): Predicted price
+            confidence (float): Prediction confidence
+            timestamp (datetime, optional): Prediction timestamp
+            model_id (int, optional): AI model ID
+
+        Returns:
+            ModelPrediction: The created ModelPrediction object
+        """
+        session = self.get_session()
+        try:
+            # Get the stock
+            stock = session.query(Stock).filter_by(symbol=symbol).first()
+            if not stock:
+                logger.warning(f"Stock {symbol} not found, adding it")
+                stock = self.add_stock(symbol)
+
+            # Get active model if model_id not provided
+            if not model_id:
+                active_model = self.get_active_model()
+                model_id = active_model.id if active_model else None
+
+            # Create new prediction
+            prediction_obj = ModelPrediction(
+                stock_id=stock.id,
+                model_id=model_id,
+                predicted_value=prediction,
+                confidence=confidence,
+                timestamp=timestamp or datetime.now(),
+                is_correct=None  # Will be updated later when we know the actual result
+            )
+
+            session.add(prediction_obj)
+            session.commit()
+
+            logger.info(f"Saved prediction for {symbol}: {prediction} with {confidence:.2f} confidence")
+            return prediction_obj
+        except Exception as e:
+            session.rollback()
+            logger.error(f"Error saving prediction for {symbol}: {e}")
+            raise
+        finally:
+            session.close()
+
+    def update_prediction_accuracy(self, prediction_id, actual_value):
+        """Update the accuracy of a prediction.
+
+        Args:
+            prediction_id (int): Prediction ID
+            actual_value (float): Actual price value
+
+        Returns:
+            ModelPrediction: The updated ModelPrediction object
+        """
+        session = self.get_session()
+        try:
+            # Get the prediction
+            prediction = session.query(ModelPrediction).filter_by(id=prediction_id).first()
+            if not prediction:
+                logger.warning(f"Prediction {prediction_id} not found")
+                return None
+
+            # Calculate accuracy
+            predicted = prediction.predicted_value
+            error_percent = abs(predicted - actual_value) / actual_value * 100
+
+            # Update prediction
+            prediction.actual_value = actual_value
+            prediction.error_percent = error_percent
+            prediction.is_correct = error_percent <= 1.0  # Consider correct if within 1%
+
+            session.commit()
+            return prediction
+        except Exception as e:
+            session.rollback()
+            logger.error(f"Error updating prediction {prediction_id}: {e}")
+            raise
+        finally:
+            session.close()
+
+    def get_model_performance(self, model_id=None, symbol=None, days=30):
+        """Get the performance of a model.
+
+        Args:
+            model_id (int, optional): Model ID
+            symbol (str, optional): Stock symbol
+            days (int, optional): Number of days to look back
+
+        Returns:
+            dict: Performance metrics
+        """
+        session = self.get_session()
+        try:
+            # Build query for predictions
+            query = session.query(ModelPrediction)
+
+            if model_id:
+                query = query.filter_by(model_id=model_id)
+            elif symbol:
+                # Get stock by symbol
+                stock = session.query(Stock).filter_by(symbol=symbol).first()
+                if not stock:
+                    logger.warning(f"Stock {symbol} not found")
+                    return {}
+                query = query.filter_by(stock_id=stock.id)
+
+            # Filter by date
+            if days:
+                start_date = datetime.now() - timedelta(days=days)
+                query = query.filter(ModelPrediction.timestamp >= start_date)
+
+            # Get predictions
+            predictions = query.all()
+
+            if not predictions:
+                return {}
+
+            # Calculate metrics
+            total_predictions = len(predictions)
+            correct_predictions = sum(1 for p in predictions if p.is_correct)
+            accuracy = correct_predictions / total_predictions if total_predictions > 0 else 0
+
+            # Calculate RMSE for predictions with actual values
+            predictions_with_actuals = [p for p in predictions if p.actual_value is not None]
+            if predictions_with_actuals:
+                mse = sum((p.predicted_value - p.actual_value) ** 2 for p in predictions_with_actuals) / len(
+                    predictions_with_actuals)
+                rmse = math.sqrt(mse)
+            else:
+                mse = rmse = None
+
+            return {
+                'total_predictions': total_predictions,
+                'correct_predictions': correct_predictions,
+                'accuracy': accuracy,
+                'mse': mse,
+                'rmse': rmse
+            }
+        except Exception as e:
+            logger.error(f"Error getting model performance: {e}")
+            return {}
         finally:
             session.close()
 
@@ -510,6 +713,18 @@ if __name__ == "__main__":
 
         active_model = db.get_active_model()
         print(f"Active model: {active_model}")
+
+        # Test adding a prediction
+        prediction = db.save_model_prediction('AAPL', 155.0, 0.8, model_id=model.id)
+        print(f"Added prediction: {prediction}")
+
+        # Test updating prediction accuracy
+        updated_prediction = db.update_prediction_accuracy(prediction.id, 156.0)
+        print(f"Updated prediction: {updated_prediction}")
+
+        # Test getting model performance
+        performance = db.get_model_performance(model_id=model.id)
+        print(f"Model performance: {performance}")
 
         print("\nDatabase test successful!")
 
