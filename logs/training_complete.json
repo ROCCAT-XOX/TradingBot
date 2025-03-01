@@ -1,6 +1,6 @@
 {
     "status": "completed",
-    "timestamp": "2025-03-01T16:04:14.405413",
+    "timestamp": "2025-03-01T17:03:13.435694",
     "models": [
         "AAPL",
         "MSFT",
@@ -58,7 +58,7 @@
             "ent_coef": 0.0,
             "max_grad_norm": 0.5,
             "vf_coef": 0.5,
-            "num_epochs": 50
+            "num_epochs": 5000
         },
         "REWARD_SETTINGS": {
             "profit_reward_factor": 1.0,

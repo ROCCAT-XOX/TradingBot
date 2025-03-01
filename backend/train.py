@@ -565,7 +565,7 @@ def train_trading_model(config=None):
         'dropout': 0.2,
         'batch_size': 64,
         'learning_rate': 0.001,
-        'num_epochs': 50
+        'num_epochs': 5000
     }
 
     # Update model parameters from AI_MODEL_SETTINGS if available
@@ -729,7 +729,7 @@ def parse_arguments():
 
     parser = argparse.ArgumentParser(description='Train trading models for selected symbols')
     parser.add_argument('--symbols', type=str, help='Comma-separated list of symbols to train (e.g., AAPL,MSFT,GOOGL)')
-    parser.add_argument('--epochs', type=int, default=50, help='Number of training epochs')
+    parser.add_argument('--epochs', type=int, default=10000, help='Number of training epochs')
     parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate')
     parser.add_argument('--timeframe', type=str, default='1Day', help='Data timeframe (e.g., 1Day, 1Hour)')
     parser.add_argument('--days', type=int, default=365, help='Number of days of historical data to use')
@@ -790,7 +790,7 @@ if __name__ == "__main__":
         config['TRAINING_PERIOD_DAYS'] = args.days
 
     # Get symbols from config
-    symbols = config.get('TRADING_SYMBOLS', ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA'])
+    symbols = config.get('TRADING_SYMBOLS', ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA','NVD'])
 
     try:
         # Run training with the updated config
