@@ -1,0 +1,438 @@
+2025-03-01 16:04:03,138 - run_all_dashboards - INFO - Starte ML-Modell-Training im Modus: default...
+2025-03-01 16:04:03,139 - run_all_dashboards - INFO - ML-Modell-Training gestartet!
+2025-03-01 16:04:03,139 - run_all_dashboards - INFO - Starte Trading-Bot im Modus: paper (Test-Modus: False)...
+2025-03-01 16:04:03,140 - run_all_dashboards - INFO - Trading-Bot im paper-Modus gestartet!
+2025-03-01 16:04:06,146 - run_all_dashboards - INFO - Starte Hauptdashboard auf Port 8501...
+2025-03-01 16:04:08,313 - run_all_dashboards - INFO - Hauptdashboard erfolgreich gestartet!
+2025-03-01 16:04:08,313 - run_all_dashboards - INFO - Starte Einfaches Dashboard auf Port 8502...
+2025-03-01 16:04:10,413 - run_all_dashboards - INFO - Einfaches Dashboard erfolgreich gestartet!
+2025-03-01 16:04:10,414 - run_all_dashboards - INFO - Starte AI-Dashboard auf Port 8503...
+2025-03-01 16:04:12,500 - run_all_dashboards - INFO - AI-Dashboard erfolgreich gestartet!
+2025-03-01 16:04:12,501 - run_all_dashboards - INFO - Alle angeforderten Komponenten wurden gestartet
+2025-03-01 16:04:12,501 - run_all_dashboards - INFO - Drücke STRG+C, um alle Prozesse zu beenden
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - __main__ - INFO - Python executable: /Users/yannickstumpf/PycharmProjects/Trading/.venv/bin/python
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - __main__ - INFO - Python version: 3.12.0 (v3.12.0:0fb18b02c8, Oct  2 2023, 09:45:56) [Clang 13.0.0 (clang-1300.0.29.30)]
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - __main__ - INFO - Current working directory: /Users/yannickstumpf/PycharmProjects/Trading
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - __main__ - INFO - Parent directory: /Users/yannickstumpf/PycharmProjects/Trading
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - __main__ - INFO - Training parameters:
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - __main__ - INFO -   Symbols: ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA']
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - __main__ - INFO -   Timeframe: 1Day
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - __main__ - INFO -   Training Days: 365
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,803 - backend.database - INFO - Using SQLite database at: /Users/yannickstumpf/PycharmProjects/Trading/backend/data/trading_bot.db
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,876 - backend.database - INFO - SQLite database connection established
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,876 - backend.alpaca_api - INFO - Loading Alpaca API configuration from: /Users/yannickstumpf/PycharmProjects/Trading/config/settings.json
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:05,876 - backend.alpaca_api - INFO - API key from config: PKLZ...EMG4
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:06,271 - backend.alpaca_api - INFO - Alpaca API client initialized and verified successfully
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:06,271 - __main__ - INFO - Using device: cpu
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:06,271 - __main__ - INFO - Fetching historical data for 5 symbols from 2024-03-01 to 2025-03-01
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,135 - __main__ - INFO - Fetched training data for symbols: ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA']
+2025-03-01 16:04:14,797 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,135 - __main__ - INFO - Starting training for symbol: AAPL
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: /Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: warnings.warn(
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,756 - __main__ - INFO - Epoch 1/50 - Train Loss: 50081.927734, Valid Loss: 58667.750000
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,778 - __main__ - INFO - Epoch 2/50 - Train Loss: 49966.201172, Valid Loss: 58486.054688
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,799 - __main__ - INFO - Epoch 3/50 - Train Loss: 49743.455078, Valid Loss: 58258.675781
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,818 - __main__ - INFO - Epoch 4/50 - Train Loss: 49556.216797, Valid Loss: 57962.457031
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,836 - __main__ - INFO - Epoch 5/50 - Train Loss: 49274.572266, Valid Loss: 57613.976562
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,854 - __main__ - INFO - Epoch 6/50 - Train Loss: 48947.806641, Valid Loss: 57284.851562
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,873 - __main__ - INFO - Epoch 7/50 - Train Loss: 48602.132812, Valid Loss: 57002.175781
+2025-03-01 16:04:14,798 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,891 - __main__ - INFO - Epoch 8/50 - Train Loss: 48431.904297, Valid Loss: 56738.886719
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,908 - __main__ - INFO - Epoch 9/50 - Train Loss: 48164.001953, Valid Loss: 56475.304688
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,926 - __main__ - INFO - Epoch 10/50 - Train Loss: 47915.962891, Valid Loss: 56211.136719
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,945 - __main__ - INFO - Epoch 11/50 - Train Loss: 47641.201172, Valid Loss: 55952.156250
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,963 - __main__ - INFO - Epoch 12/50 - Train Loss: 47416.341797, Valid Loss: 55701.023438
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,981 - __main__ - INFO - Epoch 13/50 - Train Loss: 47154.123047, Valid Loss: 55459.574219
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:07,999 - __main__ - INFO - Epoch 14/50 - Train Loss: 46990.955078, Valid Loss: 55232.480469
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,018 - __main__ - INFO - Epoch 15/50 - Train Loss: 46747.001953, Valid Loss: 55018.093750
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,036 - __main__ - INFO - Epoch 16/50 - Train Loss: 46624.207031, Valid Loss: 54812.605469
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,054 - __main__ - INFO - Epoch 17/50 - Train Loss: 46391.447266, Valid Loss: 54618.792969
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,073 - __main__ - INFO - Epoch 18/50 - Train Loss: 46191.937500, Valid Loss: 54439.042969
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,090 - __main__ - INFO - Epoch 19/50 - Train Loss: 46044.251953, Valid Loss: 54269.824219
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,109 - __main__ - INFO - Epoch 20/50 - Train Loss: 45891.699219, Valid Loss: 54107.480469
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,127 - __main__ - INFO - Epoch 21/50 - Train Loss: 45732.599609, Valid Loss: 53950.023438
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,145 - __main__ - INFO - Epoch 22/50 - Train Loss: 45592.933594, Valid Loss: 53796.230469
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,166 - __main__ - INFO - Epoch 23/50 - Train Loss: 45505.531250, Valid Loss: 53645.250000
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,188 - __main__ - INFO - Epoch 24/50 - Train Loss: 45320.982422, Valid Loss: 53496.695312
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,211 - __main__ - INFO - Epoch 25/50 - Train Loss: 45153.212891, Valid Loss: 53350.156250
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,233 - __main__ - INFO - Epoch 26/50 - Train Loss: 45056.320312, Valid Loss: 53205.386719
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,257 - __main__ - INFO - Epoch 27/50 - Train Loss: 44945.734375, Valid Loss: 53062.238281
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,281 - __main__ - INFO - Epoch 28/50 - Train Loss: 44842.875000, Valid Loss: 52920.554688
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,356 - __main__ - INFO - Epoch 29/50 - Train Loss: 44637.902344, Valid Loss: 52780.101562
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,514 - __main__ - INFO - Epoch 30/50 - Train Loss: 44531.410156, Valid Loss: 52640.699219
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,548 - __main__ - INFO - Epoch 31/50 - Train Loss: 44412.091797, Valid Loss: 52502.480469
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,583 - __main__ - INFO - Epoch 32/50 - Train Loss: 44283.757812, Valid Loss: 52365.378906
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,616 - __main__ - INFO - Epoch 33/50 - Train Loss: 44078.425781, Valid Loss: 52229.136719
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,680 - __main__ - INFO - Epoch 34/50 - Train Loss: 43994.380859, Valid Loss: 52093.851562
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,747 - __main__ - INFO - Epoch 35/50 - Train Loss: 43867.390625, Valid Loss: 51959.449219
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,821 - __main__ - INFO - Epoch 36/50 - Train Loss: 43773.978516, Valid Loss: 51825.980469
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,853 - __main__ - INFO - Epoch 37/50 - Train Loss: 43646.707031, Valid Loss: 51693.460938
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,891 - __main__ - INFO - Epoch 38/50 - Train Loss: 43568.171875, Valid Loss: 51561.929688
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,929 - __main__ - INFO - Epoch 39/50 - Train Loss: 43412.205078, Valid Loss: 51431.195312
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:08,974 - __main__ - INFO - Epoch 40/50 - Train Loss: 43315.574219, Valid Loss: 51301.238281
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,008 - __main__ - INFO - Epoch 41/50 - Train Loss: 43189.082031, Valid Loss: 51171.902344
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,038 - __main__ - INFO - Epoch 42/50 - Train Loss: 43084.068359, Valid Loss: 51043.347656
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,071 - __main__ - INFO - Epoch 43/50 - Train Loss: 42890.683594, Valid Loss: 50915.425781
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,098 - __main__ - INFO - Epoch 44/50 - Train Loss: 42854.656250, Valid Loss: 50788.210938
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,124 - __main__ - INFO - Epoch 45/50 - Train Loss: 42635.064453, Valid Loss: 50661.523438
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,154 - __main__ - INFO - Epoch 46/50 - Train Loss: 42590.263672, Valid Loss: 50535.507812
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,185 - __main__ - INFO - Epoch 47/50 - Train Loss: 42450.767578, Valid Loss: 50410.117188
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,208 - __main__ - INFO - Epoch 48/50 - Train Loss: 42372.546875, Valid Loss: 50285.335938
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,235 - __main__ - INFO - Epoch 49/50 - Train Loss: 42297.382812, Valid Loss: 50161.164062
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,262 - __main__ - INFO - Epoch 50/50 - Train Loss: 42121.226562, Valid Loss: 50037.507812
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,262 - __main__ - INFO - Training completed
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,264 - __main__ - INFO - Model evaluation for AAPL:
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,264 - __main__ - INFO -   MSE: 50572.046875
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,264 - __main__ - INFO -   RMSE: 224.882294
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,264 - __main__ - INFO -   MAE: 224.863037
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,268 - __main__ - ERROR - Error training model for AAPL: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: Traceback (most recent call last):
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 675, in train_trading_model
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: model_file = save_model(
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,799 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 491, in save_model
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: json.dump(metadata, f, indent=4)
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 179, in dump
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: for chunk in iterable:
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 432, in _iterencode
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: yield from _iterencode_dict(o, _current_indent_level)
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 439, in _iterencode
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: o = _default(o)
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 180, in default
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: raise TypeError(f'Object of type {o.__class__.__name__} '
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: TypeError: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,270 - __main__ - INFO - Starting training for symbol: MSFT
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: /Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: warnings.warn(
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,312 - __main__ - INFO - Epoch 1/50 - Train Loss: 182328.242188, Valid Loss: 177448.750000
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,336 - __main__ - INFO - Epoch 2/50 - Train Loss: 181917.632812, Valid Loss: 177038.281250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,361 - __main__ - INFO - Epoch 3/50 - Train Loss: 181512.953125, Valid Loss: 176555.125000
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,383 - __main__ - INFO - Epoch 4/50 - Train Loss: 180937.382812, Valid Loss: 176013.796875
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,407 - __main__ - INFO - Epoch 5/50 - Train Loss: 180535.140625, Valid Loss: 175464.156250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,426 - __main__ - INFO - Epoch 6/50 - Train Loss: 179813.843750, Valid Loss: 174931.921875
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,444 - __main__ - INFO - Epoch 7/50 - Train Loss: 179349.820312, Valid Loss: 174420.578125
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,463 - __main__ - INFO - Epoch 8/50 - Train Loss: 178799.906250, Valid Loss: 173920.281250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,483 - __main__ - INFO - Epoch 9/50 - Train Loss: 178270.593750, Valid Loss: 173429.953125
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,507 - __main__ - INFO - Epoch 10/50 - Train Loss: 177841.000000, Valid Loss: 172951.531250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,528 - __main__ - INFO - Epoch 11/50 - Train Loss: 177253.000000, Valid Loss: 172488.953125
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,549 - __main__ - INFO - Epoch 12/50 - Train Loss: 176907.085938, Valid Loss: 172047.109375
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,584 - __main__ - INFO - Epoch 13/50 - Train Loss: 176222.507812, Valid Loss: 171626.828125
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,615 - __main__ - INFO - Epoch 14/50 - Train Loss: 176025.984375, Valid Loss: 171237.906250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,636 - __main__ - INFO - Epoch 15/50 - Train Loss: 175648.539062, Valid Loss: 170879.531250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,658 - __main__ - INFO - Epoch 16/50 - Train Loss: 175259.750000, Valid Loss: 170543.343750
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,683 - __main__ - INFO - Epoch 17/50 - Train Loss: 175004.484375, Valid Loss: 170227.359375
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,707 - __main__ - INFO - Epoch 18/50 - Train Loss: 174525.554688, Valid Loss: 169928.343750
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,726 - __main__ - INFO - Epoch 19/50 - Train Loss: 174311.531250, Valid Loss: 169640.156250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,749 - __main__ - INFO - Epoch 20/50 - Train Loss: 173932.867188, Valid Loss: 169359.718750
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,772 - __main__ - INFO - Epoch 21/50 - Train Loss: 173614.023438, Valid Loss: 169084.984375
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,807 - __main__ - INFO - Epoch 22/50 - Train Loss: 173292.679688, Valid Loss: 168814.187500
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,831 - __main__ - INFO - Epoch 23/50 - Train Loss: 173170.734375, Valid Loss: 168546.906250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,863 - __main__ - INFO - Epoch 24/50 - Train Loss: 172820.750000, Valid Loss: 168283.078125
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,891 - __main__ - INFO - Epoch 25/50 - Train Loss: 172517.898438, Valid Loss: 168022.656250
+2025-03-01 16:04:14,800 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,933 - __main__ - INFO - Epoch 26/50 - Train Loss: 172154.726562, Valid Loss: 167765.312500
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,964 - __main__ - INFO - Epoch 27/50 - Train Loss: 171982.468750, Valid Loss: 167510.421875
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:09,983 - __main__ - INFO - Epoch 28/50 - Train Loss: 171760.960938, Valid Loss: 167257.703125
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,006 - __main__ - INFO - Epoch 29/50 - Train Loss: 171598.312500, Valid Loss: 167007.093750
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,025 - __main__ - INFO - Epoch 30/50 - Train Loss: 171148.359375, Valid Loss: 166758.109375
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,043 - __main__ - INFO - Epoch 31/50 - Train Loss: 171005.210938, Valid Loss: 166510.625000
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,064 - __main__ - INFO - Epoch 32/50 - Train Loss: 170834.765625, Valid Loss: 166264.671875
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,083 - __main__ - INFO - Epoch 33/50 - Train Loss: 170570.609375, Valid Loss: 166020.421875
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,101 - __main__ - INFO - Epoch 34/50 - Train Loss: 170201.773438, Valid Loss: 165777.375000
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,121 - __main__ - INFO - Epoch 35/50 - Train Loss: 169990.812500, Valid Loss: 165535.750000
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,140 - __main__ - INFO - Epoch 36/50 - Train Loss: 169975.476562, Valid Loss: 165295.703125
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,159 - __main__ - INFO - Epoch 37/50 - Train Loss: 169576.125000, Valid Loss: 165057.000000
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,178 - __main__ - INFO - Epoch 38/50 - Train Loss: 169438.742188, Valid Loss: 164819.796875
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,196 - __main__ - INFO - Epoch 39/50 - Train Loss: 169152.531250, Valid Loss: 164583.906250
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,215 - __main__ - INFO - Epoch 40/50 - Train Loss: 168856.015625, Valid Loss: 164349.125000
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,233 - __main__ - INFO - Epoch 41/50 - Train Loss: 168755.984375, Valid Loss: 164115.328125
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,251 - __main__ - INFO - Epoch 42/50 - Train Loss: 168402.343750, Valid Loss: 163882.406250
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,271 - __main__ - INFO - Epoch 43/50 - Train Loss: 168172.882812, Valid Loss: 163650.531250
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,293 - __main__ - INFO - Epoch 44/50 - Train Loss: 167918.343750, Valid Loss: 163419.656250
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,315 - __main__ - INFO - Epoch 45/50 - Train Loss: 167590.648438, Valid Loss: 163189.546875
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,343 - __main__ - INFO - Epoch 46/50 - Train Loss: 167477.328125, Valid Loss: 162960.468750
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,375 - __main__ - INFO - Epoch 47/50 - Train Loss: 167127.507812, Valid Loss: 162732.343750
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,402 - __main__ - INFO - Epoch 48/50 - Train Loss: 166995.468750, Valid Loss: 162505.156250
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,520 - __main__ - INFO - Epoch 49/50 - Train Loss: 166915.648438, Valid Loss: 162278.828125
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,557 - __main__ - INFO - Epoch 50/50 - Train Loss: 166344.039062, Valid Loss: 162053.046875
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,557 - __main__ - INFO - Training completed
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,560 - __main__ - INFO - Model evaluation for MSFT:
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,560 - __main__ - INFO -   MSE: 149309.984375
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,560 - __main__ - INFO -   RMSE: 386.406494
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,560 - __main__ - INFO -   MAE: 386.337708
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,562 - __main__ - ERROR - Error training model for MSFT: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: Traceback (most recent call last):
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 675, in train_trading_model
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: model_file = save_model(
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 491, in save_model
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: json.dump(metadata, f, indent=4)
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 179, in dump
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: for chunk in iterable:
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 432, in _iterencode
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: yield from _iterencode_dict(o, _current_indent_level)
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 439, in _iterencode
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: o = _default(o)
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 180, in default
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: raise TypeError(f'Object of type {o.__class__.__name__} '
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: TypeError: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,563 - __main__ - INFO - Starting training for symbol: GOOGL
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: /Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: warnings.warn(
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,624 - __main__ - INFO - Epoch 1/50 - Train Loss: 28827.864258, Valid Loss: 36788.691406
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,661 - __main__ - INFO - Epoch 2/50 - Train Loss: 28713.054688, Valid Loss: 36635.390625
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,693 - __main__ - INFO - Epoch 3/50 - Train Loss: 28562.960938, Valid Loss: 36415.214844
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,725 - __main__ - INFO - Epoch 4/50 - Train Loss: 28298.372070, Valid Loss: 36110.855469
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,789 - __main__ - INFO - Epoch 5/50 - Train Loss: 28053.165039, Valid Loss: 35783.125000
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,828 - __main__ - INFO - Epoch 6/50 - Train Loss: 27751.638672, Valid Loss: 35495.300781
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,856 - __main__ - INFO - Epoch 7/50 - Train Loss: 27532.591797, Valid Loss: 35244.906250
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,898 - __main__ - INFO - Epoch 8/50 - Train Loss: 27321.842773, Valid Loss: 35010.371094
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,933 - __main__ - INFO - Epoch 9/50 - Train Loss: 27115.241211, Valid Loss: 34783.722656
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:10,980 - __main__ - INFO - Epoch 10/50 - Train Loss: 26937.036133, Valid Loss: 34567.164062
+2025-03-01 16:04:14,801 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,022 - __main__ - INFO - Epoch 11/50 - Train Loss: 26716.285156, Valid Loss: 34365.683594
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,050 - __main__ - INFO - Epoch 12/50 - Train Loss: 26584.750977, Valid Loss: 34180.644531
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,078 - __main__ - INFO - Epoch 13/50 - Train Loss: 26379.173828, Valid Loss: 34009.476562
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,108 - __main__ - INFO - Epoch 14/50 - Train Loss: 26303.398438, Valid Loss: 33850.425781
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,139 - __main__ - INFO - Epoch 15/50 - Train Loss: 26072.148438, Valid Loss: 33701.832031
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,163 - __main__ - INFO - Epoch 16/50 - Train Loss: 26001.188477, Valid Loss: 33562.195312
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,187 - __main__ - INFO - Epoch 17/50 - Train Loss: 25853.748047, Valid Loss: 33429.492188
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,209 - __main__ - INFO - Epoch 18/50 - Train Loss: 25736.860352, Valid Loss: 33302.093750
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,232 - __main__ - INFO - Epoch 19/50 - Train Loss: 25627.509766, Valid Loss: 33179.164062
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,254 - __main__ - INFO - Epoch 20/50 - Train Loss: 25534.979492, Valid Loss: 33059.917969
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,276 - __main__ - INFO - Epoch 21/50 - Train Loss: 25382.243164, Valid Loss: 32943.289062
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,299 - __main__ - INFO - Epoch 22/50 - Train Loss: 25321.994141, Valid Loss: 32828.675781
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,322 - __main__ - INFO - Epoch 23/50 - Train Loss: 25274.817383, Valid Loss: 32715.916016
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,344 - __main__ - INFO - Epoch 24/50 - Train Loss: 25144.632812, Valid Loss: 32604.490234
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,367 - __main__ - INFO - Epoch 25/50 - Train Loss: 25057.142578, Valid Loss: 32494.269531
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,389 - __main__ - INFO - Epoch 26/50 - Train Loss: 24917.708008, Valid Loss: 32385.037109
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,408 - __main__ - INFO - Epoch 27/50 - Train Loss: 24857.334961, Valid Loss: 32276.806641
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,428 - __main__ - INFO - Epoch 28/50 - Train Loss: 24728.292969, Valid Loss: 32169.431641
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,446 - __main__ - INFO - Epoch 29/50 - Train Loss: 24666.912109, Valid Loss: 32062.917969
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,464 - __main__ - INFO - Epoch 30/50 - Train Loss: 24501.439453, Valid Loss: 31957.212891
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,482 - __main__ - INFO - Epoch 31/50 - Train Loss: 24485.577148, Valid Loss: 31852.365234
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,500 - __main__ - INFO - Epoch 32/50 - Train Loss: 24359.536133, Valid Loss: 31748.207031
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,518 - __main__ - INFO - Epoch 33/50 - Train Loss: 24278.013672, Valid Loss: 31644.771484
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,536 - __main__ - INFO - Epoch 34/50 - Train Loss: 24182.619141, Valid Loss: 31542.011719
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,555 - __main__ - INFO - Epoch 35/50 - Train Loss: 24111.578125, Valid Loss: 31439.933594
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,573 - __main__ - INFO - Epoch 36/50 - Train Loss: 24015.229492, Valid Loss: 31338.519531
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,594 - __main__ - INFO - Epoch 37/50 - Train Loss: 23924.446289, Valid Loss: 31237.707031
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,615 - __main__ - INFO - Epoch 38/50 - Train Loss: 23809.718750, Valid Loss: 31137.365234
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,636 - __main__ - INFO - Epoch 39/50 - Train Loss: 23779.308594, Valid Loss: 31037.666016
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,657 - __main__ - INFO - Epoch 40/50 - Train Loss: 23607.197266, Valid Loss: 30938.472656
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,680 - __main__ - INFO - Epoch 41/50 - Train Loss: 23600.631836, Valid Loss: 30839.916016
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,700 - __main__ - INFO - Epoch 42/50 - Train Loss: 23440.537109, Valid Loss: 30741.884766
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,720 - __main__ - INFO - Epoch 43/50 - Train Loss: 23435.145508, Valid Loss: 30644.458984
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,742 - __main__ - INFO - Epoch 44/50 - Train Loss: 23345.103516, Valid Loss: 30547.587891
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,763 - __main__ - INFO - Epoch 45/50 - Train Loss: 23233.255859, Valid Loss: 30451.203125
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,789 - __main__ - INFO - Epoch 46/50 - Train Loss: 23197.180664, Valid Loss: 30355.365234
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,822 - __main__ - INFO - Epoch 47/50 - Train Loss: 23099.133789, Valid Loss: 30260.027344
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,846 - __main__ - INFO - Epoch 48/50 - Train Loss: 23018.700195, Valid Loss: 30165.105469
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,868 - __main__ - INFO - Epoch 49/50 - Train Loss: 22892.971680, Valid Loss: 30070.568359
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,893 - __main__ - INFO - Epoch 50/50 - Train Loss: 22841.279297, Valid Loss: 29976.500000
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,893 - __main__ - INFO - Training completed
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,895 - __main__ - INFO - Model evaluation for GOOGL:
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,896 - __main__ - INFO -   MSE: 25704.119141
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,896 - __main__ - INFO -   RMSE: 160.325043
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,896 - __main__ - INFO -   MAE: 160.205948
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,898 - __main__ - ERROR - Error training model for GOOGL: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: Traceback (most recent call last):
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 675, in train_trading_model
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: model_file = save_model(
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 491, in save_model
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: json.dump(metadata, f, indent=4)
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 179, in dump
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: for chunk in iterable:
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 432, in _iterencode
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: yield from _iterencode_dict(o, _current_indent_level)
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 439, in _iterencode
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: o = _default(o)
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 180, in default
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: raise TypeError(f'Object of type {o.__class__.__name__} '
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: TypeError: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,898 - __main__ - INFO - Starting training for symbol: AMZN
+2025-03-01 16:04:14,802 - run_all_dashboards - ERROR - Training: /Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: warnings.warn(
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,936 - __main__ - INFO - Epoch 1/50 - Train Loss: 35238.861328, Valid Loss: 48814.449219
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,956 - __main__ - INFO - Epoch 2/50 - Train Loss: 35096.583984, Valid Loss: 48616.460938
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,975 - __main__ - INFO - Epoch 3/50 - Train Loss: 34954.285156, Valid Loss: 48378.210938
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:11,992 - __main__ - INFO - Epoch 4/50 - Train Loss: 34729.236328, Valid Loss: 48091.601562
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,012 - __main__ - INFO - Epoch 5/50 - Train Loss: 34502.742188, Valid Loss: 47785.140625
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,030 - __main__ - INFO - Epoch 6/50 - Train Loss: 34215.597656, Valid Loss: 47496.667969
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,049 - __main__ - INFO - Epoch 7/50 - Train Loss: 33939.460938, Valid Loss: 47225.933594
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,068 - __main__ - INFO - Epoch 8/50 - Train Loss: 33702.814453, Valid Loss: 46957.492188
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,086 - __main__ - INFO - Epoch 9/50 - Train Loss: 33507.322266, Valid Loss: 46686.886719
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,105 - __main__ - INFO - Epoch 10/50 - Train Loss: 33245.144531, Valid Loss: 46422.613281
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,123 - __main__ - INFO - Epoch 11/50 - Train Loss: 33037.494141, Valid Loss: 46177.394531
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,141 - __main__ - INFO - Epoch 12/50 - Train Loss: 32858.431641, Valid Loss: 45953.398438
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,160 - __main__ - INFO - Epoch 13/50 - Train Loss: 32703.319336, Valid Loss: 45746.148438
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,178 - __main__ - INFO - Epoch 14/50 - Train Loss: 32479.493164, Valid Loss: 45552.761719
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,197 - __main__ - INFO - Epoch 15/50 - Train Loss: 32274.594727, Valid Loss: 45370.617188
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,216 - __main__ - INFO - Epoch 16/50 - Train Loss: 32097.222656, Valid Loss: 45198.878906
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,234 - __main__ - INFO - Epoch 17/50 - Train Loss: 32026.489258, Valid Loss: 45037.183594
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,253 - __main__ - INFO - Epoch 18/50 - Train Loss: 31924.652344, Valid Loss: 44882.984375
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,271 - __main__ - INFO - Epoch 19/50 - Train Loss: 31805.811523, Valid Loss: 44733.433594
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,291 - __main__ - INFO - Epoch 20/50 - Train Loss: 31654.333984, Valid Loss: 44587.355469
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,309 - __main__ - INFO - Epoch 21/50 - Train Loss: 31553.482422, Valid Loss: 44444.757812
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,328 - __main__ - INFO - Epoch 22/50 - Train Loss: 31390.653320, Valid Loss: 44305.757812
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,346 - __main__ - INFO - Epoch 23/50 - Train Loss: 31338.090820, Valid Loss: 44170.257812
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,365 - __main__ - INFO - Epoch 24/50 - Train Loss: 31209.869141, Valid Loss: 44036.992188
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,383 - __main__ - INFO - Epoch 25/50 - Train Loss: 31093.411133, Valid Loss: 43905.261719
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,402 - __main__ - INFO - Epoch 26/50 - Train Loss: 30979.772461, Valid Loss: 43775.074219
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,420 - __main__ - INFO - Epoch 27/50 - Train Loss: 30810.363281, Valid Loss: 43646.359375
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,444 - __main__ - INFO - Epoch 28/50 - Train Loss: 30688.604492, Valid Loss: 43519.093750
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,464 - __main__ - INFO - Epoch 29/50 - Train Loss: 30629.686523, Valid Loss: 43393.128906
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,485 - __main__ - INFO - Epoch 30/50 - Train Loss: 30527.101562, Valid Loss: 43268.273438
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,510 - __main__ - INFO - Epoch 31/50 - Train Loss: 30460.400391, Valid Loss: 43144.492188
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,595 - __main__ - INFO - Epoch 32/50 - Train Loss: 30344.864258, Valid Loss: 43021.773438
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,626 - __main__ - INFO - Epoch 33/50 - Train Loss: 30230.051758, Valid Loss: 42900.046875
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,657 - __main__ - INFO - Epoch 34/50 - Train Loss: 30146.842773, Valid Loss: 42779.183594
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,687 - __main__ - INFO - Epoch 35/50 - Train Loss: 30013.627930, Valid Loss: 42659.042969
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,714 - __main__ - INFO - Epoch 36/50 - Train Loss: 29957.646484, Valid Loss: 42539.656250
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,743 - __main__ - INFO - Epoch 37/50 - Train Loss: 29768.360352, Valid Loss: 42420.972656
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,773 - __main__ - INFO - Epoch 38/50 - Train Loss: 29707.875977, Valid Loss: 42302.945312
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,803 - __main__ - INFO - Epoch 39/50 - Train Loss: 29667.897461, Valid Loss: 42185.710938
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,826 - __main__ - INFO - Epoch 40/50 - Train Loss: 29546.306641, Valid Loss: 42069.164062
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,849 - __main__ - INFO - Epoch 41/50 - Train Loss: 29432.747070, Valid Loss: 41953.296875
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,880 - __main__ - INFO - Epoch 42/50 - Train Loss: 29360.162109, Valid Loss: 41838.179688
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,940 - __main__ - INFO - Epoch 43/50 - Train Loss: 29255.829102, Valid Loss: 41723.640625
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,962 - __main__ - INFO - Epoch 44/50 - Train Loss: 29123.220703, Valid Loss: 41609.597656
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:12,984 - __main__ - INFO - Epoch 45/50 - Train Loss: 29031.558594, Valid Loss: 41496.042969
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,005 - __main__ - INFO - Epoch 46/50 - Train Loss: 28908.737305, Valid Loss: 41383.011719
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,029 - __main__ - INFO - Epoch 47/50 - Train Loss: 28894.773438, Valid Loss: 41270.601562
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,054 - __main__ - INFO - Epoch 48/50 - Train Loss: 28731.998047, Valid Loss: 41158.675781
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,083 - __main__ - INFO - Epoch 49/50 - Train Loss: 28630.091797, Valid Loss: 41047.226562
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,108 - __main__ - INFO - Epoch 50/50 - Train Loss: 28612.526367, Valid Loss: 40936.308594
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,108 - __main__ - INFO - Training completed
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,109 - __main__ - INFO - Model evaluation for AMZN:
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,109 - __main__ - INFO -   MSE: 40231.773438
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,109 - __main__ - INFO -   RMSE: 200.578598
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,109 - __main__ - INFO -   MAE: 200.440720
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,111 - __main__ - ERROR - Error training model for AMZN: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: Traceback (most recent call last):
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 675, in train_trading_model
+2025-03-01 16:04:14,803 - run_all_dashboards - ERROR - Training: model_file = save_model(
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 491, in save_model
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: json.dump(metadata, f, indent=4)
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 179, in dump
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: for chunk in iterable:
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 432, in _iterencode
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: yield from _iterencode_dict(o, _current_indent_level)
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 439, in _iterencode
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: o = _default(o)
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 180, in default
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: raise TypeError(f'Object of type {o.__class__.__name__} '
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: TypeError: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,112 - __main__ - INFO - Starting training for symbol: TSLA
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: /Users/yannickstumpf/PycharmProjects/Trading/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: warnings.warn(
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,152 - __main__ - INFO - Epoch 1/50 - Train Loss: 58988.699219, Valid Loss: 160280.468750
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,177 - __main__ - INFO - Epoch 2/50 - Train Loss: 58794.246094, Valid Loss: 159936.562500
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,197 - __main__ - INFO - Epoch 3/50 - Train Loss: 58463.375000, Valid Loss: 159500.875000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,218 - __main__ - INFO - Epoch 4/50 - Train Loss: 58585.929688, Valid Loss: 158961.921875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,239 - __main__ - INFO - Epoch 5/50 - Train Loss: 57804.302734, Valid Loss: 158381.500000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,261 - __main__ - INFO - Epoch 6/50 - Train Loss: 57528.292969, Valid Loss: 157826.921875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,282 - __main__ - INFO - Epoch 7/50 - Train Loss: 57218.544922, Valid Loss: 157302.421875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,307 - __main__ - INFO - Epoch 8/50 - Train Loss: 57022.990234, Valid Loss: 156793.687500
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,335 - __main__ - INFO - Epoch 9/50 - Train Loss: 56690.677734, Valid Loss: 156303.984375
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,358 - __main__ - INFO - Epoch 10/50 - Train Loss: 56245.417969, Valid Loss: 155837.000000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,381 - __main__ - INFO - Epoch 11/50 - Train Loss: 56243.642578, Valid Loss: 155392.921875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,406 - __main__ - INFO - Epoch 12/50 - Train Loss: 55805.615234, Valid Loss: 154980.218750
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,430 - __main__ - INFO - Epoch 13/50 - Train Loss: 55540.287109, Valid Loss: 154607.875000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,453 - __main__ - INFO - Epoch 14/50 - Train Loss: 55573.759766, Valid Loss: 154271.562500
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,480 - __main__ - INFO - Epoch 15/50 - Train Loss: 55101.986328, Valid Loss: 153957.625000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,503 - __main__ - INFO - Epoch 16/50 - Train Loss: 54878.076172, Valid Loss: 153659.812500
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,527 - __main__ - INFO - Epoch 17/50 - Train Loss: 54771.337891, Valid Loss: 153376.703125
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,552 - __main__ - INFO - Epoch 18/50 - Train Loss: 54818.906250, Valid Loss: 153104.984375
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,587 - __main__ - INFO - Epoch 19/50 - Train Loss: 54367.935547, Valid Loss: 152840.593750
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,613 - __main__ - INFO - Epoch 20/50 - Train Loss: 54366.441406, Valid Loss: 152582.531250
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,641 - __main__ - INFO - Epoch 21/50 - Train Loss: 54134.042969, Valid Loss: 152329.718750
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,670 - __main__ - INFO - Epoch 22/50 - Train Loss: 53827.964844, Valid Loss: 152081.296875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,699 - __main__ - INFO - Epoch 23/50 - Train Loss: 53833.558594, Valid Loss: 151837.281250
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,729 - __main__ - INFO - Epoch 24/50 - Train Loss: 53798.482422, Valid Loss: 151596.656250
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,761 - __main__ - INFO - Epoch 25/50 - Train Loss: 53565.320312, Valid Loss: 151358.265625
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,791 - __main__ - INFO - Epoch 26/50 - Train Loss: 53416.822266, Valid Loss: 151122.093750
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,820 - __main__ - INFO - Epoch 27/50 - Train Loss: 53210.240234, Valid Loss: 150888.281250
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,849 - __main__ - INFO - Epoch 28/50 - Train Loss: 53150.306641, Valid Loss: 150656.718750
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,876 - __main__ - INFO - Epoch 29/50 - Train Loss: 53157.392578, Valid Loss: 150426.796875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,903 - __main__ - INFO - Epoch 30/50 - Train Loss: 53133.232422, Valid Loss: 150198.625000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,939 - __main__ - INFO - Epoch 31/50 - Train Loss: 52580.187500, Valid Loss: 149971.453125
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:13,970 - __main__ - INFO - Epoch 32/50 - Train Loss: 52658.199219, Valid Loss: 149745.125000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,011 - __main__ - INFO - Epoch 33/50 - Train Loss: 52531.626953, Valid Loss: 149518.156250
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,040 - __main__ - INFO - Epoch 34/50 - Train Loss: 52219.095703, Valid Loss: 149290.250000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,065 - __main__ - INFO - Epoch 35/50 - Train Loss: 52314.587891, Valid Loss: 149063.796875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,087 - __main__ - INFO - Epoch 36/50 - Train Loss: 51993.869141, Valid Loss: 148839.765625
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,109 - __main__ - INFO - Epoch 37/50 - Train Loss: 52110.847656, Valid Loss: 148617.015625
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,133 - __main__ - INFO - Epoch 38/50 - Train Loss: 51627.591797, Valid Loss: 148392.796875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,164 - __main__ - INFO - Epoch 39/50 - Train Loss: 51947.966797, Valid Loss: 148169.750000
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,189 - __main__ - INFO - Epoch 40/50 - Train Loss: 51624.269531, Valid Loss: 147948.406250
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,210 - __main__ - INFO - Epoch 41/50 - Train Loss: 51453.455078, Valid Loss: 147728.171875
+2025-03-01 16:04:14,804 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,231 - __main__ - INFO - Epoch 42/50 - Train Loss: 51456.115234, Valid Loss: 147508.906250
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,251 - __main__ - INFO - Epoch 43/50 - Train Loss: 51404.464844, Valid Loss: 147290.609375
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,271 - __main__ - INFO - Epoch 44/50 - Train Loss: 51245.337891, Valid Loss: 147073.406250
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,297 - __main__ - INFO - Epoch 45/50 - Train Loss: 50980.585938, Valid Loss: 146856.953125
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,317 - __main__ - INFO - Epoch 46/50 - Train Loss: 50746.673828, Valid Loss: 146641.218750
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,337 - __main__ - INFO - Epoch 47/50 - Train Loss: 50674.439453, Valid Loss: 146426.265625
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,358 - __main__ - INFO - Epoch 48/50 - Train Loss: 50421.496094, Valid Loss: 146211.937500
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,378 - __main__ - INFO - Epoch 49/50 - Train Loss: 50712.949219, Valid Loss: 145998.953125
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,398 - __main__ - INFO - Epoch 50/50 - Train Loss: 50279.724609, Valid Loss: 145786.515625
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,398 - __main__ - INFO - Training completed
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,400 - __main__ - INFO - Model evaluation for TSLA:
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,400 - __main__ - INFO -   MSE: 96956.070312
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,400 - __main__ - INFO -   RMSE: 311.377686
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,400 - __main__ - INFO -   MAE: 309.994598
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,402 - __main__ - ERROR - Error training model for TSLA: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: Traceback (most recent call last):
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 675, in train_trading_model
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: model_file = save_model(
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: File "/Users/yannickstumpf/PycharmProjects/Trading/backend/train.py", line 491, in save_model
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: json.dump(metadata, f, indent=4)
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 179, in dump
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: for chunk in iterable:
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 432, in _iterencode
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: yield from _iterencode_dict(o, _current_indent_level)
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: yield from chunks
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 439, in _iterencode
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: o = _default(o)
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: ^^^^^^^^^^^
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 180, in default
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: raise TypeError(f'Object of type {o.__class__.__name__} '
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: TypeError: Object of type float32 is not JSON serializable
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,403 - __main__ - INFO - Training completed. Models saved for: []
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,405 - backend.training_completion_utils - INFO - =========================================
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,405 - backend.training_completion_utils - INFO - Training vollständig abgeschlossen!
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,405 - backend.training_completion_utils - INFO - Modelle für 5 Symbole trainiert: AAPL, MSFT, GOOGL, AMZN, TSLA
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,405 - backend.training_completion_utils - INFO - Modelle wurden gespeichert in: /Users/yannickstumpf/PycharmProjects/Trading/backend/models
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,405 - backend.training_completion_utils - INFO - =========================================
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,405 - backend.training_completion_utils - INFO - Trainingsabschluss-Benachrichtigung gespeichert: /Users/yannickstumpf/PycharmProjects/Trading/logs/training_complete.json
+2025-03-01 16:04:14,805 - run_all_dashboards - ERROR - Training: 2025-03-01 16:04:14,406 - __main__ - INFO - Training completed successfully!
+2025-03-01 16:04:42,384 - run_all_dashboards - INFO - Beende alle Prozesse...
+2025-03-01 16:04:42,384 - run_all_dashboards - INFO - training beendet
+2025-03-01 16:04:42,384 - run_all_dashboards - INFO - trading_bot beendet
+2025-03-01 16:04:42,384 - run_all_dashboards - INFO - main_dashboard beendet
+2025-03-01 16:04:42,384 - run_all_dashboards - INFO - simple_dashboard beendet
+2025-03-01 16:04:42,384 - run_all_dashboards - INFO - ai_dashboard beendet
+2025-03-01 16:04:42,384 - run_all_dashboards - INFO - Alle Prozesse beendet. Auf Wiedersehen!

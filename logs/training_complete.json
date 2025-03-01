@@ -1,6 +1,6 @@
 {
     "status": "completed",
-    "timestamp": "2025-03-01T13:55:02.890806",
+    "timestamp": "2025-03-01T16:04:14.405413",
     "models": [
         "AAPL",
         "MSFT",
@@ -24,9 +24,28 @@
             "AMZN",
             "TSLA"
         ],
+        "CRYPTO_SYMBOLS": [
+            "BTC/USD",
+            "ETH/USD",
+            "SOL/USD",
+            "DOGE/USD",
+            "AVAX/USD"
+        ],
         "DEFAULT_TIMEFRAME": "1Day",
         "TRAINING_PERIOD_DAYS": 365,
         "PAPER_TRADING": true,
+        "ASSET_TYPES": {
+            "AAPL": "stock",
+            "MSFT": "stock",
+            "GOOGL": "stock",
+            "AMZN": "stock",
+            "TSLA": "stock",
+            "BTC/USD": "crypto",
+            "ETH/USD": "crypto",
+            "SOL/USD": "crypto",
+            "DOGE/USD": "crypto",
+            "AVAX/USD": "crypto"
+        },
         "AI_MODEL_SETTINGS": {
             "model_type": "PPO",
             "learning_rate": 0.001,

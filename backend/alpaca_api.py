@@ -230,6 +230,7 @@ class AlpacaAPI:
             raise
 
 
+
 if __name__ == "__main__":
     # Simple test to make sure the API connection works
     import os
