@@ -486,9 +486,28 @@ def save_model(model, model_name, model_path, scaler=None, metadata=None):
 
     # Save metadata if provided
     if metadata is not None:
+        # Convert NumPy types to Python native types for JSON serialization
+        def convert_numpy_types(obj):
+            if isinstance(obj, dict):
+                return {k: convert_numpy_types(v) for k, v in obj.items()}
+            elif isinstance(obj, list):
+                return [convert_numpy_types(item) for item in obj]
+            elif isinstance(obj, (np.int_, np.intc, np.intp, np.int8, np.int16, np.int32, np.int64,
+                                  np.uint8, np.uint16, np.uint32, np.uint64)):
+                return int(obj)
+            elif isinstance(obj, (np.float_, np.float16, np.float32, np.float64)):
+                return float(obj)
+            elif isinstance(obj, (np.ndarray,)):
+                return convert_numpy_types(obj.tolist())
+            else:
+                return obj
+
+        # Convert NumPy types in metadata to standard Python types
+        metadata_serializable = convert_numpy_types(metadata)
+
         metadata_file = os.path.join(model_path, f"{model_name}_metadata.json")
         with open(metadata_file, 'w') as f:
-            json.dump(metadata, f, indent=4)
+            json.dump(metadata_serializable, f, indent=4)
 
     logger.info(f"Model saved to {model_file}")
     return model_file

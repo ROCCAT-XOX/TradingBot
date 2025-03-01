@@ -13,6 +13,7 @@ import subprocess
 import time
 import threading
 import queue
+from backend.crypto_integration import CryptoIntegration
 
 # Add the parent directory to the path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -266,6 +267,7 @@ def start_trading_bot(mode='paper', test_mode=True):
     # Update session state
     st.session_state.bot_running = True
     st.session_state.bot_logs = []
+
 
     # Function to read output and update logs
     def read_output(process, log_queue):
