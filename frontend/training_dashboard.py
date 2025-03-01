@@ -13,7 +13,7 @@ import subprocess
 import time
 import threading
 import queue
-from backend.training_completion_utils import check_training_completion, clear_training_notification
+
 # Add the parent directory to the path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -21,6 +21,43 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from backend.alpaca_api import AlpacaAPI
 from backend.database import Database
 from backend.trade_bot import TradingBot
+
+
+def check_training_completion():
+    """
+    Überprüft, ob ein Training abgeschlossen wurde, indem nach der Benachrichtigungsdatei gesucht wird.
+
+    Returns:
+        dict or None: Benachrichtigungsdaten, falls das Training abgeschlossen ist, sonst None
+    """
+    parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    notification_file = os.path.join(parent_dir, 'logs', 'training_complete.json')
+
+    if os.path.exists(notification_file):
+        try:
+            with open(notification_file, 'r') as f:
+                notification = json.load(f)
+            return notification
+        except Exception as e:
+            logging.error(f"Fehler beim Lesen der Trainings-Abschlussbenachrichtigung: {e}")
+
+    return None
+
+
+def clear_training_notification():
+    """Löscht die Trainingsabschluss-Benachrichtigungsdatei."""
+    parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    notification_file = os.path.join(parent_dir, 'logs', 'training_complete.json')
+
+    if os.path.exists(notification_file):
+        try:
+            os.remove(notification_file)
+            logging.info(f"Trainingsabschluss-Benachrichtigung gelöscht: {notification_file}")
+            return True
+        except Exception as e:
+            logging.error(f"Fehler beim Löschen der Trainingsabschluss-Benachrichtigung: {e}")
+
+    return False
 
 # Configure logging
 logging.basicConfig(
@@ -143,69 +180,67 @@ def start_training(symbols=None, epochs=50, learning_rate=0.001, timeframe='1Day
         cmd.append("--unlimited")
         cmd.extend(["--patience", str(patience)])
 
-    # ... Rest der Funktion bleibt gleich ...
+    # Create a queue for logs
+    log_queue = queue.Queue()
 
-    # 4. Den Aufruf von start_training() anpassen (ungefähr Zeile 300-350):
-    with col1:
-        if st.button("Training starten", disabled=st.session_state.training_running):
-            training_process = start_training(
-                symbols=selected_symbols,
-                epochs=epochs,
-                learning_rate=learning_rate,
-                timeframe=timeframe,
-                days=days,
-                unlimited=unlimited_training,
-                patience=patience
-            )
-            st.session_state.training_process = training_process
+    # Update session state
+    st.session_state.training_running = True
+    st.session_state.training_logs = []
+    st.session_state.training_status = {'status': 'running', 'progress': 0.5, 'message': 'Training läuft...'}
 
-    # 5. Vor dem "Training Status" Bereich (etwa bei Zeile 380) diese Funktion einfügen:
-    # Überprüfen, ob ein Training abgeschlossen wurde
-    if not st.session_state.training_running:
-        notification = check_training_completion()
-        if notification and notification.get('status') == 'completed':
-            # Erfolgsmeldung anzeigen
-            models = notification.get('models', [])
+    # Function to read output and update logs
+    def read_output(process, log_queue):
+        for line in iter(process.stdout.readline, ""):
+            if line:
+                log_queue.put(("INFO", line.strip()))
 
-            st.success(f"""
-            ## 🎉 Training erfolgreich abgeschlossen! 
+        for line in iter(process.stderr.readline, ""):
+            if line:
+                log_queue.put(("ERROR", line.strip()))
 
-            **Trainierte Modelle:** {', '.join(models)}
+    # Function to update session state with logs
+    def update_logs(log_queue):
+        while st.session_state.training_running:
+            try:
+                log_type, message = log_queue.get(timeout=0.1)
+                timestamp = datetime.now().strftime("%H:%M:%S")
+                st.session_state.training_logs.append(f"[{timestamp}] {log_type}: {message}")
 
-            **Zeitstempel:** {datetime.fromisoformat(notification.get('timestamp', '')).strftime('%d.%m.%Y %H:%M:%S')}
+                # Keep only the last 100 logs
+                if len(st.session_state.training_logs) > 100:
+                    st.session_state.training_logs = st.session_state.training_logs[-100:]
+            except queue.Empty:
+                time.sleep(0.1)
+            except Exception as e:
+                logger.error(f"Error updating logs: {e}")
 
-            Die Modelle wurden erfolgreich gespeichert und sind bereit für den Einsatz.
-            """)
+    # Start the process
+    try:
+        process = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            bufsize=1,
+            universal_newlines=True
+        )
 
-            # Metriken anzeigen, falls vorhanden
-            metrics = notification.get('metrics', {})
-            if metrics:
-                st.subheader("Modell-Metriken:")
-                metrics_data = []
-                for symbol, model_metrics in metrics.items():
-                    if model_metrics:
-                        metrics_data.append({
-                            'Symbol': symbol,
-                            'RMSE': model_metrics.get('rmse', 'N/A'),
-                            'MSE': model_metrics.get('mse', 'N/A'),
-                            'MAE': model_metrics.get('mae', 'N/A')
-                        })
+        # Start threads for reading output and updating logs
+        output_thread = threading.Thread(target=read_output, args=(process, log_queue), daemon=True)
+        logs_thread = threading.Thread(target=update_logs, args=(log_queue,), daemon=True)
 
-                if metrics_data:
-                    metrics_df = pd.DataFrame(metrics_data)
-                    st.dataframe(metrics_df)
+        output_thread.start()
+        logs_thread.start()
 
-            # Option zum Löschen der Benachrichtigung
-            if st.button("Benachrichtigung schließen"):
-                clear_training_notification()
-                st.rerun()
+        st.success("Training gestartet!")
+        return process
 
-            # Status aktualisieren
-            st.session_state.training_status = {
-                'status': 'completed',
-                'progress': 1.0,
-                'message': 'Training erfolgreich abgeschlossen!'
-            }
+    except Exception as e:
+        logger.error(f"Error starting training: {e}")
+        st.error(f"Fehler beim Starten des Trainings: {e}")
+        st.session_state.training_running = False
+        st.session_state.training_status = {'status': 'error', 'progress': 0, 'message': f'Fehler: {e}'}
+        return None
 
 
 # Function to start trading bot

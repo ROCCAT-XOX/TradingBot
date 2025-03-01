@@ -495,22 +495,66 @@ def save_model(model, model_name, model_path, scaler=None, metadata=None):
 
 
 def train_trading_model(config=None):
-    """
-    Main function to train trading models for selected symbols.
+    import sys
+    import traceback
 
-    Args:
-        config (dict, optional): Configuration dictionary
-    """
+    # System and environment logging
+    logger.info(f"Python executable: {sys.executable}")
+    logger.info(f"Python version: {sys.version}")
+    logger.info(f"Current working directory: {os.getcwd()}")
+    logger.info(f"Parent directory: {parent_dir}")
+
     # Load configuration
-    if config is None:
-        config_path = os.path.join(parent_dir, 'config', 'settings.json')
-        with open(config_path, 'r') as f:
-            config = json.load(f)
+    try:
+        if config is None:
+            config_path = os.path.join(parent_dir, 'config', 'settings.json')
+            logger.info(f"Attempting to load configuration from: {config_path}")
+
+            if not os.path.exists(config_path):
+                logger.error(f"Configuration file not found: {config_path}")
+                raise FileNotFoundError(f"Configuration file not found: {config_path}")
+
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        logger.error(f"Configuration loading error: {e}")
+        # Fallback to default configuration
+        config = {
+            'TRADING_SYMBOLS': ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA'],
+            'DEFAULT_TIMEFRAME': '1Day',
+            'TRAINING_PERIOD_DAYS': 365
+        }
 
     # Extract training parameters
     symbols = config.get('TRADING_SYMBOLS', ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA'])
     timeframe = config.get('DEFAULT_TIMEFRAME', '1Day')
     training_days = config.get('TRAINING_PERIOD_DAYS', 365)
+
+    logger.info(f"Training parameters:")
+    logger.info(f"  Symbols: {symbols}")
+    logger.info(f"  Timeframe: {timeframe}")
+    logger.info(f"  Training Days: {training_days}")
+
+    # Initialize database and Alpaca API
+    try:
+        db = Database()
+        alpaca_api = AlpacaAPI(config_path=os.path.join(parent_dir, 'config', 'settings.json'))
+    except Exception as e:
+        logger.error(f"Failed to initialize database or Alpaca API: {e}")
+        return None
+
+    # Set device (GPU if available, otherwise CPU)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    logger.info(f"Using device: {device}")
+
+    # Fetch training data for all symbols
+    try:
+        all_data = fetch_training_data(alpaca_api, symbols, timeframe, training_days)
+        logger.info(f"Fetched training data for symbols: {list(all_data.keys())}")
+    except Exception as e:
+        logger.error(f"Failed to fetch training data: {e}")
+        return None
 
     # ML model parameters
     model_params = {
@@ -524,30 +568,21 @@ def train_trading_model(config=None):
         'num_epochs': 50
     }
 
-    # Update with AI model settings from config if available
-    if 'AI_MODEL_SETTINGS' in config:
-        model_params.update(config['AI_MODEL_SETTINGS'])
+    # Update model parameters from AI_MODEL_SETTINGS if available
+    ai_model_settings = config.get('AI_MODEL_SETTINGS', {})
+    model_params.update({
+        'batch_size': ai_model_settings.get('batch_size', model_params['batch_size']),
+        'learning_rate': ai_model_settings.get('learning_rate', model_params['learning_rate']),
+        'num_epochs': ai_model_settings.get('num_epochs', model_params['num_epochs'])
+    })
 
-    # Initialize database
-    db = Database()
-
-    # Initialize Alpaca API
-    alpaca_api = AlpacaAPI(config_path=config_path)
-
-    # Set device (GPU if available, otherwise CPU)
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    logger.info(f"Using device: {device}")
-
-    # Fetch training data for all symbols
-    all_data = fetch_training_data(alpaca_api, symbols, timeframe, training_days)
+    # Tracking for saved models and metrics
+    saved_models = []
+    model_metrics = {}
 
     # Train models for each symbol
     for symbol in symbols:
-        logger.info(f"Training model for {symbol}")
-
-        if symbol not in all_data or all_data[symbol].empty:
-            logger.warning(f"No data available for {symbol}, skipping")
-            continue
+        logger.info(f"Starting training for symbol: {symbol}")
 
         try:
             # Get data for the current symbol
@@ -633,30 +668,6 @@ def train_trading_model(config=None):
             logger.info(f"  RMSE: {metrics['rmse']:.6f}")
             logger.info(f"  MAE: {metrics['mae']:.6f}")
 
-            # Generate plots
-            plt.figure(figsize=(10, 6))
-            plt.plot(history['train_loss'], label='Training Loss')
-            plt.plot(history['valid_loss'], label='Validation Loss')
-            plt.xlabel('Epoch')
-            plt.ylabel('Loss')
-            plt.title(f'Training and Validation Loss for {symbol}')
-            plt.legend()
-
-            # Save plot
-            plots_dir = os.path.join(parent_dir, 'backend', 'models', 'plots')
-            os.makedirs(plots_dir, exist_ok=True)
-            plt.savefig(os.path.join(plots_dir, f"{symbol}_loss.png"))
-
-            # Plot predictions vs actual values
-            plt.figure(figsize=(10, 6))
-            plt.plot(actual_values, label='Actual')
-            plt.plot(predictions, label='Predicted')
-            plt.xlabel('Sample')
-            plt.ylabel('Normalized Price')
-            plt.title(f'Predictions vs Actual Values for {symbol}')
-            plt.legend()
-            plt.savefig(os.path.join(plots_dir, f"{symbol}_predictions.png"))
-
             # Save model
             model_path = os.path.join(parent_dir, 'backend', 'models')
             model_name = f"{symbol}_lstm_{datetime.now().strftime('%Y%m%d')}"
@@ -684,7 +695,7 @@ def train_trading_model(config=None):
                 version=datetime.now().strftime('%Y%m%d'),
                 model_type="LSTM",
                 description=f"LSTM model for predicting {symbol} prices",
-                is_active=True,  # Set as active model
+                is_active=True,
                 performance_metrics={
                     'mse': float(metrics['mse']),
                     'rmse': float(metrics['rmse']),
@@ -693,10 +704,23 @@ def train_trading_model(config=None):
                 model_path=model_file
             )
 
+            saved_models.append(symbol)
+            model_metrics[symbol] = metrics
+
             logger.info(f"Successfully trained and saved model for {symbol}")
 
         except Exception as e:
             logger.error(f"Error training model for {symbol}: {e}")
+            import traceback
+            traceback.print_exc()
+
+    # Log final results
+    logger.info(f"Training completed. Models saved for: {saved_models}")
+
+    return {
+        'saved_models': saved_models,
+        'model_metrics': model_metrics
+    }
 
 
 def parse_arguments():
