@@ -2,10 +2,10 @@ import os
 import sys
 import json
 import logging
-import time
+import asyncio
+import signal
 from datetime import datetime
 import pandas as pd
-import signal
 
 # Add the parent directory to the path so we can import our modules
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -43,11 +43,6 @@ class WebSocketIntegration:
         self.config = self.load_config(config_path)
         self.symbols = self.config.get('TRADING_SYMBOLS', ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA'])
 
-        # Set environment variables for Alpaca API
-        os.environ['ALPACA_API_KEY'] = self.config.get('ALPACA_API_KEY', '')
-        os.environ['ALPACA_API_SECRET'] = self.config.get('ALPACA_API_SECRET', '')
-        os.environ['ALPACA_API_BASE_URL'] = self.config.get('ALPACA_API_BASE_URL', 'https://paper-api.alpaca.markets')
-
         # Initialize components
         try:
             # Create a temporary config file for AlpacaAPI
@@ -61,13 +56,18 @@ class WebSocketIntegration:
                 json.dump(temp_config, temp)
                 temp_config_path = temp.name
 
+            # Initialize Alpaca API
             self.alpaca_api = AlpacaAPI(config_path=temp_config_path)
 
             # Delete the temporary file
             os.unlink(temp_config_path)
 
+            # Initialize database
             self.database = Database()
+
+            # WebSocket listener will be initialized in start method
             self.ws_listener = None
+
             self.initialized = True
             logger.info("WebSocket integration initialized successfully.")
         except Exception as e:
@@ -100,178 +100,60 @@ class WebSocketIntegration:
         else:
             # Use environment variables as fallback
             logger.warning(f"Configuration file not found: {config_path}. Using environment variables.")
-            api_key = os.environ.get('ALPACA_API_KEY', '')
-            api_secret = os.environ.get('ALPACA_API_SECRET', '')
-
-            if api_key and api_secret:
-                logger.info(f"Using API credentials from environment variables: {api_key[:4]}...{api_key[-4:]}")
-            else:
-                logger.error("No API credentials found in environment variables")
-
             return {
-                'ALPACA_API_KEY': api_key,
-                'ALPACA_API_SECRET': api_secret,
+                'ALPACA_API_KEY': os.environ.get('ALPACA_API_KEY', ''),
+                'ALPACA_API_SECRET': os.environ.get('ALPACA_API_SECRET', ''),
                 'ALPACA_API_BASE_URL': os.environ.get('ALPACA_API_BASE_URL', 'https://paper-api.alpaca.markets'),
                 'TRADING_SYMBOLS': ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA']
             }
 
-    def start(self):
-        """Start the WebSocket listener and begin processing data."""
-        if not self.initialized:
-            logger.error("WebSocket integration not initialized. Cannot start.")
-            return
-
-        self.running = True
-
-        # Setup signal handlers for graceful shutdown
-        signal.signal(signal.SIGINT, self.handle_shutdown)
-        signal.signal(signal.SIGTERM, self.handle_shutdown)
-
-        try:
-            # Create and start WebSocket listener
-            self.ws_listener = WebSocketListener(self.alpaca_api, self.symbols)
-            self.ws_listener.start()
-            logger.info(f"WebSocket listener started for symbols: {', '.join(self.symbols)}")
-
-            # Main processing loop
-            self.process_data_loop()
-        except Exception as e:
-            logger.error(f"Error in WebSocket integration: {e}")
-            self.stop()
-
-    def process_data_loop(self):
-        """Main loop to process incoming WebSocket data."""
-        logger.info("Starting data processing loop...")
-
-        while self.running:
+    async def process_trades(self):
+        """Asynchronously process incoming trade data."""
+        while self.running and self.ws_listener:
             try:
-                # Process trades
-                self.process_trades()
+                # Check if there are trades in the queue
+                while not self.ws_listener.trade_queue.empty():
+                    trade = await self.ws_listener.trade_queue.get()
 
-                # Process quotes
-                self.process_quotes()
-
-                # Process bars
-                self.process_bars()
-
-                # Sleep to avoid excessive CPU usage
-                time.sleep(1)
-            except Exception as e:
-                logger.error(f"Error processing data: {e}")
-
-    def process_trades(self):
-        """Process incoming trade data."""
-        if not self.ws_listener or self.ws_listener.trade_queue.empty():
-            return
-
-        # Process all available trades
-        while not self.ws_listener.trade_queue.empty():
-            trade = self.ws_listener.trade_queue.get()
-
-            try:
-                # Log the trade
-                logger.debug(f"Processing trade: {trade['symbol']} @ ${trade['price']:.2f} x {trade['size']}")
-
-                # Save to database if it's a symbol we're tracking
-                # This is just a placeholder - implement your actual logic here
-                if trade['symbol'] in self.symbols:
-                    # You might want to save this to the database or process it further
-                    # For example, you could update a price cache or trigger trading logic
-                    pass
-            except Exception as e:
-                logger.error(f"Error processing trade {trade}: {e}")
-
-    def process_quotes(self):
-        """Process incoming quote data."""
-        if not self.ws_listener or self.ws_listener.quote_queue.empty():
-            return
-
-        # Process all available quotes
-        while not self.ws_listener.quote_queue.empty():
-            quote = self.ws_listener.quote_queue.get()
-
-            try:
-                # Log the quote
-                logger.debug(
-                    f"Processing quote: {quote['symbol']} bid: ${quote['bid_price']:.2f}, ask: ${quote['ask_price']:.2f}")
-
-                # Process the quote as needed
-                # This is just a placeholder - implement your actual logic here
-                if quote['symbol'] in self.symbols:
-                    # You might want to save this to the database or process it further
-                    pass
-            except Exception as e:
-                logger.error(f"Error processing quote {quote}: {e}")
-
-    def process_bars(self):
-        """Process incoming bar data."""
-        if not self.ws_listener or self.ws_listener.bar_queue.empty():
-            return
-
-        # Process all available bars
-        while not self.ws_listener.bar_queue.empty():
-            bar = self.ws_listener.bar_queue.get()
-
-            try:
-                # Log the bar
-                logger.debug(
-                    f"Processing bar: {bar['symbol']} OHLC: ${bar['open']:.2f}/${bar['high']:.2f}/${bar['low']:.2f}/${bar['close']:.2f}")
-
-                # Save to database
-                # This is just a placeholder - implement your actual logic here
-                if bar['symbol'] in self.symbols:
                     try:
-                        # Convert the bar to a pandas DataFrame for storage
-                        bar_df = pd.DataFrame([{
-                            'open': bar['open'],
-                            'high': bar['high'],
-                            'low': bar['low'],
-                            'close': bar['close'],
-                            'volume': bar['volume']
-                        }], index=[pd.to_datetime(bar['timestamp'])])
+                        # Log the trade
+                        logger.debug(f"Processing trade: {trade['symbol']} @ ${trade['price']:.2f} x {trade['size']}")
 
-                        # Add to database
-                        self.database.add_price_data(bar['symbol'], bar_df, timeframe='1Min')
-                        logger.debug(f"Saved bar data for {bar['symbol']} to database")
-                    except Exception as db_error:
-                        logger.error(f"Error saving bar data to database: {db_error}")
+                        # Save to database if it's a symbol we're tracking
+                        if trade['symbol'] in self.symbols:
+                            # Placeholder for trade processing logic
+                            pass
+                    except Exception as trade_error:
+                        logger.error(f"Error processing trade {trade}: {trade_error}")
+
+                # Prevent tight looping
+                await asyncio.sleep(0.1)
+            except asyncio.CancelledError:
+                break
             except Exception as e:
-                logger.error(f"Error processing bar {bar}: {e}")
+                logger.error(f"Error in trade processing loop: {e}")
+                await asyncio.sleep(1)
 
-    def stop(self):
-        """Stop the WebSocket listener and clean up."""
-        self.running = False
+    async def process_quotes(self):
+        """Asynchronously process incoming quote data."""
+        while self.running and self.ws_listener:
+            try:
+                # Check if there are quotes in the queue
+                while not self.ws_listener.quote_queue.empty():
+                    quote = await self.ws_listener.quote_queue.get()
 
-        if self.ws_listener:
-            logger.info("Stopping WebSocket listener...")
-            self.ws_listener.stop()
+                    try:
+                        # Log the quote
+                        logger.debug(
+                            f"Processing quote: {quote['symbol']} bid: ${quote['bid_price']:.2f}, ask: ${quote['ask_price']:.2f}")
 
-        logger.info("WebSocket integration stopped.")
+                        # Placeholder for quote processing logic
+                        if quote['symbol'] in self.symbols:
+                            pass
+                    except Exception as quote_error:
+                        logger.error(f"Error processing quote {quote}: {quote_error}")
 
-    def handle_shutdown(self, signum, frame):
-        """Handle shutdown signals gracefully."""
-        logger.info(f"Received signal {signum}. Shutting down...")
-        self.stop()
-        sys.exit(0)
-
-
-if __name__ == "__main__":
-    # Make sure logs directory exists
-    logs_dir = os.path.join(parent_dir, 'logs')
-    if not os.path.exists(logs_dir):
-        os.makedirs(logs_dir)
-
-    logger.info("Starting WebSocket integration...")
-
-    try:
-        # Try to load from config file first
-        config_path = os.path.join(parent_dir, 'config', 'settings.json')
-
-        integration = WebSocketIntegration(config_path if os.path.exists(config_path) else None)
-        integration.start()
-    except KeyboardInterrupt:
-        logger.info("Interrupted by user. Shutting down...")
-        sys.exit(0)
-    except Exception as e:
-        logger.error(f"Error running WebSocket integration: {e}")
-        sys.exit(1)
+                # Prevent tight looping
+                await asyncio.sleep(0.1)
+            except asyncio.CancelledError:
+                break

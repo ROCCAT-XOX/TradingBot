@@ -141,17 +141,26 @@ def initialize_database(_config):
 
 # Function to start the WebSocket listener
 def start_websocket_listener(alpaca_api, symbols):
+    """Start the WebSocket listener with error handling."""
     try:
+        # Stop existing listener if it exists
         if st.session_state.ws_listener:
-            st.session_state.ws_listener.stop()
+            try:
+                st.session_state.ws_listener.stop()
+            except Exception as stop_error:
+                logger.warning(f"Error stopping existing WebSocket listener: {stop_error}")
 
-        st.session_state.ws_listener = WebSocketListener(alpaca_api, symbols)
-        st.session_state.ws_listener.start()
+        # Create new WebSocket listener
+        new_listener = WebSocketListener(alpaca_api, symbols)
+        new_listener.start()
+
+        # Update session state
+        st.session_state.ws_listener = new_listener
         return True
     except Exception as e:
         logger.error(f"Error starting WebSocket listener: {e}")
+        st.sidebar.error(f"Could not start WebSocket listener: {e}")
         return False
-
 
 # Function to fetch historical data
 # Update this function in your dashboard.py
@@ -828,9 +837,9 @@ def main():
 
     # Refresh button
     if st.sidebar.button("Refresh Data"):
-        # Clear cached data
         st.session_state.historical_data = {}
-        st.experimental_rerun()
+        # Anstatt den gesamten App-Code neu zu starten, kannst du hier z.B. eine einfache Nachricht anzeigen
+        st.write("Daten werden aktualisiert... Bitte manuell neu laden.")
 
 
 if __name__ == "__main__":
